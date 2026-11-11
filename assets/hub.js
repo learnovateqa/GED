@@ -101,6 +101,11 @@
     return (LESSON[n] = L);
   }
   const sess = n => COURSE.sessions.find(s => s.n === n);
+  /* Canva slides: canva.json in the subject folder holds one Canva "view" link per session, e.g. { "1": "https://www.canva.com/design/…/view" }.
+     When a session has a link, the viewer shows the Canva deck, so edits made in Canva appear on the site at once. */
+  const CANVA = {};
+  const canvaReady = fetch("canva.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : {})).then(j => Object.assign(CANVA, j)).catch(() => {});
+  const canvaFor = n => { const m = String(CANVA[n] || "").match(/^https:\/\/(?:www\.)?canva\.com\/design\/([A-Za-z0-9_-]+)(?:\/([A-Za-z0-9_-]+))?/); return m ? `https://www.canva.com/design/${m[1]}/${m[2] && !/^(view|edit|watch)$/.test(m[2]) ? m[2] + "/" : ""}view` : ""; };
   /* a question marked "again" shows the passage of the question before it in a fold */
   const linkPassages = items => { let last = ""; items.forEach(it => { if (it.passage) last = it.passage; else if (it.again) it._prev = last; }); return items; };
 
@@ -229,7 +234,7 @@
   function pageSessions() { main.innerHTML = `${preview()}<h1>${esc(t("sessions"))}</h1><p>Each session has slides, a reviewer, a workbook, a quiz and a checklist.</p>${sessionList()}`; }
 
   function stepsBar(n, cur) {
-    const d = partsDone(n), P = [...(LESSON[n] && LESSON[n].slides ? [["slides", "🖥️", t("slides")]] : []), ["reviewer", "📖", t("reviewer")], ["workbook", "✏️", t("workbook")], ["quiz", "📝", t("quiz")], ["checklist", "🏅", t("checklist")]];
+    const d = partsDone(n), P = [...(LESSON[n] && (LESSON[n].slides || canvaFor(n)) ? [["slides", "🖥️", t("slides")]] : []), ["reviewer", "📖", t("reviewer")], ["workbook", "✏️", t("workbook")], ["quiz", "📝", t("quiz")], ["checklist", "🏅", t("checklist")]];
     return `<nav class="steps" aria-label="Parts of this session">${P.map(p => `<a href="#/session/${n}/${p[0]}" class="${d[p[0]] ? "done" : ""}" ${p[0] === cur ? 'aria-current="step"' : ""}><i aria-hidden="true">${d[p[0]] && p[0] !== cur ? "✓" : p[1]}</i>${esc(p[2])}${d[p[0]] ? '<span class="sr"> (done)</span>' : ""}</a>`).join("")}</nav>`;
   }
   function head(L, s) {
@@ -239,6 +244,15 @@
 
   /* ---------- Slides: one idea per slide, in the same design as the site. Arrows, swipe, keyboard, full screen. ---------- */
   function pageSlides(L) {
+    const cv = canvaFor(L.n);
+    if (cv) {
+      main.innerHTML = `${head(L)}${stepsBar(L.n, "slides")}
+        <div class="cframe"><iframe src="${esc(cv)}?embed" title="Session ${L.n} slides" loading="lazy" allow="fullscreen" allowfullscreen></iframe></div>
+        <div class="row" style="margin-top:10px"><a class="btn sm" href="${esc(cv)}" target="_blank" rel="noopener">Open the slides in a new tab</a><span class="small muted">Press ⛶ on the slides for full screen.</span></div>
+        <a class="btn primary" style="width:100%;margin-top:12px" href="#/session/${L.n}/reviewer" id="cvDone">Go to the reviewer <span aria-hidden="true">→</span></a>`;
+      $("#cvDone").onclick = () => { if (!ss(L.n).sl) { ss(L.n).sl = true; save(); } };
+      return;
+    }
     const n = L.n, S = L.slides; let i = Math.min(store.get(K("sl" + n), 0), S.length - 1);
     main.innerHTML = `${head(L)}${stepsBar(n, "slides")}
       <div class="deck" id="deck" tabindex="0" aria-roledescription="slide viewer" aria-label="Slides for Session ${n}">
@@ -459,8 +473,8 @@
       if (!s) { location.hash = "#/sessions"; return; }
       if (!ready(n)) { main.innerHTML = `<p class="eyebrow">${esc(CFG.COURSE)}</p><h1>Session ${n}: ${esc(s.title)}</h1><div class="box t-gold">⏳ <b>This session opens soon.</b> Ms. Maria will tell you when it is ready.</div><ul>${s.topics.map(x => `<li>${esc(x)}</li>`).join("")}</ul><a class="btn soft" href="#/sessions">All sessions</a>`; GED.apply(main); return; }
       main.innerHTML = `<div class="loader"><span class="ldots"><i></i><i></i><i></i><i></i></span><p>Opening Session ${n}…</p></div>`;
-      let L; try { L = await lesson(n); } catch (e) { main.innerHTML = `<div class="box t-peach">This session did not load. Check your internet and try again.</div>`; return; }
-      ({ slides: L.slides ? pageSlides : pageReviewer, reviewer: pageReviewer, workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || (L.slides ? pageSlides : pageReviewer))(L);
+      let L; try { L = await lesson(n); await canvaReady; } catch (e) { main.innerHTML = `<div class="box t-peach">This session did not load. Check your internet and try again.</div>`; return; }
+      ({ slides: L.slides || canvaFor(n) ? pageSlides : pageReviewer, reviewer: pageReviewer, workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || (L.slides || canvaFor(n) ? pageSlides : pageReviewer))(L);
     } else ({ home: pageHome, sessions: pageSessions, me: pageMe, syllabus: pageSyllabus, help: pageHelp }[page] || pageHome)();
     GED.apply(main); main.focus({ preventScroll: true });
   }
