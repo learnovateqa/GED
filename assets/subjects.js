@@ -3,7 +3,7 @@
    To open a subject later, change its status to "open" and give it an href. */
 window.GED_PASS = "145";
 window.SUBJECTS = [
-  { id: "rla", title: "Reasoning Through Language Arts", short: "RLA", tone: "blue", status: "open", href: "rla/", icon: "Aa",
+  { id: "rla", title: "Reasoning Through Language Arts", short: "RLA", tone: "rose", status: "open", href: "rla/", icon: "Aa",
     blurb: "Read for meaning, analyze arguments, use correct grammar and write the extended response.",
     time: "150 minutes", parts: "3 sections · 10-minute break · 45 minutes for the essay",
     types: "Multiple choice, drag and drop, select an area (hot spot), drop-down, 1 extended response" },

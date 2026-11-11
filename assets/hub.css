@@ -42,7 +42,7 @@ a.srow:hover{border-color:var(--navy)}
 .rev h3{font-size:1.12rem;margin:22px 0 8px}
 .rev ul,.rev ol{padding-inline-start:1.3em;margin:0 0 .7em}
 .rev li{margin:.25em 0}
-.pass{border-inline-start:4px solid var(--rose-s);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px;margin:10px 0}
+.pass{border-inline-start:4px solid var(--brand);background:var(--soft);border-radius:0 12px 12px 0;padding:10px 14px;margin:10px 0}
 .pass b.ti{display:block;font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:4px;color:var(--ink2)}
 .pass p:last-child{margin:0}
 .lab{font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;display:block;margin-bottom:4px}
