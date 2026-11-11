@@ -803,5 +803,285 @@
   "use the four steps: question, passage, evidence, answer",
   "point to the words in a passage that prove my answer",
   "name my strong skills and the skills I need to practise"
+ ],
+ "slides": [
+  {
+   "kind": "title",
+   "h": "GED RLA Introduction & Diagnostic",
+   "sub": "Meet the test. Find your starting point."
+  },
+  {
+   "h": "Today you will",
+   "blocks": [
+    {
+     "list": [
+      "learn how the RLA test works",
+      "meet the question types",
+      "learn a four-step method for reading questions",
+      "find your strong skills and the skills to practise"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "What is RLA?",
+   "blocks": [
+    {
+     "p": "**Reasoning Through Language Arts** is one of the four GED® subjects."
+    },
+    {
+     "p": "It tests three things:"
+    },
+    {
+     "list": [
+      "**Reading:** do you understand the text?",
+      "**Arguments:** can you judge a claim and its evidence?",
+      "**Language:** can you use correct written English?"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "The test at a glance",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Fact",
+       "Number"
+      ],
+      "rows": [
+       [
+        "Total time",
+        "150 minutes"
+       ],
+       [
+        "Sections",
+        "3"
+       ],
+       [
+        "Break",
+        "one, 10 minutes"
+       ],
+       [
+        "Essay (extended response)",
+        "1, with 45 minutes"
+       ],
+       [
+        "Passing score",
+        "145 or higher"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Remember the numbers",
+   "blocks": [
+    {
+     "remember": "150 minutes. 3 sections. One 10-minute break. One essay of 45 minutes. Pass at 145."
+    },
+    {
+     "p": "You need 145 on **each** of the four GED subjects."
+    }
+   ]
+  },
+  {
+   "h": "The question types",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Type",
+       "What you do"
+      ],
+      "rows": [
+       [
+        "Multiple choice",
+        "Choose the best of four answers."
+       ],
+       [
+        "Drag and drop",
+        "Move items into the correct box."
+       ],
+       [
+        "Drop-down",
+        "Choose words from a list in a sentence."
+       ],
+       [
+        "Select an area (hot spot)",
+        "Tap the correct part of a text."
+       ],
+       [
+        "Extended response",
+        "Write an essay."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Never leave a blank",
+   "blocks": [
+    {
+     "mistake": "Leaving a question with no answer. A blank answer is always wrong."
+    },
+    {
+     "steps": [
+      "Remove the answers that cannot be right.",
+      "Choose the best answer that is left.",
+      "Go on to the next question."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "What you read",
+   "blocks": [
+    {
+     "list": [
+      "**Informational texts:** articles, letters, workplace notices, speeches.",
+      "**Literary texts:** stories with characters, feelings and choices."
+     ]
+    },
+    {
+     "remember": "You do not need to know the topic. Every answer comes from the passage."
+    }
+   ]
+  },
+  {
+   "h": "What you write",
+   "blocks": [
+    {
+     "p": "One essay. 45 minutes."
+    },
+    {
+     "steps": [
+      "Read two passages with two different arguments.",
+      "Decide which argument has more convincing evidence.",
+      "Explain why. Use evidence from both passages."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "The essay is not about your opinion",
+   "blocks": [
+    {
+     "weak": "I think bicycle lanes are a good idea because I like cycling.",
+     "label": "response",
+     "note": "This is the writer's own opinion."
+    },
+    {
+     "strong": "Passage 1 gives the stronger argument. It uses accident numbers from three cities.",
+     "label": "response",
+     "note": "This judges the evidence in the passages."
+    }
+   ]
+  },
+  {
+   "h": "The four-step method",
+   "blocks": [
+    {
+     "flow": [
+      "Read the question",
+      "Read the passage",
+      "Find the evidence",
+      "Answer"
+     ]
+    },
+    {
+     "p": "Use these four steps for **every** reading question."
+    }
+   ]
+  },
+  {
+   "h": "Try it",
+   "blocks": [
+    {
+     "passage": "The town library used to close at 5 p.m. Most workers could not visit it. Last year, the library began to stay open until 9 p.m. on weekdays. Visits rose by forty percent.",
+     "title": "Passage"
+    },
+    {
+     "question": "Why did visits to the library rise?"
+    }
+   ]
+  },
+  {
+   "h": "Weak answer, strong answer",
+   "blocks": [
+    {
+     "weak": "Because people like books.",
+     "note": "The passage does not say this. It is a guess."
+    },
+    {
+     "strong": "Because the library now stays open later, so workers can visit.",
+     "note": "This uses two facts from the passage."
+    }
+   ]
+  },
+  {
+   "h": "The answer is in the passage",
+   "blocks": [
+    {
+     "remember": "Point to the line that proves your answer."
+    },
+    {
+     "mistake": "Choosing an answer because it is true in real life. It must be true **in the passage**."
+    }
+   ]
+  },
+  {
+   "h": "Use your time well",
+   "blocks": [
+    {
+     "weak": "I will stay on a hard question until I get it.",
+     "label": "plan"
+    },
+    {
+     "strong": "I choose my best answer, mark the question, and come back if I have time.",
+     "label": "plan"
+    },
+    {
+     "list": [
+      "Check the clock after each passage.",
+      "Keep a few minutes at the end of the essay to check it."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Your diagnostic",
+   "blocks": [
+    {
+     "p": "The workbook in this session is your diagnostic. It is **not** a pass or fail test."
+    },
+    {
+     "steps": [
+      "Do it alone. No dictionary, no translator.",
+      "Submit it. Read the **why** for every question.",
+      "Write down your skills to practise."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Now it is your turn",
+   "blocks": [
+    {
+     "flow": [
+      "Reviewer",
+      "Workbook",
+      "Quiz",
+      "Checklist"
+     ]
+    },
+    {
+     "p": "Read the reviewer. Do the workbook. Take the short quiz. Tick the checklist and earn your badge."
+    }
+   ]
+  }
  ]
 }

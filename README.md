@@ -15,6 +15,7 @@ A learning website for GED® students. It is the sister site of *The English Aca
 
 ## What each session has
 
+0. **Slides** – one idea per slide in the site's own design, with arrows, swipe, keyboard and full screen (for class or self-study). Slides are written in `sessionNN.json` under `slides`, so they need no image files.
 1. **Reviewer** – the full explanation, with weak and strong examples, "Remember this", "Common mistake" and a glossary.
 2. **E-workbook** – easy → guided → application → challenge. After Submit, the student sees every answer with a short WHY, and a list of strong skills and skills to practise.
 3. **Short quiz** – shows only the final score. No answer key and no review, because students can retry. The quiz is marked by the grade book, so the answers are never on the website.

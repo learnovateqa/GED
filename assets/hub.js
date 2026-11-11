@@ -20,7 +20,7 @@
   const K = k => CFG.ID + ":" + who() + ":" + k;
   let state = store.get(K("state"), { s: {} });
   const ss = n => (state.s[n] = state.s[n] || {});
-  const partsDone = n => { const x = state.s[n] || {}; return { reviewer: !!x.rev, workbook: !!x.wb, quiz: !!(x.quiz && x.quiz.length), checklist: !!x.badge }; };
+  const partsDone = n => { const x = state.s[n] || {}; return { slides: !!x.sl, reviewer: !!x.rev, workbook: !!x.wb, quiz: !!(x.quiz && x.quiz.length), checklist: !!x.badge }; };
   const doneCount = () => Object.keys(state.s).filter(n => state.s[n].badge).length;
 
   /* Everything a student does is sent to Ms. Maria's grade book without a button.
@@ -226,15 +226,55 @@
       <p class="small muted" style="margin-top:6px">Test facts are from ged.com.</p>
       <div class="sh"><span class="no">12</span><h2>${esc(t("sessions"))}</h2></div>${sessionList()}`;
   }
-  function pageSessions() { main.innerHTML = `${preview()}<h1>${esc(t("sessions"))}</h1><p>Each session has four parts: reviewer, workbook, quiz and checklist.</p>${sessionList()}`; }
+  function pageSessions() { main.innerHTML = `${preview()}<h1>${esc(t("sessions"))}</h1><p>Each session has slides, a reviewer, a workbook, a quiz and a checklist.</p>${sessionList()}`; }
 
   function stepsBar(n, cur) {
-    const d = partsDone(n), P = [["reviewer", "📖", t("reviewer")], ["workbook", "✏️", t("workbook")], ["quiz", "📝", t("quiz")], ["checklist", "🏅", t("checklist")]];
+    const d = partsDone(n), P = [...(LESSON[n] && LESSON[n].slides ? [["slides", "🖥️", t("slides")]] : []), ["reviewer", "📖", t("reviewer")], ["workbook", "✏️", t("workbook")], ["quiz", "📝", t("quiz")], ["checklist", "🏅", t("checklist")]];
     return `<nav class="steps" aria-label="Parts of this session">${P.map(p => `<a href="#/session/${n}/${p[0]}" class="${d[p[0]] ? "done" : ""}" ${p[0] === cur ? 'aria-current="step"' : ""}><i aria-hidden="true">${d[p[0]] && p[0] !== cur ? "✓" : p[1]}</i>${esc(p[2])}${d[p[0]] ? '<span class="sr"> (done)</span>' : ""}</a>`).join("")}</nav>`;
   }
   function head(L, s) {
     return `<p class="eyebrow">${esc(CFG.COURSE)}</p><h1>Session ${L.n}: ${esc(L.title)}</h1>
       <p class="row" style="gap:6px"><span class="chip">⏱ About ${L.minutes} minutes</span><span class="chip">Session ${L.n} of ${CFG.SESSIONS}</span></p>`;
+  }
+
+  /* ---------- Slides: one idea per slide, in the same design as the site. Arrows, swipe, keyboard, full screen. ---------- */
+  function pageSlides(L) {
+    const n = L.n, S = L.slides; let i = Math.min(store.get(K("sl" + n), 0), S.length - 1);
+    main.innerHTML = `${head(L)}${stepsBar(n, "slides")}
+      <div class="deck" id="deck" tabindex="0" aria-roledescription="slide viewer" aria-label="Slides for Session ${n}">
+        <div class="slide" id="slide" aria-live="polite"></div>
+        <div class="dbar"><button class="iconbtn" type="button" id="dPrev" aria-label="Previous slide">←</button>
+          <span class="dcount" id="dCount"></span><div class="bar" style="flex:1"><i id="dBar"></i></div>
+          <button class="iconbtn" type="button" id="dFull" aria-label="Full screen" aria-pressed="false">⛶</button>
+          <button class="iconbtn dnext" type="button" id="dNext" aria-label="Next slide">→</button></div>
+      </div>
+      <p class="small muted" style="margin-top:8px">Swipe, or use the arrows. ⛶ opens the slides on the full screen.</p>
+      <a class="btn primary" style="width:100%;margin-top:6px" href="#/session/${n}/reviewer">Go to the reviewer <span aria-hidden="true">→</span></a>`;
+    const deck = $("#deck"), el = $("#slide");
+    const show = k => {
+      i = Math.max(0, Math.min(S.length - 1, k)); const sl = S[i]; store.set(K("sl" + n), i);
+      el.className = "slide" + (sl.kind ? " s-" + sl.kind : "");
+      el.innerHTML = sl.kind === "title"
+        ? `<img src="../icons/academy.svg" alt="" class="slogo"><p class="eyebrow">${esc(CFG.COURSE)} · Session ${n}</p><h2>${fmt(sl.h)}</h2>${sl.sub ? `<p class="ssub">${fmt(sl.sub)}</p>` : ""}<p class="sby">The GED Academy · Ms. Maria</p>`
+        : `<p class="eyebrow">Session ${n} · ${esc(L.title)}</p><h2>${fmt(sl.h)}</h2><div class="sbody rev">${(sl.blocks || []).map(block).join("")}</div>`;
+      el.scrollTop = 0; GED.apply(el);
+      $("#dCount").textContent = (i + 1) + " / " + S.length; $("#dBar").style.setProperty("--w", ((i + 1) / S.length * 100) + "%"); $("#dBar").style.width = ((i + 1) / S.length * 100) + "%";
+      $("#dPrev").disabled = i === 0; $("#dNext").disabled = i === S.length - 1;
+      if (i === S.length - 1 && !ss(n).sl) { ss(n).sl = true; save(); }
+    };
+    $("#dPrev").onclick = () => show(i - 1); $("#dNext").onclick = () => show(i + 1);
+    deck.onkeydown = e => { if (e.key === "ArrowRight" || e.key === "PageDown" || e.key === " ") { e.preventDefault(); show(i + 1); } if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); show(i - 1); } if (e.key === "Escape") full(false); };
+    let x0 = null, y0 = 0;
+    el.addEventListener("touchstart", e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, { passive: true });
+    el.addEventListener("touchend", e => { if (x0 == null) return; const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null; if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) show(i + (dx < 0 ? 1 : -1)); }, { passive: true });
+    const full = on => {
+      deck.classList.toggle("fs", on); document.body.classList.toggle("nofs-scroll", on); $("#dFull").setAttribute("aria-pressed", on); $("#dFull").textContent = on ? "✕" : "⛶";
+      try { if (on && deck.requestFullscreen) deck.requestFullscreen().catch(() => {}); else if (!on && document.fullscreenElement) document.exitFullscreen(); } catch (e) {}
+      if (on) deck.focus();
+    };
+    $("#dFull").onclick = () => full(!deck.classList.contains("fs"));
+    document.onfullscreenchange = () => { if (!document.fullscreenElement && deck.classList.contains("fs")) full(false); };
+    show(i);
   }
 
   /* ---------- 1 · Reviewer ---------- */
@@ -400,7 +440,7 @@
     const H = (q, a) => `<details class="card" style="margin:8px 0"><summary style="font-weight:600;cursor:pointer;min-height:32px">${q}</summary><div style="margin-top:8px">${a}</div></details>`;
     main.innerHTML = `<h1>${esc(t("help"))}</h1>
       ${H("How do I sign in?", "<p>Ms. Maria gives you an access code. Type the code and your full name. You sign in one time on each phone or computer.</p>")}
-      ${H("What do I do in each session?", "<ol><li><b>Reviewer:</b> read the notes and examples.</li><li><b>Workbook:</b> answer the questions. After you submit, you see each answer and why.</li><li><b>Quiz:</b> take the short quiz. You see your score only. You can try again.</li><li><b>Checklist:</b> tick what you can do, and earn the badge.</li></ol>")}
+      ${H("What do I do in each session?", "<ol><li><b>Slides:</b> look at the main ideas, one slide at a time.</li><li><b>Reviewer:</b> read the notes and examples.</li><li><b>Workbook:</b> answer the questions. After you submit, you see each answer and why.</li><li><b>Quiz:</b> take the short quiz. You see your score only. You can try again.</li><li><b>Checklist:</b> tick what you can do, and earn the badge.</li></ol>")}
       ${H("Do I need to send my work to Ms. Maria?", "<p>No. Your progress, workbook results and quiz scores go to Ms. Maria by themselves. After a quiz, please also take a screenshot of your score and send it to her.</p>")}
       ${H("Why does the quiz not show the answers?", "<p>You can take the quiz again. So the quiz shows your score only. The workbook shows every answer and the reason.</p>")}
       ${H("How do I change the language?", "<p>Press the 🌐 button at the top. Menus change to your language. You can also translate the explanations. Passages and questions always stay in English, like the real test.</p>")}
@@ -420,7 +460,7 @@
       if (!ready(n)) { main.innerHTML = `<p class="eyebrow">${esc(CFG.COURSE)}</p><h1>Session ${n}: ${esc(s.title)}</h1><div class="box t-gold">⏳ <b>This session opens soon.</b> Ms. Maria will tell you when it is ready.</div><ul>${s.topics.map(x => `<li>${esc(x)}</li>`).join("")}</ul><a class="btn soft" href="#/sessions">All sessions</a>`; GED.apply(main); return; }
       main.innerHTML = `<div class="loader"><span class="ldots"><i></i><i></i><i></i><i></i></span><p>Opening Session ${n}…</p></div>`;
       let L; try { L = await lesson(n); } catch (e) { main.innerHTML = `<div class="box t-peach">This session did not load. Check your internet and try again.</div>`; return; }
-      ({ workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || pageReviewer)(L);
+      ({ slides: L.slides ? pageSlides : pageReviewer, reviewer: pageReviewer, workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || (L.slides ? pageSlides : pageReviewer))(L);
     } else ({ home: pageHome, sessions: pageSessions, me: pageMe, syllabus: pageSyllabus, help: pageHelp }[page] || pageHome)();
     GED.apply(main); main.focus({ preventScroll: true });
   }
