@@ -1,0 +1,807 @@
+{
+ "n": 1,
+ "title": "GED RLA Introduction & Diagnostic",
+ "minutes": 90,
+ "intro": "You learn how the RLA test works: its parts, its time, its question types and its passing score. You learn a four-step method for every reading question. Then the workbook shows your strong skills and the skills to practise.",
+ "reviewer": [
+  {
+   "h": "What is the RLA test?",
+   "blocks": [
+    {
+     "p": "RLA means **Reasoning Through Language Arts**. It is one of the four GED® subjects. It tests three things: how well you read, how well you judge an argument, and how well you use written English."
+    },
+    {
+     "table": {
+      "head": [
+       "Fact",
+       "What it means for you"
+      ],
+      "rows": [
+       [
+        "150 minutes",
+        "This is the full test time. It includes a short time for instructions and a final review."
+       ],
+       [
+        "3 sections",
+        "You finish one section before you start the next one."
+       ],
+       [
+        "One 10-minute break",
+        "The break comes between two sections. Stand up, drink water, rest your eyes."
+       ],
+       [
+        "1 extended response",
+        "This is a written essay. You have 45 minutes for it."
+       ],
+       [
+        "Passing score: 145",
+        "You need 145 or higher. You need 145 on each of the four GED subjects."
+       ]
+      ]
+     }
+    },
+    {
+     "p": "The test has three topic areas: **reading for meaning**, **identifying and creating arguments**, and **grammar and language**."
+    },
+    {
+     "remember": "150 minutes. 3 sections. One 10-minute break. One essay of 45 minutes. Pass at 145."
+    },
+    {
+     "tip": "A score of 165 to 174 shows you are ready for college-level courses. A score of 175 to 200 may earn college credit. First, aim for 145."
+    }
+   ]
+  },
+  {
+   "h": "The question types",
+   "blocks": [
+    {
+     "p": "The test is on a computer. You do not only choose A, B, C or D. You also move, tap and choose from a list. You practise every type on this site."
+    },
+    {
+     "table": {
+      "head": [
+       "Type",
+       "What you do"
+      ],
+      "rows": [
+       [
+        "Multiple choice",
+        "Read four answers. Choose the best one."
+       ],
+       [
+        "Drag and drop",
+        "Move items into the correct box or the correct order."
+       ],
+       [
+        "Drop-down",
+        "Open a small list inside a sentence. Choose the correct words."
+       ],
+       [
+        "Select an area (hot spot)",
+        "Tap the correct part of a text or picture."
+       ],
+       [
+        "Extended response",
+        "Read two passages. Write an essay."
+       ]
+      ]
+     }
+    },
+    {
+     "p": "On this site, you also practise **fill in the blank**, where you type a word or number. Other GED subjects use this type, so it is good practice."
+    },
+    {
+     "mistake": "Leaving a question with no answer. A blank answer is always wrong. If you are not sure, remove the answers that cannot be right, choose the best one, and go on."
+    }
+   ]
+  },
+  {
+   "h": "What you read",
+   "blocks": [
+    {
+     "p": "You read two kinds of text."
+    },
+    {
+     "list": [
+      "**Informational texts** give facts or opinions about real life. Examples: an article, a letter, a workplace notice, a speech.",
+      "**Literary texts** tell a story. You read about characters, their feelings and their choices."
+     ]
+    },
+    {
+     "p": "The passages start short and become longer. The questions do not test your memory. Every answer comes from the passage in front of you."
+    },
+    {
+     "remember": "You do not need to know the topic before the test. You need to read carefully and find proof in the passage."
+    }
+   ]
+  },
+  {
+   "h": "What you write",
+   "blocks": [
+    {
+     "p": "The extended response is one essay. You have 45 minutes."
+    },
+    {
+     "steps": [
+      "You read two passages. They give two different arguments about one topic.",
+      "You decide which argument has more convincing evidence.",
+      "You write an essay that explains why. You use evidence from both passages."
+     ]
+    },
+    {
+     "passage": "Passage 1 says the city should build more bicycle lanes. Passage 2 says the city should not.",
+     "title": "Example task"
+    },
+    {
+     "weak": "I think bicycle lanes are a good idea because I like cycling and it is healthy.",
+     "label": "response",
+     "note": "This gives the writer's own opinion. It does not look at the two passages."
+    },
+    {
+     "strong": "Passage 1 gives the stronger argument. It uses accident numbers from three cities, but Passage 2 gives only one person's story.",
+     "label": "response",
+     "note": "This judges the two arguments. It points to the evidence in each passage."
+    },
+    {
+     "mistake": "Writing your own opinion about the topic. The task asks which argument is **better supported**. It does not ask which side you like."
+    },
+    {
+     "p": "You learn the essay step by step in Sessions 7 to 10."
+    }
+   ]
+  },
+  {
+   "h": "The four-step method",
+   "blocks": [
+    {
+     "p": "Use these four steps for every reading question."
+    },
+    {
+     "flow": [
+      "Read the question",
+      "Read the passage",
+      "Find the evidence",
+      "Answer"
+     ]
+    },
+    {
+     "steps": [
+      "**Read the question first.** Now you know what to look for.",
+      "**Read the passage.** Read all of it. Do not skip the last lines.",
+      "**Find the evidence.** Find the words in the passage that prove the answer.",
+      "**Answer.** Choose the answer that matches the evidence."
+     ]
+    },
+    {
+     "passage": "The town library used to close at 5 p.m. Most workers could not visit it. Last year, the library began to stay open until 9 p.m. on weekdays. Visits rose by forty percent.",
+     "title": "Passage"
+    },
+    {
+     "question": "Why did visits to the library rise?"
+    },
+    {
+     "weak": "Because people like books.",
+     "note": "The passage does not say this. It is a guess from real life."
+    },
+    {
+     "strong": "Because the library now stays open later, so workers can visit.",
+     "note": "This uses two facts from the passage: workers could not visit before 5 p.m., and the library now closes at 9 p.m."
+    },
+    {
+     "remember": "The answer is in the passage. Point to the line that proves it."
+    },
+    {
+     "mistake": "Choosing an answer because it is true in real life. It must be true **in the passage**."
+    }
+   ]
+  },
+  {
+   "h": "Timing and pacing",
+   "blocks": [
+    {
+     "p": "Many students know the answers but do not finish. A plan for your time protects your score."
+    },
+    {
+     "weak": "I will answer every question perfectly. I will stay on a hard question until I get it.",
+     "label": "plan",
+     "note": "One hard question can take the time of five easy ones."
+    },
+    {
+     "strong": "I answer the questions I know first. If a question takes too long, I choose my best answer, mark it, and come back if I have time.",
+     "label": "plan",
+     "note": "Every question gets an answer, and easy points are not lost."
+    },
+    {
+     "list": [
+      "Look at the clock after each passage, not after each question.",
+      "Do not spend a long time on one question. Choose, mark it, move on.",
+      "In the essay, keep a few minutes at the end to check your writing.",
+      "Use the 10-minute break. A rested mind reads faster."
+     ]
+    },
+    {
+     "tip": "These pacing ideas are advice from your teacher. They are not official GED rules."
+    }
+   ]
+  },
+  {
+   "h": "Your diagnostic",
+   "blocks": [
+    {
+     "p": "A diagnostic shows where you are now. It is not a pass or fail test. The workbook in this session is your diagnostic."
+    },
+    {
+     "p": "It checks these skills: test format, main idea, details, inference, vocabulary in context, author's purpose, argument and evidence, and grammar."
+    },
+    {
+     "steps": [
+      "Do the workbook alone. Do not use a dictionary or a translator.",
+      "Submit it. Read the **why** for every question, also the ones you got right.",
+      "Look at the two lists: your strong skills and your skills to practise.",
+      "Write the skills to practise in your notebook. You will watch them improve."
+     ]
+    },
+    {
+     "remember": "A low diagnostic score is useful. It tells you and Ms. Maria what to work on first."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  [
+   "passage",
+   "a short text that you read in the test"
+  ],
+  [
+   "section",
+   "one part of the test"
+  ],
+  [
+   "extended response",
+   "the essay in the RLA test"
+  ],
+  [
+   "argument",
+   "an opinion with reasons and evidence to support it"
+  ],
+  [
+   "evidence",
+   "facts or words from the text that prove an idea"
+  ],
+  [
+   "main idea",
+   "the most important point of a text"
+  ],
+  [
+   "detail",
+   "a small fact that supports the main idea"
+  ],
+  [
+   "inference",
+   "an idea that the text does not say directly, but that the evidence shows"
+  ],
+  [
+   "author's purpose",
+   "the reason the author wrote the text: to inform, to persuade, to entertain or to explain"
+  ],
+  [
+   "vocabulary in context",
+   "finding the meaning of a word from the words around it"
+  ],
+  [
+   "informational text",
+   "a text about real life, such as an article, a letter or a notice"
+  ],
+  [
+   "literary text",
+   "a story with characters"
+  ],
+  [
+   "diagnostic",
+   "a first check that shows your strong and weak skills"
+  ],
+  [
+   "pacing",
+   "using your time well, so that you finish the test"
+  ]
+ ],
+ "workbook": [
+  {
+   "level": "easy",
+   "skill": "Test format",
+   "type": "mc",
+   "q": "How long is the GED RLA test?",
+   "options": [
+    "70 minutes",
+    "90 minutes",
+    "115 minutes",
+    "150 minutes"
+   ],
+   "answer": 3,
+   "why": "The RLA test is 150 minutes. The other times belong to Social Studies (70), Science (90) and Math (115)."
+  },
+  {
+   "level": "easy",
+   "skill": "Test format",
+   "type": "dropdown",
+   "q": "Choose the correct numbers.",
+   "text": "The RLA test has {0} sections. You get one {1}-minute break. You have {2} minutes to write the essay.",
+   "blanks": [
+    {
+     "options": [
+      "2",
+      "3",
+      "4"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "3",
+      "10",
+      "30"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "25",
+      "45",
+      "60"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "RLA has 3 sections, one 10-minute break and 45 minutes for the extended response."
+  },
+  {
+   "level": "easy",
+   "skill": "Test format",
+   "type": "fill",
+   "q": "Type the number.",
+   "text": "To pass the RLA test, you need a score of {0} or higher.",
+   "blanks": [
+    {
+     "accept": [
+      "145"
+     ]
+    }
+   ],
+   "why": "The passing score is 145 on each GED subject."
+  },
+  {
+   "level": "easy",
+   "skill": "Test format",
+   "type": "drag",
+   "q": "Which of these are part of the RLA test? Put each item in the correct box.",
+   "items": [
+    "Multiple choice questions",
+    "A speaking interview",
+    "Drop-down questions",
+    "A listening test",
+    "An essay (extended response)"
+   ],
+   "targets": [
+    "Part of the RLA test",
+    "Not part of the RLA test"
+   ],
+   "answer": [
+    0,
+    1,
+    0,
+    1,
+    0
+   ],
+   "why": "The RLA test has reading questions, language questions and one essay. It has no speaking and no listening part."
+  },
+  {
+   "level": "easy",
+   "skill": "Details",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Hana works in a shop from Sunday to Thursday. She has no time to study after work, because she cooks for her family. So she studies on the bus. The ride takes forty minutes each way. She reads one page of her workbook on every ride.",
+   "q": "When does Hana study?",
+   "options": [
+    "After work at home",
+    "On the bus",
+    "In the shop",
+    "On Friday only"
+   ],
+   "answer": 1,
+   "why": "The passage says, \"So she studies on the bus.\" She has no time after work, and the passage does not talk about Friday."
+  },
+  {
+   "level": "guided",
+   "skill": "Main idea",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Many adults return to study after years of work. They bring useful habits with them. They arrive on time, they ask questions, and they finish what they start.",
+   "q": "What is the main idea of the passage?",
+   "options": [
+    "Adults find study very hard.",
+    "Adults always arrive on time.",
+    "Adult students bring helpful habits to their studies.",
+    "Work is better than study."
+   ],
+   "answer": 2,
+   "why": "Sentence 2 gives the main idea: adults bring useful habits. Sentence 3 only lists examples. \"Arrive on time\" is one detail, not the whole idea."
+  },
+  {
+   "level": "guided",
+   "skill": "Details",
+   "type": "hotspot",
+   "q": "Tap the sentence that explains WHY the neighbours started the garden.",
+   "sentences": [
+    "The empty land behind Block 12 was full of rubbish for years.",
+    "The neighbours wanted a clean, safe place for their children to play.",
+    "In March, they cleared the land and planted vegetables.",
+    "Now forty families share the garden."
+   ],
+   "answer": 1,
+   "why": "Only sentence 2 gives the reason: they wanted a clean, safe place for their children. Sentence 1 describes the problem. Sentences 3 and 4 tell what happened later."
+  },
+  {
+   "level": "guided",
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "The manager gave a brief talk before the shift. It lasted only two minutes, and then everyone went back to work.",
+   "q": "What does the word \"brief\" mean in the passage?",
+   "options": [
+    "Angry",
+    "Short",
+    "Important",
+    "Boring"
+   ],
+   "answer": 1,
+   "why": "The next sentence is the clue: the talk \"lasted only two minutes\". So \"brief\" means short."
+  },
+  {
+   "level": "guided",
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Choose the correct verb for each sentence.",
+   "text": "Every student in the class {0} a workbook. The students {1} the answers after they submit.",
+   "blanks": [
+    {
+     "options": [
+      "have",
+      "has"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "see",
+      "sees"
+     ],
+     "answer": 0
+    }
+   ],
+   "why": "\"Every student\" is singular, so the verb is \"has\". \"The students\" is plural, so the verb is \"see\". The subject and the verb must agree."
+  },
+  {
+   "level": "guided",
+   "skill": "Inference",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Omar looked out of the window and frowned. He took his long coat from the cupboard and put an umbrella in his bag. Then he left for work ten minutes early.",
+   "q": "What can you infer from the passage?",
+   "options": [
+    "Omar is late for work.",
+    "Omar thinks it will rain.",
+    "Omar dislikes his job.",
+    "Omar forgot his bag."
+   ],
+   "answer": 1,
+   "why": "The passage never says \"rain\". But Omar looks outside, frowns, and takes a coat and an umbrella. These clues show that he expects rain. He leaves early, so he is not late."
+  },
+  {
+   "level": "application",
+   "skill": "Author's purpose",
+   "type": "mc",
+   "ptitle": "Notice to residents",
+   "passage": "The water in Building C will be turned off on Tuesday from 9 a.m. to 1 p.m. Workers will repair a pipe on the second floor. Please fill containers with water before 9 a.m. We are sorry for the trouble. For questions, call the building office.",
+   "q": "Why did the author write this notice?",
+   "options": [
+    "To persuade residents to use less water",
+    "To inform residents about a planned water shut-off",
+    "To entertain residents with a story about a pipe",
+    "To complain about the workers"
+   ],
+   "answer": 1,
+   "why": "The notice gives facts: the day, the time, the reason and what to do. Its purpose is to inform. It does not try to change anyone's opinion."
+  },
+  {
+   "level": "application",
+   "skill": "Argument and evidence",
+   "type": "drag",
+   "q": "Is each sentence a fact or an opinion? Put each one in the correct box.",
+   "items": [
+    "The bus fare rose from 2 riyals to 3 riyals in January.",
+    "Buses are the best way to travel in a city.",
+    "The new timetable has twelve buses each hour.",
+    "The old buses were ugly."
+   ],
+   "targets": [
+    "Fact (you can check it)",
+    "Opinion (a belief or feeling)"
+   ],
+   "answer": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "why": "You can check a fact: a price, a date, a number. \"Best\" and \"ugly\" are judgments. Different people can disagree about them, so they are opinions."
+  },
+  {
+   "level": "application",
+   "skill": "Inference",
+   "type": "mc",
+   "ptitle": "From a story",
+   "passage": "Leila read the letter twice. Then she folded it carefully and put it in the drawer under her old photographs. At dinner, her brother asked about her day. \"Nothing special,\" she said, and passed him the bread. She did not look up from her plate.",
+   "q": "What does the passage suggest about Leila?",
+   "options": [
+    "She is bored by the letter.",
+    "She wants to keep the letter private.",
+    "She is angry with her brother.",
+    "She has lost the letter."
+   ],
+   "answer": 1,
+   "why": "Leila hides the letter under photographs, says \"Nothing special\" and does not look up. These actions show that she does not want to talk about it. Nothing in the passage shows anger or boredom."
+  },
+  {
+   "level": "application",
+   "skill": "Vocabulary in context",
+   "type": "fill",
+   "ptitle": "Staff memo",
+   "passage": "All kitchen staff must attend the food safety training on Monday. The training is mandatory. Staff who do not attend cannot work in the kitchen until they complete it.",
+   "q": "Find the word.",
+   "text": "The word in the memo that means \"required\" is {0}.",
+   "blanks": [
+    {
+     "accept": [
+      "mandatory"
+     ]
+    }
+   ],
+   "why": "The memo says staff \"must attend\" and cannot work without it. These clues show that \"mandatory\" means required."
+  },
+  {
+   "level": "application",
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Choose the correct words to complete the notice.",
+   "text": "The clinic opens at 8 a.m.{0} it closes at 6 p.m. The doctors say {1} going to add evening hours next month.",
+   "blanks": [
+    {
+     "options": [
+      ", and",
+      " and,",
+      ","
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "their",
+      "there",
+      "they're"
+     ],
+     "answer": 2
+    }
+   ],
+   "why": "Two complete sentences are joined with a comma and \"and\". A comma alone is an error. \"They're\" means \"they are\", which fits \"they are going to add\"."
+  },
+  {
+   "level": "challenge",
+   "skill": "Argument and evidence",
+   "type": "mc",
+   "ptitle": "Letter to the editor",
+   "passage": "Our city council plans to end night bus service after 10 p.m. in order to save money. This decision would be a serious mistake. According to the transport office's own report, about 6,000 people ride the night buses each week, and more than half of them are travelling to or from work. Hospital cleaners, restaurant staff and security guards do not finish at five o'clock. If the buses stop, many of these workers will have to pay for taxis that cost ten times the bus fare, or give up their jobs.\n\nSupporters of the plan say the night buses are often half empty. That is true, but it misses the point. A half-empty bus at midnight still carries twenty people who have no other way home. The council should look for savings that do not strain the workers who keep this city running at night.",
+   "q": "What is the author's main claim?",
+   "options": [
+    "Night buses are often half empty.",
+    "The city council should not end night bus service.",
+    "Taxis are too expensive for most people.",
+    "The transport office wrote a report about buses."
+   ],
+   "answer": 1,
+   "why": "The claim is the opinion the author wants you to accept: ending night buses \"would be a serious mistake\". The other answers are details that the author uses, not the main claim."
+  },
+  {
+   "level": "challenge",
+   "skill": "Argument and evidence",
+   "type": "hotspot",
+   "q": "Tap the sentence that gives the strongest evidence for the author's claim.",
+   "sentences": [
+    "This decision would be a serious mistake.",
+    "According to the transport office's own report, about 6,000 people ride the night buses each week, and more than half of them are travelling to or from work.",
+    "Hospital cleaners, restaurant staff and security guards do not finish at five o'clock.",
+    "The council should look for savings that do not strain the workers who keep this city running at night."
+   ],
+   "answer": 1,
+   "why": "Strong evidence can be checked. Sentence 2 gives numbers from an official report. Sentence 1 and sentence 4 are opinions. Sentence 3 is an example, but it has no numbers and no source.",
+   "again": true
+  },
+  {
+   "level": "challenge",
+   "skill": "Inference",
+   "type": "mc",
+   "q": "The author writes, \"That is true, but it misses the point.\" What can you infer about the author?",
+   "options": [
+    "The author thinks the supporters are lying about empty buses.",
+    "The author accepts the supporters' fact but thinks it does not prove their argument.",
+    "The author agrees that the night buses should stop.",
+    "The author has never used a night bus."
+   ],
+   "answer": 1,
+   "why": "\"That is true\" shows the author accepts the fact. \"But it misses the point\" shows the author thinks the fact does not support ending the service. Good writers often answer the other side in this way.",
+   "again": true
+  },
+  {
+   "level": "challenge",
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "q": "In the last sentence of the letter, what does \"strain\" mean?",
+   "options": [
+    "To filter a liquid",
+    "To put pressure or difficulty on",
+    "To stretch a muscle",
+    "To make a loud sound"
+   ],
+   "answer": 1,
+   "why": "\"Strain\" has several meanings. Here it is about workers who would pay more or lose their jobs. So it means to put pressure or difficulty on them. Always test the meaning in the sentence.",
+   "again": true
+  },
+  {
+   "level": "challenge",
+   "skill": "Author's purpose",
+   "type": "mc",
+   "q": "Why does the author name hospital cleaners, restaurant staff and security guards?",
+   "options": [
+    "To show that the plan would hurt real workers with necessary jobs",
+    "To prove that these workers earn very little money",
+    "To explain how the transport office counts riders",
+    "To suggest that these workers should change their hours"
+   ],
+   "answer": 0,
+   "why": "Naming real jobs helps the reader picture who rides at night. It supports the claim that the plan would hurt working people. The letter gives no information about their pay, and it never suggests new hours.",
+   "again": true
+  }
+ ],
+ "quiz": [
+  {
+   "type": "mc",
+   "q": "How much time do you have for the RLA extended response?",
+   "options": [
+    "25 minutes",
+    "45 minutes",
+    "70 minutes",
+    "150 minutes"
+   ]
+  },
+  {
+   "type": "mc",
+   "q": "Which sentence about the GED passing score is correct?",
+   "options": [
+    "You need 145 on each subject.",
+    "You need 100 on each subject.",
+    "You need 145 on two subjects only.",
+    "You need 200 on each subject."
+   ]
+  },
+  {
+   "type": "dropdown",
+   "q": "Choose the correct words.",
+   "text": "The RLA test has one {0}-minute break. In the essay, you analyze {1} passages.",
+   "blanks": [
+    {
+     "options": [
+      "3",
+      "10",
+      "15"
+     ]
+    },
+    {
+     "options": [
+      "one",
+      "two",
+      "three"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "drag",
+   "q": "Put the four steps for a reading question in the correct order.",
+   "items": [
+    "Find the evidence",
+    "Read the question",
+    "Answer",
+    "Read the passage"
+   ],
+   "targets": [
+    "Step 1",
+    "Step 2",
+    "Step 3",
+    "Step 4"
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Night classes are growing in our city. Five years ago, only two schools offered them. Today, eleven schools open their doors after 6 p.m. Most of the students work during the day, and they say evening lessons are their only chance to study.",
+   "q": "What is the main idea of the passage?",
+   "options": [
+    "Students work during the day.",
+    "More and more schools offer night classes.",
+    "Schools open at 6 p.m.",
+    "Night classes are too expensive."
+   ]
+  },
+  {
+   "type": "mc",
+   "q": "How many schools offer night classes today?",
+   "options": [
+    "Two",
+    "Five",
+    "Six",
+    "Eleven"
+   ],
+   "again": true
+  },
+  {
+   "type": "hotspot",
+   "q": "Tap the sentence that explains WHY the students choose evening lessons.",
+   "sentences": [
+    "Night classes are growing in our city.",
+    "Five years ago, only two schools offered them.",
+    "Today, eleven schools open their doors after 6 p.m.",
+    "Most of the students work during the day, and they say evening lessons are their only chance to study."
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "The instructions were so vague that nobody knew where to go or what to bring.",
+   "q": "What does \"vague\" mean in the passage?",
+   "options": [
+    "Not clear",
+    "Very long",
+    "Very strict",
+    "Friendly"
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Sara checked her phone again. Still no message. She walked to the door, looked down the empty street, and sat down once more.",
+   "q": "What can you infer about Sara?",
+   "options": [
+    "She is waiting for someone.",
+    "She has lost her phone.",
+    "She is ready to sleep.",
+    "She is cooking dinner."
+   ]
+  },
+  {
+   "type": "fill",
+   "q": "Type the missing word.",
+   "text": "In the four-step method, step 3 is: find the {0}.",
+   "blanks": [
+    {}
+   ]
+  }
+ ],
+ "checklist": [
+  "say how long the RLA test is and how many sections it has",
+  "name the question types on the RLA test",
+  "say what score I need to pass",
+  "explain what the extended response asks me to do",
+  "use the four steps: question, passage, evidence, answer",
+  "point to the words in a passage that prove my answer",
+  "name my strong skills and the skills I need to practise"
+ ]
+}

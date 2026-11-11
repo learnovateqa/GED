@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+ <rect width="512" height="512" rx="112" fill="#F8DFE3"/>
+ <path d="M256 92 L452 178 L256 264 L60 178 Z" fill="#1B2A4A"/>
+ <path d="M140 226 V318 C140 352 372 352 372 318 V226 L256 278 Z" fill="#fff" stroke="#1B2A4A" stroke-width="18" stroke-linejoin="round"/>
+ <path d="M430 190 V292" stroke="#1B2A4A" stroke-width="16" stroke-linecap="round"/><circle cx="430" cy="308" r="20" fill="#EDAE7E"/>
+ <text x="256" y="446" text-anchor="middle" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="92" fill="#1B2A4A">GED</text>
+ <g transform="translate(74 420)"><circle r="14" cx="0" fill="#8DB4E2"/><circle r="14" cx="0" cy="-40" fill="#8CCB9F"/></g>
+ <g transform="translate(438 420)"><circle r="14" cx="0" fill="#A996DC"/><circle r="14" cx="0" cy="-40" fill="#E39AB6"/></g>
+</svg>

@@ -1,0 +1,16 @@
+{
+  "name": "The GED Academy · Elevate with Ms. Maria",
+  "short_name": "GED Academy",
+  "description": "Pass the GED test step by step. Reviewers, e-workbooks, quizzes and timed practice for Reasoning Through Language Arts and Social Studies.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#F8DFE3",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" },
+    { "src": "icons/academy.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

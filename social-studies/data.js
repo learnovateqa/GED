@@ -1,0 +1,88 @@
+/* ===== SYLLABUS · GED® Social Studies · 12 sessions =====
+   Based on Ms. Maria's student syllabus, with corrections and additions (see README: "Syllabus changes").
+   A session opens on the site when its number is in "ready" and its sessionNN.json file exists. */
+window.COURSE = {
+  ready: [],
+  tagline: "Twelve sessions. One step at a time.",
+  facts: [
+    ["Test length", "70 minutes", "no break"],
+    ["Passing score", "145", "on a scale that goes up to 200"],
+    ["Calculator", "On screen", "a reference sheet is given"],
+    ["Question types", "5", "multiple choice, drag and drop, fill in the blank, select an area, drop-down"]
+  ],
+  goal: "To build the reading, reasoning, civic, historical, economic, geographic, data-analysis and test-taking skills you need to prepare for the GED® Social Studies test.",
+  outcomes: [
+    "Understand the GED Social Studies test structure and question formats",
+    "Analyze historical, political, economic and social passages",
+    "Identify main ideas and supporting evidence",
+    "Make logical inferences and draw valid conclusions",
+    "Understand the basic principles of American government",
+    "Explain the purpose and structure of the U.S. Constitution",
+    "Identify the roles of the three branches of government",
+    "Understand checks and balances and the separation of powers",
+    "Analyze rights, freedoms and civic responsibilities",
+    "Understand major themes and developments in U.S. history",
+    "Identify cause-and-effect relationships in historical events",
+    "Apply basic economic concepts to real-world situations",
+    "Interpret maps, charts, graphs and tables",
+    "Analyze primary and secondary sources",
+    "Identify claims, evidence, purpose and point of view",
+    "Compare different arguments and historical perspectives",
+    "Apply Social Studies reasoning strategies",
+    "Manage time well during the GED test"
+  ],
+  phases: [
+    { name: "Phase 1 · GED foundation", sessions: [1] },
+    { name: "Phase 2 · Civics and government", sessions: [2, 3] },
+    { name: "Phase 3 · History, economics and geography", sessions: [4, 5, 6] },
+    { name: "Phase 4 · Social Studies reasoning", sessions: [7, 8, 9] },
+    { name: "Phase 5 · GED practice and mastery", sessions: [10, 11] },
+    { name: "Phase 6 · Final assessment and readiness plan", sessions: [12] }
+  ],
+  sessions: [
+    { n: 1, title: "GED Social Studies Introduction & Fundamentals", sub: "Meet the test. Learn the strategy.",
+      topics: ["GED Social Studies test structure: 70 minutes, no break", "Test timing and pacing", "Question types: multiple choice, drag and drop, drop-down, fill in the blank, select an area (hot spot)", "The on-screen calculator and when you need it", "The passing score (145)", "The test checks reading and reasoning skills more than memory", "Reading historical and political passages", "Interpreting charts, graphs and tables", "Primary vs. secondary sources", "Understanding what a question asks", "Basic test-taking strategies and time management", "Core strategy: READ → IDENTIFY → REASON → ANSWER"],
+      key: "I understand what the GED Social Studies test expects me to do." },
+    { n: 2, title: "Civics & Government I: Foundations & Constitution", sub: "Why government exists and how it was designed.",
+      topics: ["The purpose of government and society", "Types of government: democracy, monarchy, dictatorship", "Democracy and representative democracy", "Popular sovereignty and the rule of law", "Limited government and individual rights", "Ideas behind the founding: natural rights and the consent of the governed", "The purpose of the Constitution and the Preamble", "Key constitutional principles", "Separation of powers", "Federalism: federal, state and shared powers", "How the Constitution can be changed: amendments"],
+      key: "Why was the U.S. government designed this way?" },
+    { n: 3, title: "Civics & Government II: Branches, Rights & Participation", sub: "Who has power, and how it is limited.",
+      topics: ["Legislative branch: Congress (House and Senate)", "Executive branch: the President and the administration", "Judicial branch: the Supreme Court and other courts", "Checks and balances: how the branches limit one another", "How a bill becomes a law", "Judicial review and landmark Supreme Court decisions", "The Bill of Rights and civil liberties", "Due process and equal protection", "Freedoms: speech, religion, press, assembly", "Voting, elections and political parties", "How the President is elected: the Electoral College", "Citizen duties and civic responsibilities", "Public policy: how it is made and how it affects people"],
+      key: "How does the government use and limit power while protecting individual rights?" },
+    { n: 4, title: "U.S. History: Major Events & Historical Reasoning", sub: "Cause, event, effect.",
+      topics: ["Colonial period and the road to revolution", "Founding era: the Revolution, the Declaration of Independence, the Constitution", "Westward expansion and its effects", "Civil War and Reconstruction: causes, slavery, emancipation, the 13th, 14th and 15th Amendments", "Industrialization: urbanization, immigration, the Progressive Era", "The 20th century: the World Wars, the Great Depression and the New Deal, the Cold War, the Civil Rights Movement", "Women's suffrage and the expansion of voting rights", "Reading timelines", "Reasoning models: CAUSE → EVENT → EFFECT and EVENT → CHANGE → CONSEQUENCE"] },
+    { n: 5, title: "Economics: Fundamentals & the Role of Government", sub: "Choices, markets and money.",
+      topics: ["Scarcity and opportunity cost", "Supply and demand", "Markets, competition and monopoly", "Incentives, profit and productivity", "Inflation and unemployment", "Measuring the economy: GDP", "Banks, credit and interest", "Taxes, government spending and fiscal policy", "The central bank and monetary policy", "Trade: imports, exports and tariffs", "Reading economic scenarios and data", "Predicting the result of an economic choice"],
+      key: "How does this economic decision affect people, businesses and society?" },
+    { n: 6, title: "Geography & the World", sub: "Maps, people and places.",
+      topics: ["Map reading: title, key, scale and compass", "Types of maps: political, physical, thematic", "Geographic regions", "Population, migration and resources", "Human-environment interaction", "How geography shapes where and how people live", "Geographic patterns and spatial analysis", "Social and economic links between regions", "Borders and conflict", "Interpreting geographic data instead of memorizing it"],
+      key: "What does the geographic information tell me?" },
+    { n: 7, title: "Primary & Secondary Sources", sub: "Who made this, and why?",
+      topics: ["Source types: historical documents, speeches, letters, newspaper excerpts, photographs, political cartoons", "Critical elements: author, audience, purpose, context, claim, evidence, point of view, bias", "Fact, opinion and reasoned judgment", "How reliable is a source?", "Propaganda and loaded language", "Reading a political cartoon: symbols, labels and message", "Analysis strategy: WHO? → WHEN? → WHY? → AUDIENCE? → CLAIM? → EVIDENCE?"],
+      key: "Who created this source, why was it created, and what can I conclude?" },
+    { n: 8, title: "Reasoning: Claims, Evidence, Inference & Cause/Effect", sub: "What does the evidence allow?",
+      topics: ["Main ideas and claim identification", "Inferences and logical conclusions", "Cause and effect", "Compare and contrast", "Correlation is not the same as causation", "Supported and unsupported conclusions", "Comparing two sources on the same event", "Core reasoning model: QUESTION → EVIDENCE → REASONING → CONCLUSION"],
+      key: "What does the evidence allow me to conclude?" },
+    { n: 9, title: "Charts, Graphs & Data", sub: "Read the title first.",
+      topics: ["Data formats: tables, bar graphs, line graphs, pie charts, maps, data sets", "Identify variables and read scales", "Compare values and find trends", "Mean, median, mode and range with the on-screen calculator", "Percent and percent change", "Check the text against the data", "Draw conclusions that the data supports", "Data strategy: READ TITLE → IDENTIFY VARIABLES → CHECK SCALE → COMPARE → INTERPRET → CONCLUDE"] },
+    { n: 10, title: "Mixed GED Social Studies Practice Test I", sub: "Timed practice and an error log.",
+      topics: ["A timed mixed practice test with a visible clock", "Covers civics, history, economics, geography, primary sources, claims and data", "Error analysis log: What did I choose? What was correct? Why was I wrong? What skill was tested? What is my next strategy?"] },
+    { n: 11, title: "Targeted Review & Mixed GED Practice II", sub: "Fix the mistakes you repeat.",
+      topics: ["Civics: Constitution, branches, checks and balances, rights", "History: cause and effect, major events, historical evidence", "Economics: supply and demand, decisions, the role of government", "Geography: maps, population patterns, global relations", "Reasoning: claims, evidence, inference, bias and point of view", "Data: charts, graphs, tables, trends", "Mixed GED practice II"],
+      key: "What mistake am I making repeatedly, and how can I fix it?" },
+    { n: 12, title: "Social Studies Mock Test & Error Analysis", sub: "Timed test and your readiness plan.",
+      topics: ["A timed mock test with a visible clock", "Time management, passage analysis, finding evidence, reasoning and answer elimination", "Reviewing errors: the skill tested and the evidence I missed", "My readiness plan: strongest skills, weakest skills, most common mistake, best strategy, what to practise before the GED"] }
+  ],
+  cando: [
+    ["QUESTIONS", "I can understand what a question asks."],
+    ["GOVERNMENT", "I can explain U.S. government principles."],
+    ["RIGHTS", "I can identify rights and civic duties."],
+    ["HISTORY", "I can identify major historical events and their causes."],
+    ["ECONOMICS", "I can apply economic concepts to real situations."],
+    ["GEOGRAPHY", "I can interpret maps and geographic data."],
+    ["SOURCES", "I can analyze an author's purpose and sources."],
+    ["DATA", "I can read charts, graphs and tables."],
+    ["EVIDENCE", "I can use evidence to draw conclusions."],
+    ["TIMED TEST", "I can use my skills under timed GED conditions."]
+  ]
+};

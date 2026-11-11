@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The GED Academy | Pass the GED® test step by step</title>
+<meta name="description" content="The GED Academy by Elevate with Ms. Maria and Learnovate. Twelve sessions per subject with reviewers, e-workbooks, quizzes and timed practice for Reasoning Through Language Arts and Social Studies. Menus in Arabic, Urdu, Bengali, Filipino, Malayalam, Sinhala and Tamil.">
+<meta name="theme-color" content="#F8DFE3">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="GED Academy">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/academy.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta property="og:title" content="The GED Academy | Pass the GED® test step by step">
+<meta property="og:description" content="Twelve sessions. One step at a time. Reviewers, e-workbooks, quizzes and timed practice, with help in your language.">
+<meta property="og:image" content="icons/icon-512.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/academy.css">
+<style>
+.top{position:sticky;top:0;z-index:50;background:rgba(248,223,227,.92);backdrop-filter:blur(8px);border-bottom:1px solid #EFC9D2}
+.top .wrap{display:flex;align-items:center;gap:14px;min-height:66px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto}
+.logo img{width:40px;height:40px;border-radius:11px}
+.logo b{display:block;font-size:1.02rem;line-height:1.1}
+.logo small{display:block;font-size:.72rem;color:var(--ink2);letter-spacing:.04em}
+.top nav{display:flex;gap:4px}
+.top nav a{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:500;font-size:.92rem}
+.top nav a:hover{background:#fff}
+.hero{background:var(--pink);padding:46px 0 86px}
+.hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
+.hero h1{font-size:clamp(1.9rem,5.2vw,3.1rem);margin:8px 0 14px}
+.hero .lede{font-size:1.08rem;max-width:56ch;color:#2E3B5C}
+.by{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--rose-b);border-radius:999px;padding:6px 16px;margin-top:18px;font-size:.92rem}
+.by::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--rose-s);flex:none}
+.tiles4{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tiles4 a{min-height:112px;border-radius:16px;border:1.5px solid var(--b);background:var(--c);font-weight:600;font-size:1.02rem;display:grid;place-items:center;align-content:center;gap:2px;padding:12px;text-align:center;text-decoration:none;transition:transform .15s;line-height:1.25}
+.tiles4 a:hover{transform:translateY(-3px) rotate(-1deg)}
+.tiles4 a small{font-weight:400;font-size:.78rem;color:var(--ink2)}
+.facts{margin-top:-52px;background:#fff;border:1.5px solid var(--navy);border-radius:16px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:2}
+.facts div{padding:16px 20px;border-inline-start:1.5px solid var(--line2)}
+.facts div:first-child{border:0}
+.facts small{display:block;font-size:.66rem;letter-spacing:.2em;font-weight:600;text-transform:uppercase}
+.facts b{display:block;font-size:1.15rem;margin-top:4px}
+.facts span{font-size:.8rem;color:var(--ink2)}
+.paths{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
+.paths button{border:1.5px solid var(--line2);background:#fff;border-radius:999px;padding:8px 16px;min-height:42px;cursor:pointer;font-weight:500}
+.paths button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.subj{display:flex;flex-direction:column;gap:8px;border-radius:22px;padding:20px;box-shadow:0 6px 18px rgba(27,42,74,.06)}
+.subj .hd{display:flex;gap:12px;align-items:center}
+.subj .ic{width:56px;height:56px;border-radius:16px;background:#fff;border:1.5px solid var(--b);display:grid;place-items:center;font-weight:700;font-size:1.3rem;flex:none}
+.subj h3{font-size:1.15rem;margin:0}
+.subj dl{margin:4px 0 0;display:grid;gap:6px}
+.subj dl div{background:#fff;border-radius:12px;padding:8px 12px}
+.subj dt{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink2)}
+.subj dd{margin:0;font-size:.9rem}
+.subj dd b{font-size:1.02rem}
+.subj .go{margin-top:auto}
+.subj.soon{background:repeating-linear-gradient(135deg,var(--c),var(--c) 14px,#fff0 14px,#fff0 15px),var(--c)}
+.subj .status{align-self:flex-start;background:#fff}
+.finder{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:start}
+.opts{display:grid;gap:10px}
+.opts button{display:flex;align-items:center;gap:12px;text-align:start;border:1.5px solid var(--line2);background:#fff;border-radius:14px;padding:12px 16px;cursor:pointer;font-weight:500;min-height:52px}
+.opts button:hover{border-color:var(--navy)}
+.opts button[aria-pressed="true"]{background:var(--blue);border-color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
+.opts button i{font-style:normal;width:30px;height:30px;border-radius:50%;background:var(--pink);display:grid;place-items:center;flex:none}
+.feat .card h3{display:flex;align-items:center;gap:10px}
+.feat .card h3 span:first-child{font-size:1.4rem}
+.teacher{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.avatar{width:96px;height:96px;border-radius:50%;background:var(--rose);border:2px solid var(--rose-b);display:grid;place-items:center;font-size:2rem;font-weight:700}
+.end{background:var(--pink);border-radius:22px;padding:28px;margin-top:34px}
+.end h2{font-size:1.5rem}
+.tm{font-size:.76rem;opacity:.85;margin-top:12px;flex-basis:100%}
+@media (max-width:860px){.hero .wrap,.finder{grid-template-columns:1fr}.top nav{display:none}.facts{grid-template-columns:1fr 1fr}.facts div:nth-child(3){border:0}.facts div:nth-child(n+3){border-top:1.5px solid var(--line2)}}
+@media (max-width:520px){.tiles4 a{min-height:88px}.teacher{grid-template-columns:1fr}.logo small{display:none}.top .btn.primary{display:none}.hero{padding-top:28px}.facts div{padding:12px 14px}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<div class="trbar" id="trbar" hidden></div>
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="./"><img src="icons/academy.svg" alt=""><span class="notranslate" translate="no"><b>The GED Academy</b><small>Elevate with Ms. Maria · Learnovate</small></span></a>
+  <nav aria-label="Main"><a href="#subjects" data-i18n="nav_subjects">Subjects</a><a href="#how" data-i18n="nav_how">How it works</a><a href="#teacher" data-i18n="nav_teacher">Your teacher</a></nav>
+  <div class="lang" data-langmenu></div>
+  <a class="btn primary sm" href="rla/" data-i18n="nav_start">Start learning</a>
+ </div>
+</header>
+
+<main id="main">
+<section class="hero">
+ <div class="wrap">
+  <div>
+   <p class="eyebrow notranslate" translate="no" data-en>Language Arts · Social Studies · Science · Math</p>
+   <h1 data-i18n="hero_title">Pass the GED® test step by step, with help in your language</h1>
+   <p class="lede" data-i18n="hero_lede">Clear reviewers, practice with answers and reasons, short quizzes and timed tests. Study in class or at home.</p>
+   <div class="row" style="margin-top:20px">
+    <a class="btn primary" href="rla/#/session/1"><span data-i18n="btn_new">I'm new to the GED: start here</span> <span aria-hidden="true">→</span></a>
+    <a class="btn" href="#finder" data-i18n="btn_find">Help me choose</a>
+   </div>
+   <p class="by" data-en>Prepared &amp; taught by <b>Ms. Maria</b></p>
+  </div>
+  <div>
+   <div class="tiles4 notranslate" data-en translate="no" aria-label="The four GED subjects">
+    <a class="t-blue" href="rla/">Language Arts<small>150 minutes · open</small></a>
+    <a class="t-green" href="social-studies/">Social Studies<small>70 minutes · open</small></a>
+    <a class="t-peach" href="#subjects">Science<small>90 minutes · coming soon</small></a>
+    <a class="t-lav" href="#subjects">Math<small>115 minutes · coming soon</small></a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<div class="wrap">
+ <div class="facts" data-en>
+  <div><small>Subjects</small><b>4</b><span>2 open now · 🔑 access code</span></div>
+  <div><small>Passing score</small><b>145</b><span>on each subject</span></div>
+  <div><small>Format</small><b>Class, online or hybrid</b><span>+ study at home</span></div>
+  <div><small>Languages</small><b class="notranslate" translate="no">EN · AR · UR · BN · FIL · ML · SI · TA</b><span>+ many more</span></div>
+ </div>
+
+ <div class="sh" id="subjects"><span class="no">01</span><h2 data-i18n="subjects_title">Subjects</h2></div>
+ <p data-i18n="subjects_sub">Two subjects are open now. Two more are coming.</p>
+ <div class="paths" role="group" aria-label="Filter subjects">
+  <button type="button" data-path="" aria-pressed="true" data-i18n="f_all">All</button>
+  <button type="button" data-path="open" aria-pressed="false" data-i18n="f_open">Open now</button>
+  <button type="button" data-path="soon" aria-pressed="false" data-i18n="f_soon">Coming soon</button>
+ </div>
+ <div class="grid" id="subjGrid" data-en style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+ <p class="small muted" style="margin-top:10px">Test facts are from ged.com. You need 145 or higher on all four subjects to earn the GED® credential.</p>
+
+ <div class="sh" id="finder"><span class="no">02</span><h2 data-i18n="finder_title">Where should I start?</h2></div>
+ <p data-i18n="finder_sub">Answer two quick questions.</p>
+ <div class="finder">
+  <div class="card t-blue" style="background:var(--c)">
+   <h3 data-i18n="q_subject">Which subject do you need first?</h3>
+   <div class="opts" data-q="subject">
+    <button type="button" data-v="rla" aria-pressed="false"><i>📖</i><span class="notranslate" translate="no">Reasoning Through Language Arts</span></button>
+    <button type="button" data-v="ss" aria-pressed="false"><i>🏛️</i><span class="notranslate" translate="no">Social Studies</span></button>
+    <button type="button" data-v="science" aria-pressed="false"><i>🔬</i><span class="notranslate" translate="no">Science</span></button>
+    <button type="button" data-v="math" aria-pressed="false"><i>➗</i><span class="notranslate" translate="no">Mathematical Reasoning</span></button>
+   </div>
+   <h3 style="margin-top:18px" data-i18n="q_conf">How confident are you in it?</h3>
+   <div class="opts" data-q="conf">
+    <button type="button" data-v="new" aria-pressed="false"><i>🌱</i><span data-i18n="conf_new">I am new to it</span></button>
+    <button type="button" data-v="some" aria-pressed="false"><i>🌿</i><span data-i18n="conf_some">I know some of it</span></button>
+    <button type="button" data-v="good" aria-pressed="false"><i>🌳</i><span data-i18n="conf_good">I am almost ready for the test</span></button>
+   </div>
+  </div>
+  <div id="advice" aria-live="polite" data-en></div>
+ </div>
+
+ <div class="sh" id="how"><span class="no">03</span><h2 data-i18n="how_title">How you learn here</h2></div>
+ <div class="grid feat">
+  <div class="card t-blue" style="background:var(--c)"><h3><span>📖</span><span data-i18n="f_read">Read</span></h3><p data-i18n="f_read_d">Each session has a reviewer with clear notes and weak and strong examples.</p></div>
+  <div class="card t-green" style="background:var(--c)"><h3><span>✏️</span><span data-i18n="f_practise">Practise</span></h3><p data-i18n="f_practise_d">The e-workbook goes from easy to challenge. After you submit, you see each answer and why.</p></div>
+  <div class="card t-peach" style="background:var(--c)"><h3><span>⏱️</span><span data-i18n="f_test">Test yourself</span></h3><p data-i18n="f_test_d">Take a short quiz in every session, and timed tests with a clock near the end.</p></div>
+  <div class="card t-lav" style="background:var(--c)"><h3><span>📈</span><span data-i18n="f_track">Track</span></h3><p data-i18n="f_track_d">See your sessions, scores, checklists and badges. Ms. Maria sees them too.</p></div>
+  <div class="card t-rose" style="background:var(--c)"><h3><span>🌐</span><span data-i18n="f_lang">Your language</span></h3><p data-i18n="f_lang_d">Menus in Arabic, Urdu, Bengali, Filipino, Malayalam, Sinhala and Tamil. More with Google Translate.</p></div>
+  <div class="card t-gold" style="background:var(--c)"><h3><span>📱</span><span data-i18n="f_app">Works on your phone</span></h3><p data-i18n="f_app_d">Install it like an app. Study on the bus, at break or at home.</p></div>
+ </div>
+
+ <div class="sh" id="teacher"><span class="no">04</span><h2 data-i18n="teacher_title">Your teacher</h2></div>
+ <div class="card teacher">
+  <div class="avatar" aria-hidden="true">M</div>
+  <div>
+   <h3 style="font-size:1.4rem;margin:0">Ms. Maria</h3>
+   <p class="muted" data-i18n="teacher_role">English Language Instructor</p>
+   <p data-i18n="teacher_text">Mistakes are how we learn here, so come and make some. Message me any time between sessions.</p>
+   <a class="btn soft sm" href="mailto:maria@me.learnovateqa.com?subject=The%20GED%20Academy" data-i18n="contact">Contact Ms. Maria</a>
+  </div>
+ </div>
+
+ <div class="end" data-en>
+  <h2>Twelve sessions. One step at a time.</h2>
+  <p>Read. Practise. Test yourself. Then do the next one.</p>
+  <a class="btn primary" href="rla/#/session/1"><span data-i18n="nav_start">Start learning</span> <span aria-hidden="true">→</span></a>
+ </div>
+</div>
+</main>
+
+<footer class="foot" data-en>
+ <div class="wrap">
+  <div><b style="font-size:1.1rem">The GED Academy</b><br><span class="small">Elevate with Ms. Maria · Learnovate</span><br><span class="small">© 2026 Elevate with Ms. Maria · Learnovate Qatar</span></div>
+  <div class="small"><a href="rla/">Reasoning Through Language Arts</a> · <a href="social-studies/">Social Studies</a> · <a href="#subjects">Science</a> · <a href="#subjects">Mathematical Reasoning</a><br><a href="rla/#/syllabus">Syllabus</a> · <a href="rla/#/help">Help</a> · <a href="teacher/">Teacher portal</a></div>
+  <p class="tm">GED® is a registered trademark. This site is not affiliated with or endorsed by GED Testing Service.</p>
+ </div>
+</footer>
+
+<script src="assets/i18n.js"></script>
+<script src="assets/core.js" data-sw="sw.js"></script>
+<script src="assets/subjects.js"></script>
+<script>
+(function () {
+  const { esc, t } = GED, MAIL = "maria@me.learnovateqa.com";
+  const mail = s => `mailto:${MAIL}?subject=${encodeURIComponent("Tell me when it opens: GED " + s.title)}`;
+  const grid = document.getElementById("subjGrid");
+  let path = "";
+  function draw() {
+    grid.innerHTML = SUBJECTS.filter(s => !path || s.status === path).map(s => {
+      const open = s.status === "open";
+      return `<div class="card subj t-${s.tone} ${open ? "" : "soon"}" style="background-color:var(--c)">
+        <span class="status chip">${open ? "🔑 " + esc(t("code_required")) : "⏳ " + esc(t("soon"))}</span>
+        <div class="hd"><span class="ic notranslate" translate="no" aria-hidden="true">${esc(s.icon)}</span><h3 class="notranslate" translate="no">${esc(s.title)}</h3></div>
+        <p style="margin:0">${esc(s.blurb)}</p>
+        <dl>
+          <div><dt>Test length</dt><dd><b>${esc(s.time)}</b><br>${esc(s.parts)}</dd></div>
+          <div><dt>Question types</dt><dd>${esc(s.types)}</dd></div>
+          <div><dt>Passing score</dt><dd><b>${esc(GED_PASS)}</b> or higher</dd></div>
+        </dl>
+        ${open ? `<a class="btn primary go" href="${s.href}">${esc(t("open_subject"))} <span aria-hidden="true">→</span></a>` : `<a class="btn soft go" href="${mail(s)}">${esc(t("notify"))}</a>`}
+      </div>`;
+    }).join("");
+  }
+  draw();
+  document.querySelectorAll("[data-path]").forEach(b => b.onclick = () => {
+    document.querySelectorAll("[data-path]").forEach(x => x.setAttribute("aria-pressed", x === b));
+    path = b.dataset.path; draw();
+  });
+
+  /* subject finder: two questions, one starting session */
+  const START = {
+    rla: { new: [1, "GED RLA introduction and diagnostic", "Learn how the test works. Then find your strong and weak skills."],
+           some: [2, "Reading for meaning", "Do the Session 1 diagnostic first if you can. Then build your reading skills."],
+           good: [11, "RLA master review and mixed practice", "Review everything. Then take the mock test in Session 12."] },
+    ss:  { new: [1, "GED Social Studies introduction and fundamentals", "Learn what the test expects. Then learn the four-step strategy."],
+           some: [2, "Civics and government I", "Civics and government is the biggest topic. Start there."],
+           good: [10, "Mixed practice test I", "Take a timed practice test. Then review your errors."] }
+  };
+  const ans = {}, S = id => SUBJECTS.find(s => s.id === id);
+  function advise() {
+    const box = document.getElementById("advice");
+    if (!ans.subject || !ans.conf) { box.innerHTML = `<div class="card" style="border-style:dashed;text-align:center;padding:40px 20px"><p style="font-size:2rem;margin:0" aria-hidden="true">🧭</p><p class="muted">${esc(t("finder_sub"))}</p></div>`; return; }
+    const s = S(ans.subject), again = `<button class="btn soft sm" type="button" id="again">${esc(t("start_over"))}</button>`;
+    if (s.status !== "open") {
+      box.innerHTML = `<div class="card t-${s.tone}" style="background:var(--c)"><p class="eyebrow">⏳ ${esc(t("soon"))}</p><h3 class="notranslate" translate="no">${esc(s.title)}</h3>
+        <p>This subject is not open yet. Start with Reasoning Through Language Arts now. Its reading skills help you in every GED subject.</p>
+        <div class="row"><a class="btn primary sm" href="rla/#/session/1">RLA · Session 1 <span aria-hidden="true">→</span></a><a class="btn soft sm" href="${mail(s)}">${esc(t("notify"))}</a>${again}</div></div>`;
+    } else {
+      const [n, title, why] = START[s.id][ans.conf];
+      box.innerHTML = `<div class="card t-rose" style="background:var(--c)"><p class="eyebrow">${esc(t("we_recommend"))}</p>
+        <div class="box t-${s.tone}" style="margin:10px 0"><b class="notranslate" translate="no">${esc(s.short)} · Session ${n}</b><br><span class="notranslate" translate="no">${esc(title)}</span><br><span class="small muted">🔑 ${esc(t("code_required"))}</span></div>
+        <p class="small">💡 ${esc(why)}</p>
+        <div class="row"><a class="btn primary sm" href="${s.href}#/session/${n}">${esc(t("open_subject"))} <span aria-hidden="true">→</span></a>${again}</div></div>`;
+    }
+    document.getElementById("again").onclick = () => { delete ans.subject; delete ans.conf; document.querySelectorAll(".opts button").forEach(b => b.setAttribute("aria-pressed", "false")); advise(); };
+  }
+  document.querySelectorAll(".opts").forEach(g => g.querySelectorAll("button").forEach(b => b.onclick = () => {
+    g.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); ans[g.dataset.q] = b.dataset.v; advise();
+  }));
+  advise();
+  document.addEventListener("ged-lang", () => { draw(); advise(); });
+})();
+</script>
+</body>
+</html>
