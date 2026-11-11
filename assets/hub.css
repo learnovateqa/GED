@@ -1,6 +1,6 @@
 /* ===== The GED Academy · study hub (shared by every subject) ===== */
 body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-.top{position:sticky;top:0;z-index:50;background:rgba(248,223,227,.95);backdrop-filter:blur(8px);border-bottom:1px solid #EFC9D2}
+.top{position:sticky;top:0;z-index:50;background:rgba(220,238,244,.95);backdrop-filter:blur(8px);border-bottom:1px solid #B9DAE5}
 .top .wrap{display:flex;align-items:center;gap:10px;min-height:62px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto;min-width:0}
 .logo img{width:38px;height:38px;border-radius:11px;flex:none}
@@ -35,7 +35,7 @@ a.srow:hover{border-color:var(--navy)}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:14px 0}
 .steps a{border:1.5px solid var(--line2);border-radius:13px;padding:8px 2px;text-align:center;font-size:.74rem;font-weight:600;min-height:58px;background:#fff;text-decoration:none;display:grid;align-content:center;line-height:1.2}
 .steps a i{font-style:normal;font-size:1.1rem;display:block}
-.steps a[aria-current]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.steps a[aria-current]{background:var(--brand-d);color:#fff;border-color:var(--brand-d)}
 .steps a.done:not([aria-current]){background:var(--ok-t);border-color:var(--green-b)}
 
 /* reviewer */

@@ -1,12 +1,12 @@
 /* ===== The GED Academy · shared theme (same colours as its sister site, The English Academy) ===== */
 :root{
- --navy:#1B2A4A;--ink2:#5D6780;--muted:#6B7488;--line:#E2E4EC;--line2:#C9CFDB;--paper:#FFFFFF;--soft:#FBF7F8;
- --pink:#F8DFE3;--pink-d:#E39AB6;
+ --navy:#1B2A4A;--ink2:#5D6780;--muted:#6B7488;--line:#E2E4EC;--line2:#C9CFDB;--paper:#FFFFFF;--soft:#F4FAFC;
+ --pink:#DCEEF4;--pink-d:#0183A8;--brand:#0183A8;--brand-d:#017A9C;
  --blue:#DCEBFA;--blue-b:#A8C7EA;--blue-s:#8DB4E2;
  --green:#DDF3E4;--green-b:#ABD6B6;--green-s:#8CCB9F;
  --peach:#FDE5D2;--peach-b:#F3C7A5;--peach-s:#EDAE7E;
  --lav:#E8E0F7;--lav-b:#C2B3E6;--lav-s:#A996DC;
- --rose:#F9DCE7;--rose-b:#EBB5C9;--rose-s:#E39AB6;
+ --rose:#D9EDF3;--rose-b:#9CCBDB;--rose-s:#0183A8;
  --gold:#FBF0C9;--gold-b:#DDB94F;
  --ok:#2F8F57;--ok-t:#E3F5EA;--bad:#C2410C;--bad-t:#FDEBE2;
  --r:18px;--shadow:0 10px 30px rgba(27,42,74,.10);
@@ -55,7 +55,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:9px 18px;border-radius:12px;border:1.5px solid var(--navy);background:#fff;color:var(--navy);font-weight:600;text-decoration:none;cursor:pointer;transition:transform .12s, box-shadow .12s;line-height:1.2;text-align:center}
 .btn:hover{transform:translateY(-1px);box-shadow:0 6px 16px rgba(27,42,74,.12)}
 .btn:active{transform:none}
-.btn.primary{background:var(--navy);color:#fff}
+.btn.primary{background:var(--brand-d);border-color:var(--brand-d);color:#fff}
 .btn.soft{border-color:var(--line2);background:#fff}
 .btn.pink{background:var(--rose);border-color:var(--rose-b)}
 .btn.sm{min-height:38px;padding:6px 12px;font-size:.88rem;border-radius:10px}
@@ -86,7 +86,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 /* progress */
 .bar{height:10px;border-radius:999px;background:#EEF0F5;overflow:hidden}
 .bar>i{display:block;height:100%;width:var(--w,0%);background:var(--s,var(--blue-s));border-radius:999px;transition:width .6s}
-.ring{--p:0;width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--rose-s) calc(var(--p)*1%),#F1E7EA 0);display:grid;place-items:center;flex:none}
+.ring{--p:0;width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--rose-s) calc(var(--p)*1%),#E3EEF2 0);display:grid;place-items:center;flex:none}
 .ring>div{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;line-height:1.05}
 .ring b{font-size:1.6rem}
 .ring small{display:block;font-size:.62rem;letter-spacing:.12em;color:var(--muted)}
