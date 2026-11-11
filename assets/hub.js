@@ -9,6 +9,12 @@
   const LEVELS = [["easy", "Easy", "green"], ["guided", "Guided", "blue"], ["application", "Application", "peach"], ["challenge", "Challenge", "lav"]];
   const TYPE = { mc: "Multiple choice", dropdown: "Drop-down", fill: "Fill in the blank", drag: "Drag and drop", hotspot: "Hot spot (select an area)" };
   const LESSON = {};
+  /* each subject has its own look (colours come from its config.js) */
+  if (CFG.THEME) {
+    const r = document.documentElement.style, T = CFG.THEME;
+    r.setProperty("--pink", T.bg); r.setProperty("--pink-line", T.line); r.setProperty("--tint", T.tint); r.setProperty("--tint-b", T.tintLine);
+    const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = T.bg;
+  }
 
   /* ---------- who is signed in, and their saved work ---------- */
   const API = {
@@ -220,12 +226,16 @@
   function pageHome() {
     const done = doneCount(), next = COURSE.sessions.find(s => ready(s.n) && !partsDone(s.n).checklist) || COURSE.sessions[0];
     main.innerHTML = `${preview()}
-      <p class="eyebrow">The GED Academy</p><h1>${esc(CFG.COURSE)}</h1>
-      <p>${auth ? `Welcome, <b class="en">${esc(auth.name)}</b>. ` : ""}${esc(COURSE.tagline)}</p>
-      <div class="card t-rose" style="background:var(--c);display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:14px 0">
+      <section class="shero">
+        <a class="backl" href="../"><span aria-hidden="true">←</span> The GED Academy · all subjects</a>
+        <h1>${esc(CFG.COURSE)}</h1>
+        ${CFG.THEME && CFG.THEME.motto ? `<p class="motto">${esc(CFG.THEME.motto)}</p>` : ""}
+        <p class="lede">${auth ? `Welcome, <b class="en">${esc(auth.name)}</b>. ` : ""}${esc(COURSE.tagline)} GED® test preparation with Ms. Maria.</p>
+        <div class="row" style="margin-top:14px"><a class="btn primary" href="#/session/${next.n}">${done || partsDone(next.n).reviewer ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a><a class="btn" href="#/syllabus">${esc(t("syllabus"))}</a></div>
+      </section>
+      <div class="card pcard">
         <div class="ring" style="--p:${Math.round(done / CFG.SESSIONS * 100)}"><div><b>${done}/${CFG.SESSIONS}</b><small>SESSIONS</small></div></div>
-        <div style="flex:1;min-width:200px"><h3 style="margin:0">${done ? "Keep going" : "Start here"}</h3><p style="margin:4px 0 10px">Session ${next.n}: ${esc(next.title)}</p>
-        <a class="btn primary" href="#/session/${next.n}">${done || partsDone(next.n).reviewer ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a></div>
+        <div style="flex:1;min-width:200px"><h3 style="margin:0">${done ? "Keep going" : "Your next step"}</h3><p style="margin:4px 0 0">Session ${next.n}: ${esc(next.title)}</p><p class="small muted" style="margin:2px 0 0">${done} of ${CFG.SESSIONS} sessions complete</p></div>
       </div>
       <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">${COURSE.facts.map((f, i) => `<div class="pillar t-${tone(i + 1)}"><small>${esc(f[0])}</small><b>${esc(f[1])}</b><br><span class="small">${esc(f[2])}</span></div>`).join("")}</div>
       <p class="small muted" style="margin-top:6px">Test facts are from ged.com.</p>

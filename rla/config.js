@@ -8,5 +8,7 @@ window.CFG = {
   SHORT: "RLA",
   TEACHER: "Ms. Maria",
   EMAIL: "maria@me.learnovateqa.com",
-  SESSIONS: 12
+  SESSIONS: 12,
+  /* this subject's own look: header and welcome colour, its line colour, and the colour of small tags */
+  THEME: { bg: "#F8DFE3", line: "#EFC9D2", tint: "#F9DCE7", tintLine: "#EBB5C9", motto: "Read. Reason. Write." }
 };

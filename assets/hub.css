@@ -1,6 +1,6 @@
 /* ===== The GED Academy · study hub (shared by every subject) ===== */
 body{padding-bottom:calc(76px + env(safe-area-inset-bottom))}
-.top{position:sticky;top:0;z-index:50;background:rgba(220,238,244,.95);backdrop-filter:blur(8px);border-bottom:1px solid #B9DAE5}
+.top{position:sticky;top:0;z-index:50;background:var(--pink);border-bottom:1px solid var(--pink-line,#B9DAE5)}
 .top .wrap{display:flex;align-items:center;gap:10px;min-height:62px}
 .logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto;min-width:0}
 .logo img{width:38px;height:38px;border-radius:11px;flex:none}
@@ -149,3 +149,12 @@ body.nofs-scroll{overflow:hidden}
 html[dir=rtl] .dbar{direction:ltr}
 .cframe{position:relative;width:100%;aspect-ratio:16/9;border:1.5px solid var(--navy);border-radius:18px;overflow:hidden;background:var(--soft)}
 .cframe iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+/* ---------- each subject's own welcome page ---------- */
+.shero{background:var(--pink);border:1.5px solid var(--pink-line,#B9DAE5);border-radius:22px;padding:22px 22px 26px;margin-bottom:16px}
+.shero h1{font-size:clamp(1.9rem,6vw,2.8rem);margin:10px 0 6px}
+.shero .motto{font-size:1.1rem;font-weight:600;margin:0 0 6px}
+.shero .lede{color:#2E3B5C;max-width:52ch}
+.backl{display:inline-flex;align-items:center;gap:6px;background:#fff;border:1.5px solid var(--pink-line,#B9DAE5);border-radius:999px;padding:6px 14px;min-height:38px;font-size:.84rem;font-weight:600;text-decoration:none}
+.backl:hover{border-color:var(--navy)}
+.pcard{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
+@media (max-width:520px){.shero{margin:-18px -16px 16px;border-radius:0 0 22px 22px;border-width:0 0 1.5px;padding:16px 16px 22px}}
