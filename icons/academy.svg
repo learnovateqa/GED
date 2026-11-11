@@ -1,9 +1,18 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
- <rect width="512" height="512" rx="112" fill="#DCEEF4"/>
- <path d="M256 92 L452 178 L256 264 L60 178 Z" fill="#0183A8"/>
- <path d="M140 226 V318 C140 352 372 352 372 318 V226 L256 278 Z" fill="#fff" stroke="#1B2A4A" stroke-width="18" stroke-linejoin="round"/>
- <path d="M430 190 V292" stroke="#1B2A4A" stroke-width="16" stroke-linecap="round"/><circle cx="430" cy="308" r="20" fill="#EDAE7E"/>
- <text x="256" y="446" text-anchor="middle" font-family="Poppins, 'Segoe UI', Arial, sans-serif" font-weight="700" font-size="92" fill="#1B2A4A">GED</text>
- <g transform="translate(74 420)"><circle r="14" cx="0" fill="#8DB4E2"/><circle r="14" cx="0" cy="-40" fill="#8CCB9F"/></g>
- <g transform="translate(438 420)"><circle r="14" cx="0" fill="#A996DC"/><circle r="14" cx="0" cy="-40" fill="#EDAE7E"/></g>
+ <defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0E9CC4"/><stop offset="1" stop-color="#016585"/></linearGradient>
+  <linearGradient id="pg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFFFFF"/><stop offset="1" stop-color="#DCEEF4"/></linearGradient>
+ </defs>
+ <rect width="512" height="512" rx="112" fill="url(#bg)"/>
+ <!-- open book -->
+ <path d="M256 344 C214 314 150 308 96 324 V424 C150 408 214 414 256 444 Z" fill="url(#pg)"/>
+ <path d="M256 344 C298 314 362 308 416 324 V424 C362 408 298 414 256 444 Z" fill="url(#pg)"/>
+ <path d="M256 344 V444" stroke="#016585" stroke-width="8" stroke-linecap="round"/>
+ <path d="M130 352 C166 346 204 352 230 366 M130 384 C166 378 204 384 230 398 M382 352 C346 346 308 352 282 366 M382 384 C346 378 308 384 282 398" stroke="#7FC0D6" stroke-width="9" stroke-linecap="round" fill="none"/>
+ <!-- graduation cap -->
+ <path d="M160 212 V262 C160 300 352 300 352 262 V212 L256 252 Z" fill="#CFE7EF"/>
+ <path d="M256 78 L460 162 L256 246 L52 162 Z" fill="#FFFFFF"/>
+ <path d="M256 162 L412 176 V250" stroke="#F6B47B" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+ <path d="M398 250 h28 l8 52 a6 6 0 0 1 -6 7 h-32 a6 6 0 0 1 -6 -7 Z" fill="#F6B47B"/>
+ <circle cx="256" cy="162" r="13" fill="#F6B47B"/>
 </svg>
