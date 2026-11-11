@@ -15,7 +15,7 @@ def block(b):
     if "flow" in b: return '<div class="flow">' + '<i>→</i>'.join(f"<span>{html.escape(x)}</span>" for x in b["flow"]) + "</div>"
     if "passage" in b: return f'<div class="pass"><b class="lab">{html.escape(b.get("title","Passage"))}</b>{fmt(b["passage"])}</div>'
     if "question" in b: return f"<p><b>Question:</b> {fmt(b['question'])}</p>"
-    if "weak" in b: return f'<div class="box weak"><b class="lab">✗ Weak {html.escape(b.get("label","answer"))}</b>{fmt(b["weak"])}' + (f'<small>{fmt(b["note"])}</small>' if b.get("note") else "") + "</div>"
+    if "weak" in b: return f'<div class="box weak"><b class="lab">X Weak {html.escape(b.get("label","answer"))}</b>{fmt(b["weak"])}' + (f'<small>{fmt(b["note"])}</small>' if b.get("note") else "") + "</div>"
     if "strong" in b: return f'<div class="box strong"><b class="lab">✓ Strong {html.escape(b.get("label","answer"))}</b>{fmt(b["strong"])}' + (f'<small>{fmt(b["note"])}</small>' if b.get("note") else "") + "</div>"
     if "remember" in b: return f'<div class="box gold"><b class="lab">Remember this</b>{fmt(b["remember"])}</div>'
     if "mistake" in b: return f'<div class="box peach"><b class="lab">Common mistake</b>{fmt(b["mistake"])}</div>'
