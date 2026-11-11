@@ -225,14 +225,13 @@
 
   function pageHome() {
     const done = doneCount(), next = COURSE.sessions.find(s => ready(s.n) && !partsDone(s.n).checklist) || COURSE.sessions[0];
-    main.innerHTML = `${preview()}
-      <section class="shero">
+    main.innerHTML = `<section class="shero">
         <a class="backl" href="../"><span aria-hidden="true">←</span> The GED Academy · all subjects</a>
         <h1>${esc(CFG.COURSE)}</h1>
         ${CFG.THEME && CFG.THEME.motto ? `<p class="motto">${esc(CFG.THEME.motto)}</p>` : ""}
         <p class="lede">${auth ? `Welcome, <b class="en">${esc(auth.name)}</b>. ` : ""}${esc(COURSE.tagline)} GED® test preparation with Ms. Maria.</p>
         <div class="row" style="margin-top:14px"><a class="btn primary" href="#/session/${next.n}">${done || partsDone(next.n).reviewer ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a><a class="btn" href="#/syllabus">${esc(t("syllabus"))}</a></div>
-      </section>
+      </section>${preview()}
       <div class="card pcard">
         <div class="ring" style="--p:${Math.round(done / CFG.SESSIONS * 100)}"><div><b>${done}/${CFG.SESSIONS}</b><small>SESSIONS</small></div></div>
         <div style="flex:1;min-width:200px"><h3 style="margin:0">${done ? "Keep going" : "Your next step"}</h3><p style="margin:4px 0 0">Session ${next.n}: ${esc(next.title)}</p><p class="small muted" style="margin:2px 0 0">${done} of ${CFG.SESSIONS} sessions complete</p></div>
