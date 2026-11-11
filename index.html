@@ -58,6 +58,10 @@
 .subj dd{margin:0;font-size:.9rem}
 .subj dd b{font-size:1.02rem}
 .subj .go{margin-top:auto}
+/* four equal boxes: 2 x 2 on wide screens, one column on a phone; the inner boxes line up across each row */
+#subjGrid{grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:700px){#subjGrid{grid-template-columns:1fr}}
+@supports (grid-template-rows:subgrid){.subj{display:grid;grid-template-rows:subgrid;grid-row:span 7;gap:8px}.subj dl{display:contents}.subj .status{justify-self:start}.subj .go{margin-top:0;align-self:end}}
 .subj.soon{background:repeating-linear-gradient(135deg,var(--c),var(--c) 14px,#fff0 14px,#fff0 15px),var(--c)}
 .subj .status{align-self:flex-start;background:#fff}
 .finder{display:grid;grid-template-columns:1fr 1.2fr;gap:20px;align-items:start}
@@ -128,7 +132,7 @@
   <button type="button" data-path="open" aria-pressed="false" data-i18n="f_open">Open now</button>
   <button type="button" data-path="soon" aria-pressed="false" data-i18n="f_soon">Coming soon</button>
  </div>
- <div class="grid" id="subjGrid" data-en style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr))"></div>
+ <div class="grid" id="subjGrid" data-en></div>
  <p class="small muted" style="margin-top:10px">Test facts are from ged.com. You need 145 or higher on all four subjects to earn the GED® credential.</p>
 
  <div class="sh" id="finder"><span class="no">02</span><h2 data-i18n="finder_title">Where should I start?</h2></div>

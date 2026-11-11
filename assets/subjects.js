@@ -16,7 +16,7 @@ window.SUBJECTS = [
     time: "90 minutes", parts: "No break · on-screen calculator",
     types: "Multiple choice, fill in the blank, drag and drop, select an area (hot spot), drop-down" },
   { id: "math", title: "Mathematical Reasoning", short: "Math", tone: "lav", status: "soon", icon: "➗",
-    blurb: "Basic math, geometry, basic algebra, graphs and functions.",
-    time: "115 minutes", parts: "2 parts · 3-minute break · calculator on part 2 · formula sheet given",
+    blurb: "Basic math, geometry, basic algebra, graphs and functions. You get a formula sheet in the test.",
+    time: "115 minutes", parts: "2 parts · 3-minute break · calculator on part 2",
     types: "Multiple choice, drag and drop, fill in the blank, select an area (hot spot), drop-down" }
 ];

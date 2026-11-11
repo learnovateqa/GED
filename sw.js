@@ -1,6 +1,6 @@
 /* The GED Academy · offline support.
    If you change the app files, change the CACHE name (for example ged-v2) so phones load the new version. */
-const CACHE = "ged-v4";
+const CACHE = "ged-v5";
 const CORE = ["./", "./index.html", "./manifest.webmanifest", "./icons/academy.svg", "./icons/icon-192.png",
   "./assets/academy.css", "./assets/hub.css", "./assets/i18n.js", "./assets/core.js", "./assets/subjects.js", "./assets/hub.js",
   "./rla/", "./rla/index.html", "./rla/config.js", "./rla/data.js",
