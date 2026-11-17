@@ -121,6 +121,7 @@ function doPost(e) {
     if (b.action === 'teacher') return out_(teacher_(b));
     if (b.action === 'keys') return out_(keys_(b));
     if (b.action === 'students') return out_(students_(b));
+    if (b.action === 'quizkey') { const ok = teacherOk_(b.password); if (ok !== 'ok') return out_({ ok: false, error: ok }); const k = key_(String(b.program) + '-' + (Number(b.session) || 0)); return out_(k ? { ok: true, key: k } : { ok: false, error: 'nokey' }); }
     const code = code_(b.code), st = student_(code);
     if (!st) return out_({ ok: false, error: 'code' });
     const prog = SUBJECTS[b.program] ? b.program : '';

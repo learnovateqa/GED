@@ -165,3 +165,6 @@ html[dir=rtl] .dbar{direction:ltr}
 .qclock.low span:first-child::after{content:" · less than 5 minutes"}
 @media (max-width:400px){.top .logo{min-width:44px;justify-content:center}.top .logo span{display:none}.top .wrap{gap:6px}#signBtn{max-width:none}}
 @media (max-width:400px){.steps{grid-template-columns:repeat(3,1fr)}.lvl{position:static;display:grid;grid-template-columns:1fr 1fr;overflow:visible}}
+.teachbar{background:var(--navy);color:#fff;font-size:.9rem}
+.teachbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.teachbar .btn{background:#fff}

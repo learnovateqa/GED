@@ -21,7 +21,9 @@
     on: () => /^https:\/\/script\.google\.com\//.test(CFG.API || "") || /^http:\/\/localhost/.test(CFG.API || ""),
     async post(body) { const r = await fetch(CFG.API, { method: "POST", body: JSON.stringify(Object.assign({ program: CFG.ID }, body)) }); return r.json(); }
   };
-  let auth = store.get("auth", null);                       /* { code, name } — one sign-in for every subject */
+  /* Teacher view: the teacher portal opens sessions in this same tab. No sign-in, nothing is saved or sent. */
+  const TEACH = (() => { try { return sessionStorage.getItem("ged-teacher") || ""; } catch (e) { return ""; } })();
+  let auth = TEACH ? { code: "TEACHER", name: "Teacher view" } : store.get("auth", null);                       /* { code, name } — one sign-in for every subject */
   const who = () => (auth ? auth.code : "guest");
   const K = k => CFG.ID + ":" + who() + ":" + k;
   let state = store.get(K("state"), { s: {} });
@@ -32,7 +34,7 @@
   /* Everything a student does is sent to Ms. Maria's grade book without a button.
      If the phone is offline, the message waits in a queue and goes when the internet is back. */
   function send(msg) {
-    if (!API.on() || !auth) return;
+    if (!API.on() || !auth || TEACH) return;
     const box = store.get("outbox", []); box.push(Object.assign({ program: CFG.ID, code: auth.code, name: auth.name, at: new Date().toISOString() }, msg));
     store.set("outbox", box); flush();
   }
@@ -192,13 +194,22 @@
     if (it.type === "drag") return it.targets.map((x, k) => x + ": " + it.items.filter((_, j) => it.answer[j] === k).join(", ")).join("\n");
   }
   /* after Submit: lock the question, mark it with a tick or cross (never colour alone), show the answer and WHY */
+  const keyAnswer = (it, k) => {
+    k = k === undefined ? (it.type === "dropdown" ? it.blanks.map(b => b.answer) : it.type === "fill" ? it.blanks.map(b => b.accept) : it.answer) : k;
+    if (it.type === "fill") { it = Object.assign({}, it, { blanks: it.blanks.map((b, j) => Object.assign({}, b, { accept: k[j] })) }); return [it, k.map(x => x[0])]; }
+    if (it.type === "dropdown") { it = Object.assign({}, it, { blanks: it.blanks.map((b, j) => Object.assign({}, b, { answer: k[j] })) }); return [it, k]; }
+    return [Object.assign({}, it, { answer: k }), k];
+  };
+  function teacherShow(prefix, items, keys) {
+    items.forEach((it0, i) => { const q = $("#" + prefix + i); if (!q || q.classList.contains("locked")) return; const [it, a] = keyAnswer(it0, keys ? keys[i] : undefined); write(q, it, a); reveal(q, it, a); });
+  }
   function reveal(q, it, a) {
     const ok = correct(it, a), M = (good, txt) => `<span class="mark ${good ? "ok" : "bad"}" aria-hidden="true">${good ? "✓" : "✗"}</span><span class="sr">${good ? "Correct" : "Wrong"}${txt ? ": " + txt : ""}</span>`;
     q.classList.add("locked");
     q.querySelectorAll("input,select").forEach(x => { x.disabled = true; });
     if (it.type === "mc") q.querySelectorAll(".opt").forEach(l => {
       const k = +l.querySelector("input").value;
-      if (k === it.answer) { l.classList.add("is-ok"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(true)} ${k === a ? "Your answer · correct" : "Correct answer"}</span>`); }
+      if (k === it.answer) { l.classList.add("is-ok"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(true)} ${k === a && !TEACH ? "Your answer · correct" : "Correct answer"}</span>`); }
       else if (k === a) { l.classList.add("is-bad"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(false)} Your answer</span>`); }
     });
     if (it.type === "hotspot") q.querySelectorAll(".hot button").forEach(b => { const k = +b.dataset.k; if (k === it.answer) { b.classList.add("is-ok"); b.insertAdjacentHTML("beforeend", " ✓"); } else if (k === a) { b.classList.add("is-bad"); b.insertAdjacentHTML("beforeend", " ✗"); } });
@@ -206,7 +217,7 @@
     if (it.type === "fill") q.querySelectorAll("input[data-b]").forEach((x, j) => { const g = it.blanks[j].accept.map(norm).includes(norm(a && a[j])); x.classList.add(g ? "is-ok" : "is-bad"); x.insertAdjacentHTML("afterend", " " + M(g) + " "); });
     if (it.type === "drag") q.querySelectorAll(".chipb").forEach(c => { const k = +c.dataset.k, g = a && a[k] === it.answer[k]; c.classList.add(g ? "is-ok" : "is-bad"); c.insertAdjacentHTML("beforeend", g ? " ✓" : " ✗"); c.disabled = true; });
     q.querySelector("[data-fb]").innerHTML = `<div class="why ${ok ? "" : "bad"}"><b class="ans">${M(ok)} ${ok ? "Correct." : answered(it, a) ? "Not correct." : "No answer."}</b>
-      ${ok && it.type === "mc" ? "" : `<span class="ans en"><b>Answer:</b> ${fmt(keyText(it))}</span>`}<span><b>Why:</b> ${fmt(it.why || "")}</span></div>`;
+      ${ok && it.type === "mc" ? "" : `<span class="ans en"><b>Answer:</b> ${fmt(keyText(it))}</span>`}${it.why ? `<span><b>Why:</b> ${fmt(it.why)}</span>` : ""}${TEACH && it.skill ? `<span class="small muted" style="display:block">Skill: ${esc(it.skill)}</span>` : ""}</div>`;
     return ok;
   }
 
@@ -296,6 +307,7 @@
       if (on) deck.focus();
     };
     $("#dFull").onclick = () => full(!deck.classList.contains("fs"));
+    if (/\/present$/.test(location.hash)) setTimeout(() => full(true), 50);
     document.onfullscreenchange = () => { if (!document.fullscreenElement && deck.classList.contains("fs")) full(false); };
     show(i);
   }
@@ -361,6 +373,11 @@
       $("#wbEnd").innerHTML = `<div class="row" style="margin-top:14px"><button class="btn soft" type="button" id="wbAgain">Try the workbook again</button><a class="btn primary" href="#/session/${n}/quiz" style="flex:1">Go to the quiz <span aria-hidden="true">→</span></a></div>`;
       main.querySelectorAll("#wbAgain,[data-again]").forEach(b => b.onclick = () => { store.del(K("wbA" + n)); store.del(K("wbD" + n)); pageWorkbook(L); window.scrollTo(0, 0); });
     }
+    if (TEACH) {
+      $("#wbTop").innerHTML = `<div class="box t-gold">🎓 <b>Teacher view.</b> Go through the questions with the class, then show the answers and the reasons.</div><button class="btn primary" type="button" id="tShow">Show all answers</button>`;
+      $("#tShow").onclick = () => { teacherShow("w", items); $("#tShow").remove(); };
+      wire(form); return;
+    }
     if (review) { showKey(last, res); return; }
     if (res) $("#wbTop").innerHTML = `<div class="box t-blue">Your last workbook score: <b>${res.score} / ${res.total}</b>. You can do the workbook again here.</div>`;
     wire(form, () => store.set(K("wbD" + n), collect()));
@@ -390,6 +407,18 @@
   }
   function pageQuiz(L, fresh) {
     const n = L.n, tries = ss(n).quiz || [], top = `${head(L)}${stepsBar(n, "quiz")}`;
+    if (TEACH) {
+      main.innerHTML = `${top}<div class="box t-gold">🎓 <b>Teacher view.</b> ${L.quiz.length} questions. Students have ${L.quizMinutes || Math.ceil(L.quiz.length * 1.5)} minutes and see only their score. The answers below come from your grade book.</div>
+        <button class="btn primary" type="button" id="tKey">Show the answers</button><p class="err" id="tErr" role="alert"></p>
+        <form id="qz">${L.quiz.map((it, i) => qHTML(it, i, L.quiz.length, "z")).join("")}</form>`;
+      wire($("#qz"));
+      $("#tKey").onclick = async () => {
+        const b = $("#tKey"); b.disabled = true; b.innerHTML = '<span class="wait">Getting the answers…</span>';
+        try { const r = await API.post({ action: "quizkey", password: TEACH, session: n }); if (!r.ok) throw new Error(r.error); teacherShow("z", L.quiz, r.key); b.remove(); }
+        catch (e) { b.disabled = false; b.textContent = "Show the answers"; $("#tErr").textContent = e.message === "nokey" ? "This quiz's answer key is not in the grade book yet. Import quiz-keys.json in the teacher portal." : "Could not get the answers. Sign in to the teacher portal again, then try."; }
+      };
+      return;
+    }
     if (!API.on() || !auth) {
       main.innerHTML = `${top}<div class="box t-gold"><b>The short quiz is not open yet.</b><br>The quiz is marked by Ms. Maria's grade book. It opens when the grade book is connected and you are signed in.</div><a class="btn primary" style="width:100%" href="#/session/${n}/checklist">Go to the checklist <span aria-hidden="true">→</span></a>`; return;
     }
@@ -506,13 +535,18 @@
     const h = location.hash.replace(/^#\/?/, "").split("/"), page = h[0] || "home";
     document.querySelectorAll(".tabs a, .navl a").forEach(a => { const p = a.getAttribute("href").replace(/^#\/?/, "") || "home"; (p === page || (p === "sessions" && page === "session")) ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
     if (API.on() && !auth && page !== "help" && page !== "syllabus") return gate();
+    if (TEACH && !document.getElementById("teachBar")) {
+      const bar = document.createElement("div"); bar.id = "teachBar"; bar.className = "teachbar notranslate"; bar.setAttribute("translate", "no");
+      bar.innerHTML = `<div class="wrap"><span>🎓 <b>Teacher view</b> · nothing is saved</span><a class="btn sm" href="../teacher/#teach">← Teacher portal</a></div>`;
+      document.body.insertBefore(bar, document.body.firstChild);
+    }
     if (page === "session") {
       const n = +h[1], s = sess(n);
       if (!s) { location.hash = "#/sessions"; return; }
       if (!ready(n)) { main.innerHTML = `<p class="eyebrow">${esc(CFG.COURSE)}</p><h1>Session ${n}: ${esc(s.title)}</h1><div class="box t-gold">⏳ <b>This session opens soon.</b> Ms. Maria will tell you when it is ready.</div><ul>${s.topics.map(x => `<li>${esc(x)}</li>`).join("")}</ul><a class="btn soft" href="#/sessions">All sessions</a>`; GED.apply(main); return; }
       main.innerHTML = `<div class="loader"><span class="ldots"><i></i><i></i><i></i><i></i></span><p>Opening Session ${n}…</p></div>`;
       let L; try { L = await lesson(n); await canvaReady; } catch (e) { main.innerHTML = `<div class="box t-peach">This session did not load. Check your internet and try again.</div>`; return; }
-      ({ slides: L.slides || canvaFor(n) ? pageSlides : pageReviewer, reviewer: pageReviewer, workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || (L.slides || canvaFor(n) ? pageSlides : pageReviewer))(L);
+      ({ present: L.slides ? pageSlides : pageReviewer, slides: L.slides || canvaFor(n) ? pageSlides : pageReviewer, reviewer: pageReviewer, workbook: pageWorkbook, quiz: pageQuiz, checklist: pageChecklist }[h[2]] || (L.slides || canvaFor(n) ? pageSlides : pageReviewer))(L);
     } else ({ home: pageHome, sessions: pageSessions, me: pageMe, syllabus: pageSyllabus, help: pageHelp }[page] || pageHome)();
     GED.apply(main); main.focus({ preventScroll: true });
   }

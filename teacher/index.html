@@ -32,6 +32,13 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
 .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
 .err{color:var(--bad);font-weight:600}
 .ptabs{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.tsess{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin:8px 0}
+.tsess.off{opacity:.6}
+.ctimer{position:fixed;inset:0;z-index:300;background:var(--navy);color:#fff;display:grid;place-items:center;align-content:center;cursor:pointer;user-select:none}
+.ctimer .ct{font-size:min(34vw,40vh);font-weight:700;line-height:1;font-variant-numeric:tabular-nums}
+.ctimer .cs{font-size:1.2rem;opacity:.85}
+.ctimer.low{background:#B4530E}.ctimer.done{background:var(--bad)}
+.ctimer .cx{position:absolute;top:16px;right:16px;background:#fff;color:var(--navy)}
 .ptabs button{border:1.5px solid var(--line2);background:#fff;border-radius:999px;padding:8px 16px;min-height:44px;font-weight:600;cursor:pointer}
 .ptabs button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
 .mtab td{vertical-align:middle}
@@ -81,11 +88,12 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   const doneOf = (code, subj) => { const p = D.progress.find(x => x.code === code && x.subject === subj); return p ? Number(p.done) || 0 : 0; };
   const best = xs => xs.length ? xs.reduce((a, b) => (b.score / b.total > a.score / a.total ? b : a)) : null;
 
-  let view = "results";
+  let view = location.hash === "#teach" ? "teach" : "results";
   function draw() {
     $("#out").hidden = false;
-    const tabs = `<nav class="ptabs" aria-label="Teacher portal"><button type="button" data-v="results" aria-pressed="${view === "results"}">📊 Results</button><button type="button" data-v="manage" aria-pressed="${view === "manage"}">👤 Manage students</button></nav>`;
+    const tabs = `<nav class="ptabs" aria-label="Teacher portal"><button type="button" data-v="teach" aria-pressed="${view === "teach"}">🎓 Teach</button><button type="button" data-v="results" aria-pressed="${view === "results"}">📊 Results</button><button type="button" data-v="manage" aria-pressed="${view === "manage"}">👤 Manage students</button></nav>`;
     if (view === "manage") { manage(tabs); return; }
+    if (view === "teach") { teach(tabs); return; }
     main.innerHTML = `${tabs}<h1>Results</h1>
       <div class="kpi">
         <div class="pillar t-blue"><small>STUDENTS</small><b>${D.students.length}</b></div>
@@ -115,6 +123,43 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
       catch (err) { $("#km").textContent = "This file did not work. Choose quiz-keys.json."; }
     };
     rows();
+  }
+  /* ---------- teach: open any session as the teacher (no sign-in, nothing saved), and a class timer ---------- */
+  const SUBJECTS_T = [["rla", "Reasoning Through Language Arts"], ["social-studies", "Social Studies"]];
+  let tSubj = "rla"; const COURSES = {};
+  async function course(dir) {
+    if (!COURSES[dir]) { const txt = await (await fetch("../" + dir + "/data.js", { cache: "no-cache" })).text(); COURSES[dir] = new Function("var window={};" + txt + ";return window.COURSE;")(); }
+    return COURSES[dir];
+  }
+  async function teach(tabs) {
+    main.innerHTML = `${tabs}<h1>Teach</h1><p>Open any session to teach it. You do not need a student code, and nothing you do here is saved as student work.</p>
+      <div class="ptabs" role="group" aria-label="Subject">${SUBJECTS_T.map(s => `<button type="button" data-s="${s[0]}" aria-pressed="${tSubj === s[0]}">${esc(s[1])}</button>`).join("")}</div>
+      <div id="tList"><p class="wait">Loading sessions…</p></div>
+      <div class="sh"><span class="no">⏱</span><h2>Class timer</h2></div>
+      <div class="card t-gold" style="background:var(--c)"><div class="row">${[1, 3, 5, 10, 15, 20, 45].map(m => `<button class="btn sm" type="button" data-m="${m}">${m} min</button>`).join("")}</div>
+      <p class="small" style="margin:8px 0 0">The timer opens full screen. Tap it to pause. Press ✕ to close.</p></div>`;
+    tabsWire();
+    main.querySelectorAll("[data-s]").forEach(b => b.onclick = () => { tSubj = b.dataset.s; teach(tabs); });
+    main.querySelectorAll("[data-m]").forEach(b => b.onclick = () => timer(+b.dataset.m));
+    try {
+      const C = await course(tSubj), ready = C.ready || [];
+      $("#tList").innerHTML = C.sessions.map(s => {
+        const ok = ready.includes(s.n), base = `../${tSubj}/#/session/${s.n}`;
+        return `<div class="card tsess ${ok ? "" : "off"}"><div><b>Session ${s.n} · ${esc(s.title)}</b><br><span class="small muted">${esc(s.sub || "")}</span></div>
+          ${ok ? `<div class="row"><a class="btn sm primary" href="${base}/present">🖥️ Present slides</a><a class="btn sm" href="${base}/reviewer">📖 Reviewer</a><a class="btn sm" href="${base}/workbook">✏️ Workbook + answers</a><a class="btn sm" href="${base}/quiz">📝 Quiz + answers</a></div>` : `<span class="small muted">Not built yet</span>`}</div>`;
+      }).join("");
+    } catch (e) { $("#tList").innerHTML = `<p class="err">The sessions did not load. Check your internet.</p>`; }
+  }
+  function timer(mins) {
+    let left = mins * 60, run = true, last = Date.now();
+    const el = document.createElement("div"); el.className = "ctimer"; el.setAttribute("role", "timer");
+    el.innerHTML = `<button class="iconbtn cx" type="button" aria-label="Close timer">✕</button><div class="ct" aria-live="off"></div><p class="cs">Tap to pause</p>`;
+    document.body.appendChild(el);
+    const draw = () => { el.querySelector(".ct").textContent = Math.floor(left / 60) + ":" + String(left % 60).padStart(2, "0"); el.classList.toggle("low", left <= 60); el.classList.toggle("done", left === 0); el.querySelector(".cs").textContent = left === 0 ? "Time is up" : run ? "Tap to pause" : "Paused · tap to continue"; };
+    const iv = setInterval(() => { if (run && left > 0) { const now = Date.now(); if (now - last >= 1000) { left = Math.max(0, left - Math.round((now - last) / 1000)); last = now; draw(); } } else last = Date.now(); }, 200);
+    el.onclick = e => { if (e.target.closest(".cx")) { clearInterval(iv); el.remove(); try { document.exitFullscreen && document.fullscreenElement && document.exitFullscreen(); } catch (x) {} return; } run = !run; last = Date.now(); draw(); };
+    try { el.requestFullscreen && el.requestFullscreen().catch(() => {}); } catch (x) {}
+    draw();
   }
   function tabsWire() { main.querySelectorAll(".ptabs [data-v]").forEach(b => b.onclick = () => { view = b.dataset.v; draw(); }); }
   /* ---------- manage students: add (codes are made by the grade book), edit, new code, stop ---------- */
