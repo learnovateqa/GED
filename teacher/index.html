@@ -31,6 +31,13 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
 .det h4{margin:10px 0 4px;font-size:.92rem}.det table{font-size:.84rem;background:#fff;border:1px solid var(--line)}
 .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:10px;margin:12px 0}
 .err{color:var(--bad);font-weight:600}
+.ptabs{display:flex;gap:8px;margin:0 0 14px;flex-wrap:wrap}
+.ptabs button{border:1.5px solid var(--line2);background:#fff;border-radius:999px;padding:8px 16px;min-height:44px;font-weight:600;cursor:pointer}
+.ptabs button[aria-pressed="true"]{background:var(--navy);color:#fff;border-color:var(--navy)}
+.mtab td{vertical-align:middle}
+.mi{width:100%;min-width:150px;min-height:40px;border:1.5px solid var(--line2);border-radius:10px;padding:0 10px;font:inherit}
+.code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;font-size:1.05rem}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:12px;z-index:90}
 .linkb{background:none;border:0;padding:0;font-weight:600;text-decoration:underline;cursor:pointer;color:var(--navy)}
 </style>
 </head>
@@ -74,10 +81,12 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   const doneOf = (code, subj) => { const p = D.progress.find(x => x.code === code && x.subject === subj); return p ? Number(p.done) || 0 : 0; };
   const best = xs => xs.length ? xs.reduce((a, b) => (b.score / b.total > a.score / a.total ? b : a)) : null;
 
+  let view = "results";
   function draw() {
     $("#out").hidden = false;
-    const groups = [...new Set(D.students.map(s => s.group).filter(Boolean))].sort();
-    main.innerHTML = `<h1>Students</h1>
+    const tabs = `<nav class="ptabs" aria-label="Teacher portal"><button type="button" data-v="results" aria-pressed="${view === "results"}">📊 Results</button><button type="button" data-v="manage" aria-pressed="${view === "manage"}">👤 Manage students</button></nav>`;
+    if (view === "manage") { manage(tabs); return; }
+    main.innerHTML = `${tabs}<h1>Results</h1>
       <div class="kpi">
         <div class="pillar t-blue"><small>STUDENTS</small><b>${D.students.length}</b></div>
         <div class="pillar t-green"><small>WORKBOOKS SUBMITTED</small><b>${D.workbooks.length}</b></div>
@@ -85,7 +94,6 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
         <div class="pillar t-lav"><small>MOCK TESTS</small><b>${D.mocks.length}</b></div>
       </div>
       <div class="bar2">
-        <label><span>Group</span><select id="g"><option value="">All groups</option>${groups.map(g => `<option>${esc(g)}</option>`).join("")}</select></label>
         <label><span>Subject</span><select id="s"><option value="">Both subjects</option>${SUBJ.map(g => `<option>${esc(g)}</option>`).join("")}</select></label>
         <label><span>Find a student</span><input id="q" type="search" placeholder="Name or code"></label>
         <button class="btn primary" type="button" id="xs">Export summary</button>
@@ -96,8 +104,9 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
       <div class="sh"><span class="no">+</span><h2>Quiz answer keys</h2></div>
       <p>Keys loaded in the grade book: <b>${D.keys.length ? esc(D.keys.join(", ")) : "none yet"}</b>. Students cannot take a quiz until its key is loaded.</p>
       <label class="btn soft" style="cursor:pointer">Import quiz answer keys (quiz-keys.json)<input type="file" id="kf" accept=".json,application/json" hidden></label> <span id="km" role="status"></span>
-      <p class="small muted" style="margin-top:8px">To add, remove or change students and groups, edit the Students tab in your Google Sheet.</p>`;
-    ["g", "s", "q"].forEach(id => $("#" + id).oninput = rows);
+      <p class="small muted" style="margin-top:8px">To add students, give new codes or stop a student, open <b>Manage students</b> above.</p>`;
+    tabsWire();
+    ["s", "q"].forEach(id => $("#" + id).oninput = rows);
     $("#xs").onclick = () => csv("ged-summary", summary());
     $("#xa").onclick = () => csv("ged-all-results", all());
     $("#kf").onchange = async e => {
@@ -107,18 +116,68 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
     };
     rows();
   }
+  function tabsWire() { main.querySelectorAll(".ptabs [data-v]").forEach(b => b.onclick = () => { view = b.dataset.v; draw(); }); }
+  /* ---------- manage students: add (codes are made by the grade book), edit, new code, stop ---------- */
+  let justAdded = [], showStopped = false;
+  async function save(body, btn, okMsg) {
+    if (btn) { btn.disabled = true; btn.dataset.t = btn.textContent; btn.innerHTML = '<span class="wait">Saving…</span>'; }
+    try { const r = await post(Object.assign({ action: "students" }, body)); if (!r.ok) throw new Error(r.error); if (r.added && r.added.length) justAdded = r.added; await load(); if (okMsg) toastT(okMsg); }
+    catch (e) { if (btn) { btn.disabled = false; btn.textContent = btn.dataset.t; } alert(MSG[e.message] || "It did not save. Check your internet and try again."); }
+  }
+  function toastT(m) { const el = document.createElement("div"); el.className = "toast"; el.setAttribute("role", "status"); el.textContent = m; document.body.appendChild(el); setTimeout(() => el.remove(), 3000); }
+  function codeSheet(list) {
+    return `<div class="scroll"><table><thead><tr><th>Name</th><th>Access code</th></tr></thead><tbody>${list.map(s => `<tr><td>${esc(s.name)}</td><td><b class="code">${esc(s.code)}</b></td></tr>`).join("")}</tbody></table></div>`;
+  }
+  function printCodes(list) {
+    const w = window.open("", "_blank"); if (!w) { alert("Please allow pop-ups to print."); return; }
+    w.document.write(`<!doctype html><meta charset="utf-8"><title>Access codes</title><style>body{font-family:Arial,sans-serif;padding:24px}div{border:1.5px dashed #999;border-radius:10px;padding:14px 18px;margin:0 0 12px;break-inside:avoid}b{font-size:22px;letter-spacing:3px}</style>` +
+      list.map(s => `<div>${esc(s.name)}<br>The GED Academy · your access code: <b>${esc(s.code)}</b><br><small>https://learnovateqa.github.io/GED/ · sign in with this code and your full name.</small></div>`).join(""));
+    w.document.close(); w.focus(); w.print();
+  }
+  function manage(tabs) {
+    const list = D.students.filter(s => showStopped || s.active).sort((a, b) => String(a.name).localeCompare(String(b.name)));
+    main.innerHTML = `${tabs}<h1>Manage students</h1>
+      <div class="card t-blue" style="background:var(--c)"><h3>Add students</h3>
+        <p class="small">Type one full name per line. Each student gets an access code automatically.</p>
+        <textarea id="newNames" rows="5" style="width:100%;border:1.5px solid var(--line2);border-radius:12px;padding:10px;font:inherit" placeholder="Amina Hassan&#10;Ravi Kumar"></textarea>
+        <button class="btn primary" type="button" id="addBtn" style="margin-top:8px">Add students</button></div>
+      ${justAdded.length ? `<div class="card t-green" style="background:var(--c);margin-top:14px"><h3>✓ New students and their codes</h3><p class="small">Give each student their own code. They sign in with it and their full name.</p>${codeSheet(justAdded)}
+        <div class="row" style="margin-top:10px"><button class="btn sm" type="button" id="prNew">Print code cards</button><button class="btn sm soft" type="button" id="csvNew">Download list</button><button class="btn sm soft" type="button" id="hideNew">Done</button></div></div>` : ""}
+      <div class="sh"><span class="no">${D.students.filter(s => s.active).length}</span><h2>Your students</h2></div>
+      <label class="small" style="display:flex;gap:8px;align-items:center;margin-bottom:8px"><input type="checkbox" id="showStop" ${showStopped ? "checked" : ""}> Show stopped students too</label>
+      <div class="scroll"><table class="mtab"><thead><tr><th>Name</th><th>Access code</th><th>Active</th><th>Notes (only you see these)</th><th></th></tr></thead><tbody>
+        ${list.length ? list.map(s => `<tr data-c="${esc(s.code)}"><td><input class="mi" data-f="name" value="${esc(s.name)}" aria-label="Name"></td>
+          <td><b class="code">${esc(s.code)}</b><br><button class="linkb small" type="button" data-new>Give a new code</button></td>
+          <td><label style="display:flex;gap:6px;align-items:center"><input type="checkbox" data-f="active" ${s.active ? "checked" : ""}> ${s.active ? "yes" : "stopped"}</label></td>
+          <td><input class="mi" data-f="notes" value="${esc(s.notes || "")}" aria-label="Notes"></td>
+          <td><button class="btn sm" type="button" data-save>Save</button></td></tr>`).join("") : `<tr><td colspan="5">No students yet. Add them above.</td></tr>`}
+      </tbody></table></div>
+      <div class="row" style="margin-top:10px"><button class="btn sm soft" type="button" id="prAll">Print code cards for all active students</button><button class="btn sm soft" type="button" id="csvAll">Download all codes</button></div>
+      <p class="small muted" style="margin-top:10px">“Stopped” students cannot sign in, but their results stay. A new code replaces the old one at once; the student keeps all their work.</p>`;
+    tabsWire();
+    $("#addBtn").onclick = () => { const names = $("#newNames").value.split(/\n+/).map(x => x.trim().replace(/\s+/g, " ")).filter(Boolean); if (!names.length) { alert("Type at least one name."); return; } save({ add: names.map(name => ({ name })) }, $("#addBtn"), names.length + " student(s) added."); };
+    if (justAdded.length) { $("#prNew").onclick = () => printCodes(justAdded); $("#csvNew").onclick = () => csv("ged-new-codes", [["Name", "Access code"], ...justAdded.map(s => [s.name, s.code])]); $("#hideNew").onclick = () => { justAdded = []; manage(tabs); }; }
+    $("#showStop").onchange = e => { showStopped = e.target.checked; manage(tabs); };
+    const act = D.students.filter(s => s.active);
+    $("#prAll").onclick = () => printCodes(act); $("#csvAll").onclick = () => csv("ged-all-codes", [["Name", "Access code"], ...act.map(s => [s.name, s.code])]);
+    main.querySelectorAll("tr[data-c]").forEach(tr => {
+      const code = tr.dataset.c, f = k => tr.querySelector(`[data-f="${k}"]`);
+      tr.querySelector("[data-save]").onclick = e => save({ update: [{ code, name: f("name").value, notes: f("notes").value, active: f("active").checked }] }, e.target, "Saved.");
+      tr.querySelector("[data-new]").onclick = e => { if (confirm("Give " + f("name").value + " a new code? The old code stops working at once.")) save({ update: [{ code, newCode: true }] }, null, "New code made. Find it in the list."); };
+    });
+  }
   function filtered() {
-    const g = $("#g").value, q = $("#q").value.trim().toLowerCase();
-    return D.students.filter(s => (!g || s.group === g) && (!q || (s.name + " " + s.code + " " + s.typed).toLowerCase().includes(q)));
+    const q = $("#q").value.trim().toLowerCase();
+    return D.students.filter(s => !q || (s.name + " " + s.code + " " + s.typed).toLowerCase().includes(q));
   }
   function rows() {
     const subj = $("#s").value, S = subj ? [subj] : SUBJ;
-    $("#th").innerHTML = `<tr><th>Student</th><th>Group</th>${S.map(x => `<th>${esc(x)}<br>sessions done</th><th>${esc(x)}<br>workbooks</th><th>${esc(x)}<br>quiz attempts</th><th>${esc(x)}<br>mock tests</th>`).join("")}<th>Last sign-in</th></tr>`;
+    $("#th").innerHTML = `<tr><th>Student</th>${S.map(x => `<th>${esc(x)}<br>sessions done</th><th>${esc(x)}<br>workbooks</th><th>${esc(x)}<br>quiz attempts</th><th>${esc(x)}<br>mock tests</th>`).join("")}<th>Last sign-in</th></tr>`;
     const list = filtered();
     $("#tb").innerHTML = list.length ? list.map(s => {
       const cells = S.map(x => { const m = best(of(D.mocks, s.code, x)); return `<td><b>${doneOf(s.code, x)}</b> / 12</td><td>${of(D.workbooks, s.code, x).length}</td><td>${of(D.quizzes, s.code, x).length}</td><td>${m ? m.score + "/" + m.total : "–"}</td>`; }).join("");
-      return `<tr class="st" data-c="${esc(s.code)}" tabindex="0"><td><b>${esc(s.name || s.typed)}</b>${s.active ? "" : " (not active)"}<br><span class="small muted">${esc(s.code)}</span></td><td>${esc(s.group)}</td>${cells}<td>${esc(day(s.last))}</td></tr>${open === s.code ? `<tr><td class="det" colspan="${3 + S.length * 4}">${detail(s, S)}</td></tr>` : ""}`;
-    }).join("") : `<tr><td colspan="12">No students match. Add students in the Students tab of your Google Sheet.</td></tr>`;
+      return `<tr class="st" data-c="${esc(s.code)}" tabindex="0"><td><b>${esc(s.name || s.typed)}</b>${s.active ? "" : " (not active)"}<br><span class="small muted">${esc(s.code)}</span></td>${cells}<td>${esc(day(s.last))}</td></tr>${open === s.code ? `<tr><td class="det" colspan="${2 + S.length * 4}">${detail(s, S)}</td></tr>` : ""}`;
+    }).join("") : `<tr><td colspan="12">No students yet. Open <b>Manage students</b> to add them.</td></tr>`;
     document.querySelectorAll("tr.st").forEach(tr => { const go = () => { open = open === tr.dataset.c ? "" : tr.dataset.c; rows(); }; tr.onclick = go; tr.onkeydown = e => { if (e.key === "Enter") go(); }; });
   }
   function detail(s, S) {
@@ -135,8 +194,8 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   }
   /* ---------- export to spreadsheet (CSV opens in Excel and Google Sheets) ---------- */
   function summary() {
-    const out = [["Name", "Access code", "Group", ...SUBJ.flatMap(x => [x + " sessions completed", x + " workbooks submitted", x + " workbook average %", x + " quiz attempts", x + " best quiz %", x + " best mock test"]), "Last sign-in"]];
-    filtered().forEach(s => out.push([s.name || s.typed, s.code, s.group, ...SUBJ.flatMap(x => {
+    const out = [["Name", "Access code", ...SUBJ.flatMap(x => [x + " sessions completed", x + " workbooks submitted", x + " workbook average %", x + " quiz attempts", x + " best quiz %", x + " best mock test"]), "Last sign-in"]];
+    filtered().forEach(s => out.push([s.name || s.typed, s.code, ...SUBJ.flatMap(x => {
       const w = of(D.workbooks, s.code, x), q = of(D.quizzes, s.code, x), m = best(of(D.mocks, s.code, x)), bq = best(q);
       return [doneOf(s.code, x), w.length, w.length ? Math.round(w.reduce((a, b) => a + b.score / b.total, 0) / w.length * 100) : "", q.length, bq ? Math.round(bq.score / bq.total * 100) : "", m ? m.score + "/" + m.total : ""];
     }), day(s.last)]));
@@ -144,8 +203,8 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   }
   function all() {
     const ok = new Set(filtered().map(s => s.code)), nm = {}, gp = {}; D.students.forEach(s => { nm[s.code] = s.name || s.typed; gp[s.code] = s.group; });
-    const out = [["Type", "Date", "Name", "Access code", "Group", "Subject", "Session", "Attempt", "Score", "Total", "Percent", "Details / skills to review", "Wrong questions (error log)"]];
-    const add = (type, x, att, det, wrong) => { if (ok.has(x.code)) out.push([type, day(x.at), nm[x.code], x.code, gp[x.code], x.subject, x.session, att, x.score, x.total, x.total ? Math.round(x.score / x.total * 100) : "", det, wrong]); };
+    const out = [["Type", "Date", "Name", "Access code", "Subject", "Session", "Attempt", "Score", "Total", "Percent", "Details / skills to review", "Wrong questions (error log)"]];
+    const add = (type, x, att, det, wrong) => { if (ok.has(x.code)) out.push([type, day(x.at), nm[x.code], x.code, x.subject, x.session, att, x.score, x.total, x.total ? Math.round(x.score / x.total * 100) : "", det, wrong]); };
     D.workbooks.forEach(w => add("Workbook", w, "", w.levels, w.wrong));
     D.quizzes.forEach(q => add("Quiz", q, q.attempt, (q.minutes ? q.minutes + " min · " : "") + (q.blank ? q.blank + " blank · " : "") + (q.review || ""), q.log || ""));
     D.mocks.forEach(m => add("Mock test", m, "", m.bySkill, m.wrong));

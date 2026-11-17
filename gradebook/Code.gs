@@ -21,7 +21,7 @@
 const TAB = { settings: 'Settings', students: 'Students', progress: 'Progress', wb: 'Workbooks', quiz: 'Quiz_Scores', mock: 'Mock_Tests', keys: 'Quiz_Keys' };
 const HEAD = {
   Settings: ['Setting', 'Value'],
-  Students: ['Name', 'Access code', 'Group', 'Active (yes / no)', 'Notes', 'Name the student typed', 'Last sign-in'],
+  Students: ['Name', 'Access code', 'Group (optional)', 'Active (yes / no)', 'Notes', 'Name the student typed', 'Last sign-in'],
   Progress: ['Access code', 'Name', 'Subject', 'Sessions completed', 'Data (JSON)', 'Last updated'],
   Workbooks: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'By level', 'Wrong question numbers'],
   Quiz_Scores: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'Attempt', 'Minutes used', 'Unanswered', 'Error log (question: skill)', 'Skills to review'],
@@ -120,6 +120,7 @@ function doPost(e) {
   try {
     if (b.action === 'teacher') return out_(teacher_(b));
     if (b.action === 'keys') return out_(keys_(b));
+    if (b.action === 'students') return out_(students_(b));
     const code = code_(b.code), st = student_(code);
     if (!st) return out_({ ok: false, error: 'code' });
     const prog = SUBJECTS[b.program] ? b.program : '';
@@ -204,7 +205,7 @@ function teacher_(b) {
   const iso = function (d) { return d instanceof Date ? d.toISOString() : String(d); };
   return {
     ok: true,
-    students: rows_(TAB.students).filter(function (r) { return r[1]; }).map(function (r) { return { name: r[0], code: code_(r[1]), group: r[2], active: !/^(no|n|false|0)$/i.test(String(r[3]).trim()), typed: r[5], last: r[6] ? iso(r[6]) : '' }; }),
+    students: rows_(TAB.students).filter(function (r) { return r[1]; }).map(function (r) { return { name: r[0], code: code_(r[1]), group: r[2], notes: r[4], active: !/^(no|n|false|0)$/i.test(String(r[3]).trim()), typed: r[5], last: r[6] ? iso(r[6]) : '' }; }),
     progress: rows_(TAB.progress).map(function (r) { let s = {}; try { s = JSON.parse(r[4]); } catch (e) {} return { code: code_(r[0]), subject: r[2], done: r[3], state: s, at: iso(r[5]) }; }),
     workbooks: rows_(TAB.wb).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], levels: r[7], wrong: r[8] }; }),
     quizzes: rows_(TAB.quiz).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], attempt: r[7], minutes: r[8], blank: r[9], log: r[10], review: r[11] }; }),
@@ -224,4 +225,52 @@ function keys_(b) {
     n++;
   });
   return { ok: true, saved: n };
+}
+
+/* ---------- students, managed from the teacher portal ----------
+   The teacher can add, edit, move and stop students without opening the Sheet.
+   Access codes are made here, so two students never get the same code. */
+const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';   /* no 0/O or 1/I, which look alike */
+function newCode_(used) {
+  for (let t = 0; t < 1000; t++) {
+    let c = ''; for (let i = 0; i < 6; i++) c += CODE_CHARS.charAt(Math.floor(Math.random() * CODE_CHARS.length));
+    if (!used[c]) { used[c] = true; return c; }
+  }
+  throw new Error('no free code');
+}
+function students_(b) {
+  const ok = teacherOk_(b.password); if (ok !== 'ok') return { ok: false, error: ok };
+  const lock = LockService.getScriptLock(); lock.waitLock(20000);
+  try {
+    const sh = sheet_(TAB.students);
+    sh.getRange(1, 1, 1, HEAD.Students.length).setValues([HEAD.Students]);
+    const v = rows_(TAB.students), used = {}, rowOf = {};
+    v.forEach(function (r, i) { const c = code_(r[1]); if (c) { used[c] = true; rowOf[c] = i + 2; } });
+    const added = [];
+    (b.add || []).forEach(function (s) {
+      const name = clean_(s.name, 80); if (!name) return;
+      const c = newCode_(used);
+      sh.appendRow([name, c, '', 'yes', clean_(s.notes, 200), '', '']);
+      added.push({ name: name, code: c });
+    });
+    (b.update || []).forEach(function (s) {
+      const row = rowOf[code_(s.code)]; if (!row) return;
+      const cur = sh.getRange(row, 1, 1, 5).getValues()[0];
+      let code = code_(s.code);
+      if (s.newCode) {
+        const old = code; delete used[code]; code = newCode_(used);
+        /* move the student's earlier results to the new code, so nothing is lost */
+        [TAB.progress, TAB.wb, TAB.quiz, TAB.mock].forEach(function (name) {
+          const t = sheet_(name), col = name === TAB.progress ? 1 : 2, vals = rows_(name);
+          vals.forEach(function (r, i) { if (code_(r[col - 1]) === old) t.getRange(i + 2, col).setValue(code); });
+        });
+      }
+      sh.getRange(row, 1, 1, 5).setValues([[
+        s.name !== undefined ? clean_(s.name, 80) : cur[0], code,
+        cur[2],
+        s.active !== undefined ? (s.active ? 'yes' : 'no') : cur[3],
+        s.notes !== undefined ? clean_(s.notes, 200) : cur[4]]]);
+    });
+    return { ok: true, added: added };
+  } finally { lock.releaseLock(); }
 }

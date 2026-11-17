@@ -51,8 +51,8 @@ Student progress, workbook results and quiz scores are sent automatically to a G
 1. Create a new Google Sheet, for example `GED_Academy_Gradebook`.
 2. In the Sheet: **Extensions > Apps Script**. Delete the sample code. Paste all of `gradebook/Code.gs`. Press **Save**.
 3. In the toolbar, choose the function **setup** and press **Run**. Allow the permissions. The tabs are created.
-4. Go back to the Sheet and reload the page. Use the new menu **GED Academy > Set teacher password** (10 characters or more).
-5. In the **Students** tab, type each student: Name, Access code, Group. (Active = `no` blocks a student.)
+4. Set the teacher password (10 characters or more): reload the Sheet and use **GED Academy > Set teacher password**, or, if that menu does not appear, add the script property `NEW_TEACHER_PASSWORD` (Project Settings > Script Properties) and run **applyNewPassword** in the editor.
+5. Add students in the **teacher portal > Manage students** (one name per line; codes are made automatically). You can also type them in the Students tab.
 6. In Apps Script: **Deploy > New deployment > Web app**. Execute as: **Me**. Who has access: **Anyone**. Press **Deploy**.
 7. Copy the **Web app URL**. Put it in `rla/config.js` and `social-studies/config.js` (`API: "…"`).
 8. Open the teacher portal, sign in, and press **Import quiz answer keys** to load `quiz-keys.json`.
