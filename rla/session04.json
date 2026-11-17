@@ -1,0 +1,1484 @@
+{
+ "n": 4,
+ "title": "Evidence, Reasoning & Comparing Arguments",
+ "minutes": 90,
+ "intro": "You learn to test evidence with four questions, to spot the traps that make weak evidence look strong, and to find broken reasoning. Then you compare two arguments and decide which one is better supported, and why.",
+ "slides": [
+  {
+   "kind": "title",
+   "h": "Evidence, Reasoning & Comparing Arguments",
+   "sub": "Which argument is stronger, and what evidence proves it?"
+  },
+  {
+   "h": "Today you will",
+   "blocks": [
+    {
+     "steps": [
+      "Break an argument into claim, reason and evidence.",
+      "Test evidence with four questions.",
+      "Spot the traps.",
+      "Compare two arguments and choose the better-supported one."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "The golden rule",
+   "blocks": [
+    {
+     "remember": "Do not choose the argument you agree with. Choose the argument the **evidence** supports."
+    },
+    {
+     "weak": "I chose B because I hate school uniforms.",
+     "label": "answer"
+    },
+    {
+     "strong": "I chose A because it uses a three-year study, and B uses one family story.",
+     "label": "answer"
+    }
+   ]
+  },
+  {
+   "h": "Claim, reason, evidence",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Part",
+       "Question",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Claim",
+        "What does the author want me to believe?",
+        "Cities should plant more trees."
+       ],
+       [
+        "Reason",
+        "Why?",
+        "Trees make streets cooler."
+       ],
+       [
+        "Evidence",
+        "What is the proof?",
+        "A city study: shaded streets were 5°C cooler."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "The 4-Test Evidence Check",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Test",
+       "Ask"
+      ],
+      "rows": [
+       [
+        "**R**elevant",
+        "Does it prove this exact claim?"
+       ],
+       [
+        "**C**redible",
+        "Is the source trustworthy and fair?"
+       ],
+       [
+        "**S**pecific",
+        "Does it give numbers, dates, names?"
+       ],
+       [
+        "**L**ogical",
+        "Does it really lead to the claim?"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "If evidence fails one test, it becomes weak."
+    }
+   ]
+  },
+  {
+   "h": "Two myths",
+   "blocks": [
+    {
+     "mistake": "Myth 1: numbers are always strong. A number can be old, off topic or misleading."
+    },
+    {
+     "mistake": "Myth 2: examples are always weak. A clear example that fits the claim can be strong."
+    }
+   ]
+  },
+  {
+   "h": "True does not mean relevant",
+   "blocks": [
+    {
+     "p": "**Claim:** Schools should start at 8:30 a.m., because teenagers need more sleep to learn well."
+    },
+    {
+     "strong": "A city study: teenagers who slept under 7 hours scored lower in maths.",
+     "label": "relevant evidence"
+    },
+    {
+     "weak": "The canteen serves pizza every Friday. (True, but it proves nothing here.)",
+     "label": "irrelevant"
+    }
+   ]
+  },
+  {
+   "h": "Three traps",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Trap",
+       "What it looks like"
+      ],
+      "rows": [
+       [
+        "It sounds true",
+        "an answer that is true in real life, but not proved in the text"
+       ],
+       [
+        "Emotional language",
+        "strong words like *outrageous* or *disaster* instead of proof"
+       ],
+       [
+        "Wrong expert",
+        "an expert speaking outside their field, like a dentist on climate change"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "An opinion can be strong",
+   "blocks": [
+    {
+     "p": "Every claim is an opinion. It becomes a **strong argument** when facts support it."
+    },
+    {
+     "weak": "Schools should require uniforms because normal clothes are ugly.",
+     "label": "argument",
+     "note": "Opinion + opinion."
+    },
+    {
+     "strong": "Schools should require uniforms because discipline problems fell by 28% in schools that tried them.",
+     "label": "argument",
+     "note": "Opinion + fact."
+    }
+   ]
+  },
+  {
+   "h": "Broken reasoning",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Error",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Hasty generalization",
+        "My cousin's car broke, so all electric cars are bad."
+       ],
+       [
+        "False cause",
+        "I wore my red shirt and we won, so the shirt made us win."
+       ],
+       [
+        "Unsupported claim",
+        "Everyone knows uniforms cost too much. (No proof.)"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Show me the proof",
+   "blocks": [
+    {
+     "p": "Watch out for absolute words:"
+    },
+    {
+     "flow": [
+      "everyone",
+      "always",
+      "never",
+      "nobody",
+      "all"
+     ]
+    },
+    {
+     "tip": "An absolute word is a warning. Check if the author gives proof."
+    }
+   ]
+  },
+  {
+   "h": "GED questions in plain English",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "The question says…",
+       "It means…"
+      ],
+      "rows": [
+       [
+        "Which claim is best supported?",
+        "Which claim has the strongest proof?"
+       ],
+       [
+        "Which evidence is irrelevant?",
+        "Which fact does not help the claim?"
+       ],
+       [
+        "Which argument is more convincing?",
+        "Which one has better evidence?"
+       ],
+       [
+        "Which conclusion is unsupported?",
+        "Which statement has no proof?"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Two arguments: compare",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Check",
+       "Argument A",
+       "Argument B"
+      ],
+      "rows": [
+       [
+        "Main evidence",
+        "a three-year study",
+        "one family story"
+       ],
+       [
+        "Specific?",
+        "28%, 19%, 74%",
+        "\"everyone knows\""
+       ],
+       [
+        "Source",
+        "an education office report",
+        "personal chats"
+       ],
+       [
+        "Tone",
+        "calm and clear",
+        "emotional"
+       ]
+      ]
+     }
+    },
+    {
+     "strong": "Argument A is better supported.",
+     "label": "verdict"
+    }
+   ]
+  },
+  {
+   "h": "Speed drill: 5 minutes",
+   "blocks": [
+    {
+     "passage": "**Passage X:** City parks help local shops. A 2023 business report found that shops near Central Park sold 22% more on park event days.\n\n**Passage Y:** City parks are wonderful because my family loves picnics, and parks make everyone happy.",
+     "title": "Two passages"
+    },
+    {
+     "steps": [
+      "What is the claim of each passage?",
+      "Which is better supported?",
+      "Give one reason from the text."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "The bridge to the essay",
+   "blocks": [
+    {
+     "p": "The essay asks the same question: which argument is better supported?"
+    },
+    {
+     "flow": [
+      "Session 4: compare",
+      "Sessions 7–8: plan and build",
+      "Sessions 9–10: write"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Now it is your turn",
+   "blocks": [
+    {
+     "flow": [
+      "Reviewer",
+      "Workbook",
+      "Quiz",
+      "Checklist"
+     ]
+    },
+    {
+     "remember": "Don't choose what you agree with. Choose what the evidence supports."
+    }
+   ]
+  },
+  {
+   "kind": "title",
+   "h": "Thank you!",
+   "sub": "See you in Session 5: Sentence Structure & Grammar."
+  }
+ ],
+ "reviewer": [
+  {
+   "h": "The golden rule",
+   "blocks": [
+    {
+     "p": "On the GED, many arguments are about topics people feel strongly about. The test checks if you can put your feelings aside and judge the evidence."
+    },
+    {
+     "remember": "Do not choose the argument you agree with. Choose the argument the evidence supports."
+    },
+    {
+     "weak": "I chose Argument B because I personally hate school uniforms.",
+     "label": "answer",
+     "note": "This is the writer's own feeling about the topic."
+    },
+    {
+     "strong": "I chose Argument A because it uses a three-year study with clear numbers, while Argument B relies on one family story.",
+     "label": "answer",
+     "note": "This compares the quality of the evidence."
+    }
+   ]
+  },
+  {
+   "h": "Claim, reason and evidence",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Part",
+       "Question it answers",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Claim",
+        "What does the author want me to believe?",
+        "Electric buses should replace diesel buses by 2035."
+       ],
+       [
+        "Reason",
+        "Why should I believe it?",
+        "Diesel buses pollute the air in busy streets."
+       ],
+       [
+        "Evidence",
+        "What proof does the author give?",
+        "A city report found that diesel buses produce 40% of traffic smoke in the centre."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "When you read an argument, mark the three parts on your note board: C for claim, R for reasons, E for evidence."
+    }
+   ]
+  },
+  {
+   "h": "The 4-Test Evidence Check",
+   "blocks": [
+    {
+     "p": "Test every piece of evidence with four questions. If it fails one test, it is weak."
+    },
+    {
+     "table": {
+      "head": [
+       "Test",
+       "Ask yourself",
+       "Weak if…"
+      ],
+      "rows": [
+       [
+        "Relevant",
+        "Does it prove this exact claim?",
+        "it is about something else"
+       ],
+       [
+        "Credible",
+        "Is the source trustworthy and fair?",
+        "the source is unknown or has a reason to be unfair"
+       ],
+       [
+        "Specific",
+        "Does it give numbers, dates or names?",
+        "it says \"many\", \"a lot\" or \"everyone knows\""
+       ],
+       [
+        "Logical",
+        "Does it really lead to the claim?",
+        "the link between the evidence and the claim is broken"
+       ]
+      ]
+     }
+    },
+    {
+     "mistake": "Thinking every number is strong. A number can be old, about a different place, or about a different question."
+    },
+    {
+     "tip": "A clear real example that fits the claim exactly can be strong evidence too."
+    }
+   ]
+  },
+  {
+   "h": "True does not mean relevant",
+   "blocks": [
+    {
+     "p": "A sentence can be completely true and still prove nothing."
+    },
+    {
+     "passage": "Secondary schools should start at 8:30 a.m., because teenagers need more sleep to learn well.",
+     "title": "Claim"
+    },
+    {
+     "strong": "A city study found that teenagers who slept less than seven hours scored lower in maths tests.",
+     "label": "evidence",
+     "note": "Relevant: it connects sleep and learning."
+    },
+    {
+     "weak": "The school canteen serves pizza every Friday.",
+     "label": "evidence",
+     "note": "True, but it says nothing about sleep or start times."
+    },
+    {
+     "remember": "Ask: if I delete this sentence, does the claim lose any proof? If not, it is irrelevant."
+    }
+   ]
+  },
+  {
+   "h": "Three traps",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Trap",
+       "What happens",
+       "Example"
+      ],
+      "rows": [
+       [
+        "It sounds true",
+        "You choose an answer that is true in real life, but the text does not prove it.",
+        "\"Exercise is healthy.\" (The passage is about bus fares.)"
+       ],
+       [
+        "Emotional language",
+        "Strong words take the place of proof.",
+        "\"This outrageous plan will destroy our town.\""
+       ],
+       [
+        "Wrong expert",
+        "An expert speaks outside their own field.",
+        "A famous footballer gives advice on medicine."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "An opinion is not always weak",
+   "blocks": [
+    {
+     "p": "Every claim is an opinion. An opinion becomes a strong argument when facts support it."
+    },
+    {
+     "weak": "Schools should require uniforms because normal clothes are ugly and shopping is boring.",
+     "label": "argument",
+     "note": "Opinion supported only by more opinions."
+    },
+    {
+     "strong": "Schools should require uniforms because discipline problems fell by 28% in the schools that tried them.",
+     "label": "argument",
+     "note": "Opinion supported by a fact."
+    }
+   ]
+  },
+  {
+   "h": "Broken reasoning",
+   "blocks": [
+    {
+     "p": "Reasoning is the bridge between the evidence and the claim. Some bridges are broken."
+    },
+    {
+     "table": {
+      "head": [
+       "Error",
+       "What it is",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Hasty generalization",
+        "a big conclusion from one small example",
+        "My cousin's electric car broke, so all electric cars are bad."
+       ],
+       [
+        "False cause",
+        "A happened before B, so A caused B",
+        "I wore my red shirt and we won, so the shirt made us win."
+       ],
+       [
+        "Unsupported claim",
+        "a strong statement with no proof",
+        "Everyone knows uniforms cost too much."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "Absolute words (everyone, always, never, nobody, all) are a warning. Check whether the author gives proof."
+    }
+   ]
+  },
+  {
+   "h": "Comparing two arguments",
+   "blocks": [
+    {
+     "p": "Read both arguments. Then compare them on the same points."
+    },
+    {
+     "table": {
+      "head": [
+       "Check",
+       "Argument A (for uniforms)",
+       "Argument B (against uniforms)"
+      ],
+      "rows": [
+       [
+        "Main evidence",
+        "a three-year study by the city education office",
+        "one story about the writer's daughter"
+       ],
+       [
+        "Specific",
+        "28% fewer discipline problems, 74% of students surveyed",
+        "\"everyone knows\", \"costs far more\""
+       ],
+       [
+        "Source",
+        "an official report",
+        "personal conversations"
+       ],
+       [
+        "Tone",
+        "calm and analytical",
+        "emotional (\"mindless robots\")"
+       ]
+      ]
+     }
+    },
+    {
+     "strong": "Argument A is better supported, because it uses specific data from an official study, while Argument B relies on one personal story and claims with no proof.",
+     "label": "comparison"
+    },
+    {
+     "mistake": "Saying Argument B is weak because a parent wrote it. Attack the evidence, not the person."
+    }
+   ]
+  },
+  {
+   "h": "GED questions in plain English",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "The question says…",
+       "It means…"
+      ],
+      "rows": [
+       [
+        "Which claim is best supported by the passage?",
+        "Which claim has the strongest, most specific proof?"
+       ],
+       [
+        "Which evidence is irrelevant to the argument?",
+        "Which fact does not help prove the claim?"
+       ],
+       [
+        "Which argument is more convincing?",
+        "Which one has better evidence?"
+       ],
+       [
+        "Which statement is an unsupported conclusion?",
+        "Which statement has no proof?"
+       ]
+      ]
+     }
+    },
+    {
+     "remember": "Translate the question first. Then look for the evidence."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  [
+   "relevant",
+   "connected to the exact claim"
+  ],
+  [
+   "credible",
+   "trustworthy; from a reliable, fair source"
+  ],
+  [
+   "specific",
+   "exact, with numbers, dates or names"
+  ],
+  [
+   "logical",
+   "the evidence really leads to the claim"
+  ],
+  [
+   "better supported",
+   "having stronger and more evidence"
+  ],
+  [
+   "irrelevant",
+   "not connected to the claim"
+  ],
+  [
+   "emotional language",
+   "words chosen to create strong feelings instead of proof"
+  ],
+  [
+   "hasty generalization",
+   "a big conclusion from one small example"
+  ],
+  [
+   "false cause",
+   "saying A caused B only because A happened first"
+  ],
+  [
+   "unsupported claim",
+   "a statement given as true with no proof"
+  ],
+  [
+   "absolute word",
+   "a word like always, never, everyone or nobody"
+  ],
+  [
+   "anecdote",
+   "a short personal story"
+  ],
+  [
+   "source",
+   "where information comes from"
+  ],
+  [
+   "compare",
+   "look at two things to find what is the same and different"
+  ]
+ ],
+ "workbook": [
+  {
+   "level": "easy",
+   "skill": "Claim, reason, evidence",
+   "type": "drag",
+   "q": "Sort the sentences into claim, reason and evidence.",
+   "items": [
+    "Our city should build more cycle lanes.",
+    "Cycle lanes make cycling safer.",
+    "After one city added cycle lanes, cycling accidents fell by 35%."
+   ],
+   "targets": [
+    "Claim",
+    "Reason",
+    "Evidence"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "The claim is what the author wants (more cycle lanes). The reason explains why (safer). The evidence is the proof with a number."
+  },
+  {
+   "level": "easy",
+   "skill": "Relevant evidence",
+   "type": "mc",
+   "ptitle": "Claim",
+   "passage": "The office should allow staff to work from home on Fridays, because it saves them time.",
+   "q": "Which evidence is relevant to the claim?",
+   "options": [
+    "The office has a new coffee machine.",
+    "Staff spend an average of 80 minutes a day travelling to the office.",
+    "Fridays are the last day of the work week in some countries.",
+    "The office building is ten years old."
+   ],
+   "answer": 1,
+   "why": "The claim is about saving time. Only the travel time proves that working from home saves time. The other facts are true but off topic."
+  },
+  {
+   "level": "easy",
+   "skill": "The golden rule",
+   "type": "mc",
+   "q": "How should you choose the stronger of two arguments?",
+   "options": [
+    "Choose the one you agree with.",
+    "Choose the one with better evidence.",
+    "Choose the longer one.",
+    "Choose the one with more strong words."
+   ],
+   "answer": 1,
+   "why": "The GED asks which argument is better supported. Your own opinion, the length and strong words do not decide it."
+  },
+  {
+   "level": "easy",
+   "skill": "The 4-Test check",
+   "type": "drag",
+   "q": "Match each test with its question.",
+   "items": [
+    "Relevant",
+    "Credible",
+    "Specific",
+    "Logical"
+   ],
+   "targets": [
+    "Does it prove this exact claim?",
+    "Is the source trustworthy?",
+    "Does it give numbers, dates or names?",
+    "Does it really lead to the claim?"
+   ],
+   "answer": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "why": "These are the four tests: Relevant, Credible, Specific, Logical. Remember them as R-C-S-L."
+  },
+  {
+   "level": "easy",
+   "skill": "Specific evidence",
+   "type": "mc",
+   "q": "Which evidence is the MOST specific?",
+   "options": [
+    "Many people like the new park.",
+    "The new park is very popular.",
+    "The new park had 12,400 visitors in its first month.",
+    "Everyone knows the park is busy."
+   ],
+   "answer": 2,
+   "why": "A specific fact gives an exact number and time. \"Many\", \"very popular\" and \"everyone knows\" are vague."
+  },
+  {
+   "level": "guided",
+   "skill": "Relevant evidence",
+   "type": "hotspot",
+   "ptitle": "Argument",
+   "q": "Tap the sentence that is true but irrelevant to the claim.",
+   "sentences": [
+    "The city should open the public pool until 10 p.m. in summer.",
+    "In July, daytime temperatures often reach 45°C, so many families cannot swim safely in the afternoon.",
+    "The pool was built in 1998 by a local company.",
+    "Last summer, evening swimming sessions at a private club were fully booked every night."
+   ],
+   "answer": 2,
+   "why": "The year the pool was built does not help prove that it should open later. The heat and the full evening sessions are relevant."
+  },
+  {
+   "level": "guided",
+   "skill": "Traps",
+   "type": "drag",
+   "q": "Which trap does each sentence use?",
+   "items": [
+    "\"This shameful plan will ruin our children's future!\"",
+    "\"A famous singer says this medicine works.\"",
+    "\"Everybody knows that shopping online is safer.\""
+   ],
+   "targets": [
+    "Emotional language",
+    "Wrong expert",
+    "Unsupported claim"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "\"Shameful\" and \"ruin\" push feelings. A singer is not a medical expert. \"Everybody knows\" gives no proof."
+  },
+  {
+   "level": "guided",
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "q": "\"I ate fish on Monday, and on Tuesday I had a headache. Fish gives me headaches.\" What is the error?",
+   "options": [
+    "Hasty generalization",
+    "False cause",
+    "Emotional language",
+    "Wrong expert"
+   ],
+   "answer": 1,
+   "why": "The writer thinks that because the fish came first, it caused the headache. That is a false cause. Many other things could cause a headache."
+  },
+  {
+   "level": "guided",
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "q": "\"I visited one restaurant in that city and the service was slow. All the restaurants there have slow service.\" What is the error?",
+   "options": [
+    "Hasty generalization",
+    "False cause",
+    "Credible source",
+    "Relevant evidence"
+   ],
+   "answer": 0,
+   "why": "The writer makes a big conclusion (all restaurants) from one small example (one restaurant). That is a hasty generalization."
+  },
+  {
+   "level": "guided",
+   "skill": "Opinion and fact",
+   "type": "mc",
+   "q": "Which is the stronger argument?",
+   "options": [
+    "Companies should offer lunch breaks because breaks are nice and everyone loves them.",
+    "Companies should offer lunch breaks because a study of 3,000 workers found that people who took breaks made 20% fewer mistakes.",
+    "Companies should offer lunch breaks because I always feel hungry at noon.",
+    "Companies should offer lunch breaks because it is obvious."
+   ],
+   "answer": 1,
+   "why": "All four are opinions. Only B supports its opinion with a specific fact from a study. The others use more opinions, a personal feeling or no proof."
+  },
+  {
+   "level": "application",
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "ptitle": "Two passages",
+   "passage": "**Passage X:** City parks help local shops. A 2023 business report found that shops within two blocks of Central Park sold 22% more on park event days.\n\n**Passage Y:** City parks are wonderful because my family loves picnics, and parks make everyone in our neighbourhood feel happy and relaxed.",
+   "q": "Which passage is better supported?",
+   "options": [
+    "Passage X, because it uses a specific figure from a report",
+    "Passage Y, because it is about families",
+    "Both are equally supported",
+    "Neither has a claim"
+   ],
+   "answer": 0,
+   "why": "Passage X gives a specific, sourced number (22%, a 2023 report). Passage Y uses one family's feelings and an unsupported claim about everyone."
+  },
+  {
+   "level": "application",
+   "skill": "Unsupported claim",
+   "type": "hotspot",
+   "again": true,
+   "q": "Tap the part of Passage Y that is an unsupported claim.",
+   "sentences": [
+    "City parks are wonderful",
+    "because my family loves picnics,",
+    "and parks make everyone in our neighbourhood feel happy and relaxed."
+   ],
+   "answer": 2,
+   "why": "\"Everyone in our neighbourhood\" is an absolute claim. The writer gives no survey or proof that every person feels this way."
+  },
+  {
+   "level": "application",
+   "skill": "Credible source",
+   "type": "mc",
+   "q": "A writer claims that a new road will reduce traffic. Which source is the MOST credible?",
+   "options": [
+    "The company that will be paid to build the road",
+    "An independent traffic study by a university",
+    "A neighbour who drives every day",
+    "A social media post with many likes"
+   ],
+   "answer": 1,
+   "why": "An independent university study has no reason to be unfair and uses research. The building company could gain money, so it may be biased."
+  },
+  {
+   "level": "application",
+   "skill": "Logical evidence",
+   "type": "mc",
+   "ptitle": "Argument",
+   "passage": "Our town should build a bigger car park at the market. Last year, the number of cars in our country rose by 8%.",
+   "q": "Why is the evidence weak?",
+   "options": [
+    "It has no number.",
+    "It is about the whole country, not about parking at the market.",
+    "It is an emotional story.",
+    "It comes from an expert."
+   ],
+   "answer": 1,
+   "why": "The number is specific, but it is about cars in the whole country. It does not show that people cannot find parking at this market, so the link is weak."
+  },
+  {
+   "level": "application",
+   "skill": "GED question language",
+   "type": "drag",
+   "q": "Match each GED question with its plain English meaning.",
+   "items": [
+    "Which claim is best supported by the passage?",
+    "Which evidence is irrelevant to the argument?",
+    "Which statement is an unsupported conclusion?"
+   ],
+   "targets": [
+    "Which claim has the strongest proof?",
+    "Which fact does not help the claim?",
+    "Which statement has no proof?"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "Translate the question into plain words first. Then you know exactly what to look for."
+  },
+  {
+   "level": "challenge",
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "ptitle": "Two arguments",
+   "passage": "**Argument A:** Requiring school uniforms improves safety and focus. A three-year study by the city education office, covering 45 secondary schools, found that discipline problems fell by 28% within two years of introducing uniforms. A survey by the student council found that 74% of students preferred to show their personality through clubs, sport and art rather than clothes.\n\n**Argument B:** Uniforms are an attack on freedom that destroys creativity. Every student I have talked to hates them. When my daughter had to wear a uniform, she lost all interest in school. Everyone knows uniforms cost far more than normal clothes, and they do nothing to stop bullying.",
+   "q": "Which statement best explains why Argument A is better supported?",
+   "options": [
+    "Argument A talks about student feelings, but Argument B does not.",
+    "Argument A uses specific data from a study and a survey, while Argument B relies on one personal story and unsupported claims.",
+    "Argument A proves that every school saves money with uniforms.",
+    "Argument B was written by a parent, so it cannot be trusted."
+   ],
+   "answer": 1,
+   "why": "B compares the quality of the evidence. A is wrong: Argument B also mentions feelings. C is wrong: Argument A says nothing about money. D attacks the person, not the evidence."
+  },
+  {
+   "level": "challenge",
+   "skill": "Traps",
+   "type": "hotspot",
+   "again": true,
+   "q": "Tap the phrase from Argument B that is emotional language, not evidence.",
+   "sentences": [
+    "Uniforms are an attack on freedom that destroys creativity.",
+    "When my daughter had to wear a uniform,",
+    "she lost all interest in school.",
+    "and they do nothing to stop bullying."
+   ],
+   "answer": 0,
+   "why": "\"An attack on freedom\" and \"destroys creativity\" are strong, emotional words. They give no measurement or proof."
+  },
+  {
+   "level": "challenge",
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "again": true,
+   "q": "\"When my daughter had to wear a uniform, she lost all interest in school.\" What is the problem with using this as evidence?",
+   "options": [
+    "It is a hasty generalization from one child.",
+    "It uses too many statistics.",
+    "It is from an expert.",
+    "It is irrelevant to uniforms."
+   ],
+   "answer": 0,
+   "why": "One child's experience cannot prove what uniforms do to all students. Also, other things may have caused the change."
+  },
+  {
+   "level": "challenge",
+   "skill": "Credible source",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the comparison.",
+   "text": "Argument A's evidence is more credible because it comes from {0}. Argument B's evidence is less specific because it uses phrases like {1}.",
+   "blanks": [
+    {
+     "options": [
+      "an official study and a student survey",
+      "the writer's daughter",
+      "a famous singer"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "\"28% within two years\"",
+      "\"everyone knows\"",
+      "\"45 secondary schools\""
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "An official study and a survey are credible sources. \"Everyone knows\" is vague and gives no proof."
+  },
+  {
+   "level": "challenge",
+   "skill": "Extended response",
+   "type": "mc",
+   "again": true,
+   "q": "Which sentence would be the best start for an essay about these two arguments?",
+   "options": [
+    "I think uniforms are boring, so I agree with Argument B.",
+    "Argument A is better supported because it uses specific data from a three-year study and a survey, while Argument B depends on one personal story.",
+    "Both arguments talk about uniforms.",
+    "Argument B is wrong because parents always complain."
+   ],
+   "answer": 1,
+   "why": "A good essay claim names the better-supported argument and gives the main reason, based on evidence. A gives an opinion. C says nothing. D attacks people."
+  }
+ ],
+ "quiz": [
+  {
+   "skill": "The golden rule",
+   "type": "mc",
+   "q": "On the GED, how do you decide which of two arguments is stronger?",
+   "options": [
+    "By choosing the one you agree with",
+    "By choosing the one with better evidence",
+    "By choosing the longer one",
+    "By choosing the one with stronger words"
+   ]
+  },
+  {
+   "skill": "Claim, reason, evidence",
+   "type": "drag",
+   "q": "Sort the sentences into claim, reason and evidence.",
+   "items": [
+    "Schools should teach first aid.",
+    "Students would know how to help in an emergency.",
+    "In one region, 60% of students who took a first aid course later used it to help someone."
+   ],
+   "targets": [
+    "Claim",
+    "Reason",
+    "Evidence"
+   ]
+  },
+  {
+   "skill": "The 4-Test check",
+   "type": "mc",
+   "q": "Evidence that gives exact numbers, dates or names passes which test?",
+   "options": [
+    "Relevant",
+    "Credible",
+    "Specific",
+    "Logical"
+   ]
+  },
+  {
+   "skill": "Specific evidence",
+   "type": "mc",
+   "q": "Which evidence is the most specific?",
+   "options": [
+    "Lots of people use the library.",
+    "The library is very busy.",
+    "The library had 3,200 visitors in May.",
+    "Everyone loves the library."
+   ]
+  },
+  {
+   "skill": "Traps",
+   "type": "mc",
+   "q": "A famous footballer says a new medicine cures colds. Which trap is this?",
+   "options": [
+    "Emotional language",
+    "Wrong expert",
+    "False cause",
+    "Specific evidence"
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "ptitle": "Two passages",
+   "passage": "**Passage X:** The city should keep the night market open until midnight. When the market stayed open late during last year's festival, the market office counted 9,500 extra visitors, and stall owners reported average sales 30% higher than on normal nights.\n\n**Passage Y:** The night market should close at 9 p.m. The noise is terrible and the late crowds are a nightmare for everyone who lives nearby. My neighbour could not sleep for a week. Late markets always bring trouble.",
+   "q": "What is the claim of Passage X?",
+   "options": [
+    "The night market is noisy.",
+    "The night market should stay open until midnight.",
+    "Stall owners sell food.",
+    "The festival was last year."
+   ]
+  },
+  {
+   "skill": "Specific evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the part of Passage X that gives the most specific evidence.",
+   "sentences": [
+    "The city should keep the night market open until midnight.",
+    "When the market stayed open late during last year's festival,",
+    "the market office counted 9,500 extra visitors, and stall owners reported average sales 30% higher than on normal nights."
+   ]
+  },
+  {
+   "skill": "Traps",
+   "type": "mc",
+   "again": true,
+   "q": "Which phrase from Passage Y is emotional language rather than evidence?",
+   "options": [
+    "\"close at 9 p.m.\"",
+    "\"a nightmare for everyone who lives nearby\"",
+    "\"the night market\"",
+    "\"lives nearby\""
+   ]
+  },
+  {
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "again": true,
+   "q": "\"Late markets always bring trouble.\" What is the problem with this sentence?",
+   "options": [
+    "It is an unsupported claim with an absolute word.",
+    "It is a statistic.",
+    "It is from an expert.",
+    "It is relevant evidence."
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "again": true,
+   "q": "Which passage is better supported, and why?",
+   "options": [
+    "Passage Y, because noise is a real problem",
+    "Passage X, because it uses specific numbers from the market office",
+    "Passage Y, because it tells a story about a neighbour",
+    "They are equally supported."
+   ]
+  },
+  {
+   "skill": "Claim, reason, evidence",
+   "type": "mc",
+   "ptitle": "Argument",
+   "passage": "Our hospital should hire twenty more night nurses. At present, one night nurse cares for up to twelve patients. A 2022 study of 160 hospitals by a national nursing college found that each extra patient per nurse was linked to a 7% higher risk of serious problems. The new hospital car park opened in March and has 400 spaces. Hiring more nurses will cost money, but serious problems cost far more: in longer stays, in more treatment and in lives. The board should approve the plan this year.",
+   "q": "What is the author's claim?",
+   "options": [
+    "The hospital car park has 400 spaces.",
+    "The hospital should hire twenty more night nurses.",
+    "Nurses work at night.",
+    "Serious problems are expensive."
+   ]
+  },
+  {
+   "skill": "Relevant evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that is true but irrelevant to the claim.",
+   "sentences": [
+    "At present, one night nurse cares for up to twelve patients.",
+    "A 2022 study of 160 hospitals by a national nursing college found that each extra patient per nurse was linked to a 7% higher risk of serious problems.",
+    "The new hospital car park opened in March and has 400 spaces.",
+    "Hiring more nurses will cost money, but serious problems cost far more."
+   ]
+  },
+  {
+   "skill": "Credible source",
+   "type": "mc",
+   "again": true,
+   "q": "Why is the 2022 study credible evidence?",
+   "options": [
+    "It is a personal story.",
+    "It is a large study by a national nursing college.",
+    "It uses emotional words.",
+    "It is about car parks."
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does the author answer the concern about cost?",
+   "options": [
+    "By saying nurses are free",
+    "By accepting the cost and arguing that serious problems cost more",
+    "By ignoring it",
+    "By asking for a new car park"
+   ]
+  },
+  {
+   "skill": "Logical evidence",
+   "type": "mc",
+   "again": true,
+   "q": "Which addition would make the argument STRONGER?",
+   "options": [
+    "\"Nurses wear blue uniforms.\"",
+    "\"In a hospital that hired more night nurses, serious problems at night fell by 15% in one year.\"",
+    "\"Everyone knows nurses are tired.\"",
+    "\"The hospital has a new café.\""
+   ]
+  },
+  {
+   "skill": "Position and purpose",
+   "type": "mc",
+   "again": true,
+   "q": "What is the author's purpose?",
+   "options": [
+    "To persuade the hospital board to hire more night nurses",
+    "To describe the new car park",
+    "To entertain readers",
+    "To explain how nurses are trained"
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "ptitle": "Two arguments",
+   "passage": "**Argument 1 (Dr. Leila Haddad, sleep researcher):** Secondary schools should start at 8:30 a.m. instead of 7:00 a.m. During the teenage years, the body clock moves later, so most teenagers cannot fall asleep before 11 p.m. A study of 9,000 students in three countries found that when schools started later, students slept about 45 minutes more each night, attendance rose by 4%, and car accidents involving teenage drivers fell. Some parents worry about work schedules. However, the schools in the study offered supervised early rooms from 7:00 a.m., so parents could still drop children off before work.\n\n**Argument 2 (Mr. Tom Reyes, parent):** Starting school later is a bad idea. Teenagers will just stay up later playing on their phones. When I was young, we started at 7:00 a.m. and nobody complained. A later start also means a later finish, which leaves no time for sports and part-time jobs. Families have enough problems already. Schools should leave the timetable alone.",
+   "q": "What is the main claim of Argument 1?",
+   "options": [
+    "Teenagers use phones too much.",
+    "Secondary schools should start at 8:30 a.m.",
+    "Parents start work early.",
+    "Sports are important."
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "again": true,
+   "q": "What is the main claim of Argument 2?",
+   "options": [
+    "Schools should not change to a later start.",
+    "Schools should start at 8:30 a.m.",
+    "Teenagers sleep too much.",
+    "Schools should close earlier."
+   ]
+  },
+  {
+   "skill": "Specific evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence from Argument 1 that gives the strongest evidence.",
+   "sentences": [
+    "Secondary schools should start at 8:30 a.m. instead of 7:00 a.m.",
+    "During the teenage years, the body clock moves later, so most teenagers cannot fall asleep before 11 p.m.",
+    "A study of 9,000 students in three countries found that when schools started later, students slept about 45 minutes more each night, attendance rose by 4%, and car accidents involving teenage drivers fell.",
+    "Some parents worry about work schedules."
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does Argument 1 respond to parents' worries about work?",
+   "options": [
+    "It says parents are wrong.",
+    "It explains that schools in the study opened supervised early rooms from 7:00 a.m.",
+    "It ignores the worry.",
+    "It says parents should change jobs."
+   ]
+  },
+  {
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "again": true,
+   "q": "\"When I was young, we started at 7:00 a.m. and nobody complained.\" Why is this weak evidence?",
+   "options": [
+    "It is one personal memory and an absolute claim, with no data.",
+    "It is a large study.",
+    "It is irrelevant to schools.",
+    "It comes from a sleep expert."
+   ]
+  },
+  {
+   "skill": "Unsupported claim",
+   "type": "mc",
+   "again": true,
+   "q": "\"Teenagers will just stay up later playing on their phones.\" Which statement best describes this sentence?",
+   "options": [
+    "It is supported by the study.",
+    "It is a prediction with no evidence.",
+    "It is a fact with a number.",
+    "It is a counterclaim that Argument 1 accepts."
+   ]
+  },
+  {
+   "skill": "Credible source",
+   "type": "drag",
+   "again": true,
+   "q": "Match each writer with the kind of evidence they mainly use.",
+   "items": [
+    "Argument 1 (Dr. Haddad)",
+    "Argument 2 (Mr. Reyes)"
+   ],
+   "targets": [
+    "A large study with numbers",
+    "Personal memory and predictions"
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "again": true,
+   "q": "Which statement best explains why Argument 1 is better supported?",
+   "options": [
+    "Dr. Haddad is a doctor, so she is always right.",
+    "Argument 1 uses data from a large study and answers a counterclaim, while Argument 2 relies on memory and predictions without evidence.",
+    "Argument 2 is shorter.",
+    "Argument 1 agrees with most parents."
+   ]
+  },
+  {
+   "skill": "Traps",
+   "type": "mc",
+   "again": true,
+   "q": "A student writes: \"Argument 2 is weak because Mr. Reyes is just a parent.\" What is wrong with this reason?",
+   "options": [
+    "Nothing; parents are never right.",
+    "It attacks the person instead of judging the evidence.",
+    "It is too specific.",
+    "It uses statistics."
+   ]
+  },
+  {
+   "skill": "Extended response",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the essay sentence.",
+   "text": "Argument 1 is better supported because it uses {0}, while Argument 2 depends on {1}.",
+   "blanks": [
+    {
+     "options": [
+      "a study of 9,000 students",
+      "emotional language",
+      "the writer's memory"
+     ]
+    },
+    {
+     "options": [
+      "a large study",
+      "personal memory and predictions",
+      "expert data"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "q": "\"After the new mayor started, it rained more. The new mayor brought the rain.\" What is the error?",
+   "options": [
+    "Hasty generalization",
+    "False cause",
+    "Wrong expert",
+    "Specific evidence"
+   ]
+  },
+  {
+   "skill": "Broken reasoning",
+   "type": "mc",
+   "q": "\"I bought one bad phone from that shop, so all their products are bad.\" What is the error?",
+   "options": [
+    "Hasty generalization",
+    "False cause",
+    "Credible source",
+    "Relevant evidence"
+   ]
+  },
+  {
+   "skill": "Opinion and fact",
+   "type": "mc",
+   "q": "Which argument is the strongest?",
+   "options": [
+    "The city should plant trees because trees are beautiful.",
+    "The city should plant trees because a city study found shaded streets were up to 5°C cooler in summer.",
+    "The city should plant trees because I love green colours.",
+    "The city should plant trees because everyone wants them."
+   ]
+  },
+  {
+   "skill": "GED question language",
+   "type": "mc",
+   "q": "A question asks: \"Which evidence is irrelevant to the author's argument?\" What does it mean?",
+   "options": [
+    "Which fact does not help prove the claim?",
+    "Which fact is the most specific?",
+    "Which fact is the newest?",
+    "Which fact is an opinion?"
+   ]
+  },
+  {
+   "skill": "Credible source",
+   "type": "mc",
+   "q": "A writer claims a new drink is healthy. Which source is the LEAST credible?",
+   "options": [
+    "A study by a university nutrition department",
+    "A report from the health ministry",
+    "An advert paid for by the company that makes the drink",
+    "A review of 20 studies by doctors"
+   ]
+  },
+  {
+   "skill": "Logical evidence",
+   "type": "mc",
+   "ptitle": "Argument",
+   "passage": "The town should build a new football stadium. Football is the most popular sport in the world.",
+   "q": "Why is the evidence weak?",
+   "options": [
+    "It is not about this town's needs or use of a stadium.",
+    "It is too specific.",
+    "It comes from a stadium study.",
+    "It is an emotional story."
+   ]
+  },
+  {
+   "skill": "Relevant evidence",
+   "type": "mc",
+   "q": "Claim: \"The company should give staff a training budget.\" Which evidence is relevant?",
+   "options": [
+    "The company's logo is blue.",
+    "Staff who completed training last year handled 25% more customer cases.",
+    "The office opens at 8 a.m.",
+    "The company has two lifts."
+   ]
+  },
+  {
+   "skill": "Unsupported claim",
+   "type": "hotspot",
+   "q": "Select the unsupported claim.",
+   "sentences": [
+    "The new bus route started in May.",
+    "It stops at the hospital and the university.",
+    "Nobody will ever use this route.",
+    "It runs every 15 minutes."
+   ]
+  },
+  {
+   "skill": "The 4-Test check",
+   "type": "drag",
+   "q": "Match each weak piece of evidence with the test it fails.",
+   "items": [
+    "A study about cars in another country, used to argue about one local market",
+    "\"Lots of people say so.\"",
+    "A survey paid for by the company that sells the product"
+   ],
+   "targets": [
+    "Relevant",
+    "Specific",
+    "Credible"
+   ]
+  }
+ ],
+ "checklist": [
+  "follow the golden rule: choose the evidence, not my opinion",
+  "find the claim, the reason and the evidence",
+  "test evidence: relevant, credible, specific, logical",
+  "see that true does not always mean relevant",
+  "spot the three traps: it sounds true, emotional language, wrong expert",
+  "spot hasty generalizations, false causes and unsupported claims",
+  "compare two arguments and say which is better supported, with a reason"
+ ]
+}

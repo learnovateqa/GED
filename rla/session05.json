@@ -1,0 +1,1651 @@
+{
+ "n": 5,
+ "title": "Sentence Structure & Grammar",
+ "minutes": 90,
+ "intro": "You learn to find where a sentence starts and stops, to fix fragments, run-ons and comma splices, and to make subjects and verbs, pronouns and tenses agree. You use one routine for every editing question: S.C.A.N.",
+ "slides": [
+  {
+   "kind": "title",
+   "h": "Build a sentence that doesn't break",
+   "sub": "Sentence Structure & Grammar"
+  },
+  {
+   "h": "Today you will",
+   "blocks": [
+    {
+     "steps": [
+      "**Find** the sentence: where does it start and stop?",
+      "**Spot** the broken ones: fragments, run-ons, comma splices.",
+      "**Fix** them four different ways.",
+      "**Match** subjects, verbs, pronouns and tenses."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Why this matters",
+   "blocks": [
+    {
+     "list": [
+      "**Editing questions:** drop-down lists inside the reading passages. Only one choice is correct.",
+      "**The essay:** one of the three scoring traits is clear, correct English.",
+      "**Reading:** punctuation and pronouns change meaning."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Two emails, one job",
+   "blocks": [
+    {
+     "weak": "I am writing about the supervisor job I saw your advert online I have four years of experience. Because I managed a team of nine people.",
+     "label": "email",
+     "note": "No interview."
+    },
+    {
+     "strong": "I am writing about the supervisor job. I saw your advert online. I have four years of experience, and I managed a team of nine people.",
+     "label": "email",
+     "note": "Interview!"
+    },
+    {
+     "p": "Same person, same facts. Only the sentence boundaries changed."
+    }
+   ]
+  },
+  {
+   "h": "S.C.A.N.: your routine",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Letter",
+       "Check"
+      ],
+      "rows": [
+       [
+        "**S**",
+        "Subject and verb: who or what, doing what?"
+       ],
+       [
+        "**C**",
+        "Complete: can it stand alone?"
+       ],
+       [
+        "**A**",
+        "Agreement: subject–verb, pronoun, tense"
+       ],
+       [
+        "**N**",
+        "Neat: punctuation (Session 6)"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Independent or dependent?",
+   "blocks": [
+    {
+     "strong": "The bus arrived late.",
+     "label": "independent clause",
+     "note": "Subject + verb + complete thought. It can stand alone."
+    },
+    {
+     "weak": "Because the bus arrived late…",
+     "label": "dependent clause",
+     "note": "Subject + verb, but the thought is not finished. Alone, it is a fragment."
+    }
+   ]
+  },
+  {
+   "h": "The waiting words",
+   "blocks": [
+    {
+     "flow": [
+      "after",
+      "although",
+      "as",
+      "because",
+      "before",
+      "if",
+      "since",
+      "until",
+      "when",
+      "while"
+     ]
+    },
+    {
+     "remember": "If a group of words starts with a waiting word, look for the second half. No second half = fragment."
+    }
+   ]
+  },
+  {
+   "h": "The 3-question sentence test",
+   "blocks": [
+    {
+     "steps": [
+      "Is there a **subject**? (Who or what?)",
+      "Is there a **verb**? (An -ing word alone does not count.)",
+      "Is the thought **complete**? (Am I still waiting?)"
+     ]
+    },
+    {
+     "mistake": "Judging by length. A 24-word group can be a fragment. \"She left.\" is a full sentence."
+    }
+   ]
+  },
+  {
+   "h": "Four kinds of fragment",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Missing",
+       "Example"
+      ],
+      "rows": [
+       [
+        "subject",
+        "Ran to the station without a ticket."
+       ],
+       [
+        "verb",
+        "The manager and the whole night team."
+       ],
+       [
+        "second half",
+        "Although the report was on time."
+       ],
+       [
+        "main verb (-ing)",
+        "The team working every weekend."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Run-on and comma splice",
+   "blocks": [
+    {
+     "weak": "The shop closed early we went home.",
+     "label": "run-on (nothing between)"
+    },
+    {
+     "weak": "The shop closed early, we went home.",
+     "label": "comma splice (only a comma)"
+    },
+    {
+     "tip": "Finger test: cover the comma. If both sides are full sentences, a comma alone is wrong."
+    }
+   ]
+  },
+  {
+   "h": "The four legal fixes",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Fix",
+       "Example"
+      ],
+      "rows": [
+       [
+        "1 · Period",
+        "The shop closed early. We went home."
+       ],
+       [
+        "2 · Semicolon",
+        "The shop closed early; we went home."
+       ],
+       [
+        "3 · Comma + FANBOYS",
+        "The shop closed early, so we went home."
+       ],
+       [
+        "4 · Waiting word",
+        "Because the shop closed early, we went home."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "FANBOYS: for, and, nor, but, or, yet, so."
+    }
+   ]
+  },
+  {
+   "h": "Think aloud",
+   "blocks": [
+    {
+     "passage": "Many employees prefer flexible hours, they say it reduces stress.",
+     "title": "Which is the best revision?"
+    },
+    {
+     "list": [
+      "A. …flexible hours they say it reduces stress.",
+      "B. …flexible hours; they say it reduces stress.",
+      "C. …flexible hours, and, they say it reduces stress.",
+      "D. …flexible hours, they say, it reduces stress."
+     ]
+    },
+    {
+     "strong": "B. A semicolon joins two complete, closely related sentences.",
+     "label": "answer"
+    }
+   ]
+  },
+  {
+   "h": "Subject–verb agreement",
+   "blocks": [
+    {
+     "steps": [
+      "Find the **verb**.",
+      "Ask who or what does it. That is the subject.",
+      "Cross out the words in the middle (of…, with…, along with…).",
+      "Read subject + verb alone."
+     ]
+    },
+    {
+     "strong": "The box ~~of old photos and letters~~ **was** in the cupboard.",
+     "label": "sentence"
+    }
+   ]
+  },
+  {
+   "h": "Agreement rules",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Rule",
+       "Example"
+      ],
+      "rows": [
+       [
+        "each, every, everyone, nobody = one",
+        "Everyone **is** ready."
+       ],
+       [
+        "A and B = more than one",
+        "The manager and the clerk **are** here."
+       ],
+       [
+        "either…or / neither…nor: the nearer one",
+        "Neither the boxes nor the crate **fits**."
+       ],
+       [
+        "along with, as well as: no change",
+        "The teacher, along with her students, **was** late."
+       ],
+       [
+        "team, staff, family = one",
+        "The committee **meets** monthly."
+       ],
+       [
+        "there is / there are: subject after the verb",
+        "There **are** three reasons."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Pronouns: me or I?",
+   "blocks": [
+    {
+     "weak": "Give the file to Ahmed and I.",
+     "label": "sentence"
+    },
+    {
+     "strong": "Give the file to Ahmed and me.",
+     "label": "sentence"
+    },
+    {
+     "tip": "Cover \"Ahmed and\". Give the file to **me**, not to *I*."
+    }
+   ]
+  },
+  {
+   "h": "Pronouns: this what?",
+   "blocks": [
+    {
+     "weak": "The report criticized the plan. This was unexpected.",
+     "label": "sentence",
+     "note": "This what? It is not clear."
+    },
+    {
+     "strong": "The report criticized the plan. This criticism was unexpected.",
+     "label": "sentence"
+    }
+   ]
+  },
+  {
+   "h": "Stay in one time zone",
+   "blocks": [
+    {
+     "weak": "She walked into the room and sits down.",
+     "label": "sentence",
+     "note": "Past, then present, for no reason."
+    },
+    {
+     "strong": "She walked into the room and sat down.",
+     "label": "sentence"
+    },
+    {
+     "tip": "Change tense only when a time word tells you to: yesterday, now, next year. Read one sentence before and one after."
+    }
+   ]
+  },
+  {
+   "h": "Lists: keep them parallel",
+   "blocks": [
+    {
+     "weak": "She likes cooking, to swim and reading.",
+     "label": "sentence",
+     "note": "Mixed forms."
+    },
+    {
+     "strong": "She likes cooking, swimming and reading.",
+     "label": "sentence",
+     "note": "The same form."
+    }
+   ]
+  },
+  {
+   "h": "Describing phrases: in the right place",
+   "blocks": [
+    {
+     "weak": "Running to the bus, my phone fell.",
+     "label": "sentence",
+     "note": "The phone was not running."
+    },
+    {
+     "strong": "Running to the bus, I dropped my phone.",
+     "label": "sentence"
+    }
+   ]
+  },
+  {
+   "h": "Common GED traps",
+   "blocks": [
+    {
+     "list": [
+      "Long, so it must be a sentence. (No.)",
+      "A comma where your ear wants a pause.",
+      "A plural noun just before the verb: *the box of letters were…*",
+      "An -ing word as the main verb.",
+      "Fixing a splice with *however* and a comma. (*However* needs a semicolon or a period.)",
+      "Changing a sentence that is already correct."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Now it is your turn",
+   "blocks": [
+    {
+     "flow": [
+      "Reviewer",
+      "Workbook",
+      "Quiz",
+      "Checklist"
+     ]
+    },
+    {
+     "remember": "Use S.C.A.N. on every editing question."
+    }
+   ]
+  },
+  {
+   "kind": "title",
+   "h": "Thank you!",
+   "sub": "See you in Session 6: Punctuation & Language Conventions."
+  }
+ ],
+ "reviewer": [
+  {
+   "h": "Why sentences matter on the GED",
+   "blocks": [
+    {
+     "p": "On the RLA test, grammar is tested with **drop-down** lists inside short texts like emails, letters and articles. You choose the version that is correct. In the essay, one of the three scoring traits is clear and correct English."
+    },
+    {
+     "weak": "I am writing about the supervisor job I saw your advert online I have four years of experience. Because I managed a team of nine people.",
+     "label": "email",
+     "note": "A run-on and a fragment make the writer look careless."
+    },
+    {
+     "strong": "I am writing about the supervisor job. I saw your advert online. I have four years of experience, and I managed a team of nine people.",
+     "label": "email",
+     "note": "The same facts, in clear sentences."
+    },
+    {
+     "remember": "Use **S.C.A.N.** for every editing question: Subject and verb · Complete · Agreement · Neat (punctuation)."
+    }
+   ]
+  },
+  {
+   "h": "Clauses: independent and dependent",
+   "blocks": [
+    {
+     "p": "A **clause** has a subject and a verb. An **independent clause** is a complete thought and can stand alone. A **dependent clause** starts with a waiting word and cannot stand alone."
+    },
+    {
+     "table": {
+      "head": [
+       "Clause",
+       "Example",
+       "Alone?"
+      ],
+      "rows": [
+       [
+        "Independent",
+        "The bus arrived late.",
+        "Yes, it is a sentence."
+       ],
+       [
+        "Dependent",
+        "Because the bus arrived late",
+        "No, it is a fragment."
+       ]
+      ]
+     }
+    },
+    {
+     "p": "Waiting words: **after, although, as, because, before, if, since, until, when, while**."
+    },
+    {
+     "tip": "If a group of words starts with a waiting word, look for the second half: *Because the bus arrived late, **I missed the meeting.***"
+    }
+   ]
+  },
+  {
+   "h": "Fragments",
+   "blocks": [
+    {
+     "p": "A **fragment** is part of a sentence written as if it were complete. Use the 3-question test: Is there a subject? Is there a verb? Is the thought complete? If any answer is no, it is a fragment."
+    },
+    {
+     "table": {
+      "head": [
+       "Fragment",
+       "What is missing",
+       "Fixed"
+      ],
+      "rows": [
+       [
+        "Ran to the station without a ticket.",
+        "subject",
+        "**He** ran to the station without a ticket."
+       ],
+       [
+        "The manager and the whole night team.",
+        "verb",
+        "The manager and the whole night team **worked late**."
+       ],
+       [
+        "Although the report was on time.",
+        "the second half",
+        "Although the report was on time, **the manager was not happy**."
+       ],
+       [
+        "The team working every weekend.",
+        "a main verb",
+        "The team **was** working every weekend."
+       ]
+      ]
+     }
+    },
+    {
+     "mistake": "Judging by length. \"When the supervisor, who had worked at the plant for nineteen years, finally retired.\" is long but still a fragment. \"She left.\" is short but complete."
+    }
+   ]
+  },
+  {
+   "h": "Run-ons and comma splices",
+   "blocks": [
+    {
+     "p": "A **run-on** joins two sentences with nothing. A **comma splice** joins two sentences with only a comma. Both are errors."
+    },
+    {
+     "weak": "The shop closed early we went home.",
+     "label": "run-on"
+    },
+    {
+     "weak": "The shop closed early, we went home.",
+     "label": "comma splice"
+    },
+    {
+     "p": "**The finger test:** cover the comma. Read the left side alone, then the right side alone. If both are complete sentences, a comma alone is not enough."
+    },
+    {
+     "table": {
+      "head": [
+       "The four legal fixes",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Period",
+        "The shop closed early. We went home."
+       ],
+       [
+        "Semicolon",
+        "The shop closed early; we went home."
+       ],
+       [
+        "Comma + FANBOYS (for, and, nor, but, or, yet, so)",
+        "The shop closed early, so we went home."
+       ],
+       [
+        "Waiting word",
+        "Because the shop closed early, we went home."
+       ]
+      ]
+     }
+    },
+    {
+     "mistake": "Fixing a comma splice with *however* and a comma: \"It rained, however we played.\" *However* needs a semicolon or a period before it: \"It rained; however, we played.\""
+    }
+   ]
+  },
+  {
+   "h": "Subject–verb agreement",
+   "blocks": [
+    {
+     "p": "A singular subject takes a singular verb. A plural subject takes a plural verb. The GED often hides the subject behind extra words."
+    },
+    {
+     "steps": [
+      "Find the verb.",
+      "Ask who or what does it. That is the real subject.",
+      "Cross out the words in the middle, especially after *of, with, along with, as well as, including*.",
+      "Read the subject and the verb alone."
+     ]
+    },
+    {
+     "strong": "The collection of rare coins and stamps **is** in the east room.",
+     "label": "sentence",
+     "note": "One collection. \"of rare coins and stamps\" only describes it."
+    },
+    {
+     "table": {
+      "head": [
+       "Rule",
+       "Example"
+      ],
+      "rows": [
+       [
+        "each, every, everyone, anyone, nobody, either, neither = singular",
+        "Everyone **is** ready."
+       ],
+       [
+        "two subjects joined by and = plural",
+        "The manager and the clerk **are** here."
+       ],
+       [
+        "either…or / neither…nor: match the nearer subject",
+        "Neither the boxes nor the crate **fits**."
+       ],
+       [
+        "along with, as well as, together with change nothing",
+        "The teacher, along with her students, **was** late."
+       ],
+       [
+        "team, staff, committee, family = one group",
+        "The committee **meets** every month."
+       ],
+       [
+        "there is / there are: the subject comes after the verb",
+        "There **are** three reasons."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Pronouns",
+   "blocks": [
+    {
+     "p": "A pronoun must match the word it replaces, and it must be clear. Ask two questions: **Who?** and **How many?**"
+    },
+    {
+     "table": {
+      "head": [
+       "Problem",
+       "Wrong",
+       "Right"
+      ],
+      "rows": [
+       [
+        "case",
+        "Give the file to Ahmed and I.",
+        "Give the file to Ahmed and **me**."
+       ],
+       [
+        "unclear reference",
+        "The report criticized the plan. This was unexpected.",
+        "The report criticized the plan. **This criticism** was unexpected."
+       ],
+       [
+        "number",
+        "The company changed their logo. (formal writing)",
+        "The company changed **its** logo."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "For *Ahmed and I / me*, cover \"Ahmed and\". Give the file to **me**, not to *I*."
+    }
+   ]
+  },
+  {
+   "h": "Verb tense",
+   "blocks": [
+    {
+     "p": "Stay in one time zone. Change the tense only when a time word gives a reason."
+    },
+    {
+     "weak": "She walked into the room and sits down.",
+     "label": "sentence",
+     "note": "Past, then present, for no reason."
+    },
+    {
+     "strong": "She walked into the room and sat down.",
+     "label": "sentence"
+    },
+    {
+     "tip": "For tense questions, read one sentence before and one sentence after. The neighbours decide."
+    }
+   ]
+  },
+  {
+   "h": "Parallel structure and modifiers",
+   "blocks": [
+    {
+     "p": "Items in a list should have the same form. A describing phrase must sit next to the word it describes."
+    },
+    {
+     "weak": "She likes cooking, to swim and reading.",
+     "label": "sentence",
+     "note": "Mixed forms."
+    },
+    {
+     "strong": "She likes cooking, swimming and reading.",
+     "label": "sentence",
+     "note": "All -ing forms."
+    },
+    {
+     "weak": "Running to the bus, my phone fell.",
+     "label": "sentence",
+     "note": "This says the phone was running."
+    },
+    {
+     "strong": "Running to the bus, I dropped my phone.",
+     "label": "sentence"
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  [
+   "clause",
+   "a group of words with a subject and a verb"
+  ],
+  [
+   "independent clause",
+   "a clause that is a complete thought and can stand alone"
+  ],
+  [
+   "dependent clause",
+   "a clause that starts with a waiting word and cannot stand alone"
+  ],
+  [
+   "fragment",
+   "part of a sentence written as if it were complete"
+  ],
+  [
+   "run-on",
+   "two sentences joined with no punctuation"
+  ],
+  [
+   "comma splice",
+   "two sentences joined with only a comma"
+  ],
+  [
+   "FANBOYS",
+   "for, and, nor, but, or, yet, so: joining words used with a comma"
+  ],
+  [
+   "subject",
+   "who or what the sentence is about"
+  ],
+  [
+   "verb",
+   "the action or state: what the subject does or is"
+  ],
+  [
+   "agreement",
+   "matching singular with singular and plural with plural"
+  ],
+  [
+   "pronoun",
+   "a word that replaces a noun: he, she, it, they, this"
+  ],
+  [
+   "tense",
+   "the time of a verb: past, present or future"
+  ],
+  [
+   "parallel structure",
+   "using the same form for items in a list"
+  ],
+  [
+   "modifier",
+   "a word or phrase that describes something"
+  ]
+ ],
+ "workbook": [
+  {
+   "level": "easy",
+   "skill": "Fragments",
+   "type": "drag",
+   "q": "Is each group of words a complete sentence or a fragment?",
+   "items": [
+    "She left.",
+    "Because the shop was closed.",
+    "The workers finished the job.",
+    "Running to catch the bus."
+   ],
+   "targets": [
+    "Complete sentence",
+    "Fragment"
+   ],
+   "answer": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "why": "\"She left\" and \"The workers finished the job\" have a subject, a verb and a complete thought. \"Because…\" needs a second half, and \"Running…\" has no subject and no main verb."
+  },
+  {
+   "level": "easy",
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Choose the correct verb.",
+   "text": "My brother {0} in a hotel. My sisters {1} at a bank.",
+   "blanks": [
+    {
+     "options": [
+      "work",
+      "works"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "work",
+      "works"
+     ],
+     "answer": 0
+    }
+   ],
+   "why": "\"My brother\" is one person, so the verb is \"works\". \"My sisters\" are more than one, so the verb is \"work\"."
+  },
+  {
+   "level": "easy",
+   "skill": "Run-ons",
+   "type": "mc",
+   "q": "Which sentence is correct?",
+   "options": [
+    "It was late we went home.",
+    "It was late, we went home.",
+    "It was late, so we went home.",
+    "It was late so, we went home."
+   ],
+   "answer": 2,
+   "why": "C joins two sentences with a comma and \"so\" (FANBOYS). A is a run-on, B is a comma splice, and D puts the comma in the wrong place."
+  },
+  {
+   "level": "easy",
+   "skill": "Verb tense",
+   "type": "dropdown",
+   "q": "Choose the verb that keeps the same time.",
+   "text": "Yesterday, I opened the door and {0} the lights on.",
+   "blanks": [
+    {
+     "options": [
+      "turn",
+      "turned",
+      "will turn"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "\"Yesterday\" and \"opened\" are in the past, so the second verb is also past: \"turned\"."
+  },
+  {
+   "level": "easy",
+   "skill": "Pronouns",
+   "type": "mc",
+   "q": "Which sentence is correct?",
+   "options": [
+    "Please send the report to Sara and I.",
+    "Please send the report to Sara and me.",
+    "Please send the report to me and Sara and I.",
+    "Please send the report to Sara and myself."
+   ],
+   "answer": 1,
+   "why": "Cover \"Sara and\": send the report to **me**. \"To I\" is wrong, so \"Sara and me\" is correct."
+  },
+  {
+   "level": "guided",
+   "skill": "Fragments",
+   "type": "mc",
+   "q": "\"Although the meeting started late.\" How can you fix this fragment?",
+   "options": [
+    "Although the meeting started late, we finished on time.",
+    "Although, the meeting started late.",
+    "Although the meeting started late and.",
+    "The meeting although started late."
+   ],
+   "answer": 0,
+   "why": "\"Although\" is a waiting word, so the sentence needs a second half: \"…, we finished on time.\""
+  },
+  {
+   "level": "guided",
+   "skill": "Run-ons",
+   "type": "drag",
+   "q": "Match each sentence with its fix.",
+   "items": [
+    "The bus was full. We waited.",
+    "The bus was full; we waited.",
+    "The bus was full, so we waited.",
+    "Because the bus was full, we waited."
+   ],
+   "targets": [
+    "Period",
+    "Semicolon",
+    "Comma + FANBOYS",
+    "Waiting word"
+   ],
+   "answer": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "why": "These are the four legal ways to fix \"The bus was full, we waited.\" All four are correct."
+  },
+  {
+   "level": "guided",
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Cross out the middle, then choose.",
+   "text": "The box of old letters {0} in the cupboard. The list of names {1} on the wall.",
+   "blanks": [
+    {
+     "options": [
+      "was",
+      "were"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "is",
+      "are"
+     ],
+     "answer": 0
+    }
+   ],
+   "why": "The subjects are \"the box\" and \"the list\". Both are singular. \"Of old letters\" and \"of names\" only describe them."
+  },
+  {
+   "level": "guided",
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Choose the correct verbs.",
+   "text": "Everyone in the class {0} a laptop. The team {1} every Monday.",
+   "blanks": [
+    {
+     "options": [
+      "has",
+      "have"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "meet",
+      "meets"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "\"Everyone\" is singular, so it takes \"has\". \"The team\" is one group, so it takes \"meets\"."
+  },
+  {
+   "level": "guided",
+   "skill": "Fragments",
+   "type": "fill",
+   "q": "Add the missing subject. Type one word.",
+   "text": "{0} ran to the station without a ticket.",
+   "blanks": [
+    {
+     "accept": [
+      "he",
+      "she",
+      "i",
+      "we",
+      "they",
+      "ali",
+      "sara",
+      "the man",
+      "the woman"
+     ]
+    }
+   ],
+   "why": "The fragment has a verb (ran) but no subject. Adding a subject like \"He\" makes a complete sentence."
+  },
+  {
+   "level": "application",
+   "skill": "Run-ons",
+   "type": "mc",
+   "q": "Which is the best revision? \"Many workers prefer flexible hours, they say it reduces stress.\"",
+   "options": [
+    "Many workers prefer flexible hours they say it reduces stress.",
+    "Many workers prefer flexible hours; they say it reduces stress.",
+    "Many workers prefer flexible hours, and, they say it reduces stress.",
+    "Many workers prefer flexible hours, they say, it reduces stress."
+   ],
+   "answer": 1,
+   "why": "The semicolon correctly joins two complete sentences. A is a run-on. C has an extra comma after \"and\". D does not fix the splice."
+  },
+  {
+   "level": "application",
+   "skill": "Subject–verb agreement",
+   "type": "mc",
+   "q": "Choose the correct sentence.",
+   "options": [
+    "Neither the manager nor the workers was ready.",
+    "Neither the manager nor the workers were ready.",
+    "Neither the manager or the workers were ready.",
+    "Neither the managers nor the worker were ready."
+   ],
+   "answer": 1,
+   "why": "With neither…nor, the verb matches the nearer subject. \"Workers\" is plural, so \"were\" is correct. C uses \"or\" instead of \"nor\". In D, \"worker\" is singular, so it needs \"was\"."
+  },
+  {
+   "level": "application",
+   "skill": "Pronouns",
+   "type": "dropdown",
+   "q": "Choose the clearest and most correct words.",
+   "text": "The company updated {0} website. The new design is easy to use, and {1} has more information for customers.",
+   "blanks": [
+    {
+     "options": [
+      "its",
+      "their",
+      "it's"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "it",
+      "they",
+      "this"
+     ],
+     "answer": 0
+    }
+   ],
+   "why": "\"The company\" is one organization, so use \"its\" (no apostrophe). The new design is one thing, so \"it\" is correct."
+  },
+  {
+   "level": "application",
+   "skill": "Parallel structure",
+   "type": "mc",
+   "q": "Which sentence is parallel?",
+   "options": [
+    "The job needs patience, being careful and to work hard.",
+    "The job needs patience, care and hard work.",
+    "The job needs to be patient, care and working hard.",
+    "The job needs patience, careful and hard working."
+   ],
+   "answer": 1,
+   "why": "In B, all three items are nouns: patience, care, hard work. The other choices mix different forms."
+  },
+  {
+   "level": "application",
+   "skill": "Modifiers",
+   "type": "mc",
+   "q": "Which sentence is correct?",
+   "options": [
+    "Walking to work, the rain started.",
+    "Walking to work, I felt the rain start.",
+    "The rain started walking to work.",
+    "Walking to work, it started to rain on me."
+   ],
+   "answer": 1,
+   "why": "The phrase \"Walking to work\" must describe the person who walked. In B, \"I\" comes right after it. In A, the rain is walking."
+  },
+  {
+   "level": "challenge",
+   "skill": "Editing in context",
+   "type": "dropdown",
+   "ptitle": "Email",
+   "q": "Read the email. Choose the best option for each blank.",
+   "text": "Dear Ms. Alvarez,\n\nI am writing about the warehouse supervisor position{0} I saw your advertisement online. I have four years of experience{1} and I managed a team of nine people. The list of my references {2} attached. My last two managers, along with my team leader, {3} happy to speak with you.",
+   "blanks": [
+    {
+     "options": [
+      ",",
+      ".",
+      " and,"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      ",",
+      ";",
+      "(no punctuation)"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "is",
+      "are"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "is",
+      "are"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "1) Two sentences need a period. 2) Two complete sentences joined with \"and\" take a comma. 3) The subject is \"the list\" (one), so \"is\". 4) The subject is \"my last two managers\" (plural); \"along with\" changes nothing, so \"are\"."
+  },
+  {
+   "level": "challenge",
+   "skill": "Fragments",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Tap the fragment.",
+   "sentences": [
+    "The new clinic opened in March.",
+    "It has six doctors and a small pharmacy.",
+    "Because many families in the area had no clinic nearby.",
+    "Now most patients can see a doctor on the same day."
+   ],
+   "answer": 2,
+   "why": "Sentence 3 starts with the waiting word \"Because\" and has no second half. It should be joined to sentence 1: \"The new clinic opened in March because…\""
+  },
+  {
+   "level": "challenge",
+   "skill": "Verb tense",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Tap the sentence with an unnecessary tense change.",
+   "sentences": [
+    "Last year, our company moved to a new office.",
+    "The building had more light and more space.",
+    "Staff members arrive earlier and stayed later.",
+    "Productivity rose by ten percent."
+   ],
+   "answer": 2,
+   "why": "The paragraph is in the past (last year, moved, had, rose). \"Arrive\" is present. It should be \"arrived\"."
+  },
+  {
+   "level": "challenge",
+   "skill": "Run-ons",
+   "type": "mc",
+   "q": "Which is the best revision? \"The report was finished on time, however the manager asked for changes.\"",
+   "options": [
+    "The report was finished on time, however, the manager asked for changes.",
+    "The report was finished on time; however, the manager asked for changes.",
+    "The report was finished on time however the manager asked for changes.",
+    "The report was finished on time, however; the manager asked for changes."
+   ],
+   "answer": 1,
+   "why": "\"However\" is not a FANBOYS word, so it cannot join two sentences with a comma. Use a semicolon before it and a comma after it."
+  },
+  {
+   "level": "challenge",
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Choose the correct verbs.",
+   "text": "There {0} three reasons for the delay. The quality of the new machines {1} better than expected.",
+   "blanks": [
+    {
+     "options": [
+      "is",
+      "are"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "is",
+      "are"
+     ],
+     "answer": 0
+    }
+   ],
+   "why": "With \"there is / there are\", the subject comes after the verb: \"three reasons\" is plural, so \"are\". The subject of the second sentence is \"the quality\" (one), so \"is\"."
+  }
+ ],
+ "quiz": [
+  {
+   "skill": "Run-ons",
+   "type": "dropdown",
+   "q": "Read the email. Choose the option that correctly completes each sentence.",
+   "text": "Dear Mr. Khan,\n\nThank you for your message{0} I am happy to answer your questions.",
+   "blanks": [
+    {
+     "options": [
+      ",",
+      " ",
+      ". "
+     ]
+    }
+   ],
+   "ptitle": "Email"
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "Our training courses {0} every Sunday and Tuesday evening.",
+   "blanks": [
+    {
+     "options": [
+      "start",
+      "starts",
+      "starting"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Fragments",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "Each course lasts eight weeks{0} because most students work during the day.",
+   "blanks": [
+    {
+     "options": [
+      ". The classes are in the evening",
+      ". Because the classes are in the evening",
+      ", the classes are in the evening"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Pronouns",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "If you want to join, please send the form to my colleague and {0} before Thursday.",
+   "blanks": [
+    {
+     "options": [
+      "I",
+      "me",
+      "myself"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Verb tense",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "Last month, twenty new students {0} the course.",
+   "blanks": [
+    {
+     "options": [
+      "join",
+      "joined",
+      "will join"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "The list of books for the course {0} attached to this email.\n\nBest regards,\nHana Saleh",
+   "blanks": [
+    {
+     "options": [
+      "is",
+      "are",
+      "were"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Read the memo. Choose the option that correctly completes each sentence.",
+   "text": "To all staff:\n\nThe new security system, along with the new ID cards, {0} ready next week.",
+   "blanks": [
+    {
+     "options": [
+      "are",
+      "is",
+      "were"
+     ]
+    }
+   ],
+   "ptitle": "Memo"
+  },
+  {
+   "skill": "Run-ons",
+   "type": "dropdown",
+   "q": "Continue the memo.",
+   "text": "Each employee will receive a new card{0} the old cards will stop working on 1 June.",
+   "blanks": [
+    {
+     "options": [
+      ",",
+      ";",
+      " "
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Continue the memo.",
+   "text": "Neither the managers nor the receptionist {0} able to open doors with an old card after that date.",
+   "blanks": [
+    {
+     "options": [
+      "are",
+      "is",
+      "were"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Pronouns",
+   "type": "dropdown",
+   "q": "Continue the memo.",
+   "text": "The company has updated {0} rules for visitors.",
+   "blanks": [
+    {
+     "options": [
+      "their",
+      "its",
+      "it's"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Parallel structure",
+   "type": "dropdown",
+   "q": "Continue the memo.",
+   "text": "Visitors must sign in at reception, wear a badge and {0} by a staff member.",
+   "blanks": [
+    {
+     "options": [
+      "be accompanied",
+      "accompanying",
+      "to accompany"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "dropdown",
+   "q": "Continue the memo.",
+   "text": "Questions can go to the security office{0} please do not reply to this email.\n\nFacilities Team",
+   "blanks": [
+    {
+     "options": [
+      ", however",
+      ". However,",
+      ", however,"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Fragments",
+   "type": "dropdown",
+   "q": "Read the article. Choose the option that correctly completes each sentence.",
+   "text": "Community gardens are spreading across our city{0} on rooftops, empty plots and even school car parks.",
+   "blanks": [
+    {
+     "options": [
+      ". Appearing",
+      ", appearing",
+      "; appearing"
+     ]
+    }
+   ],
+   "ptitle": "Article"
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "The number of gardens {0} doubled in the past five years.",
+   "blanks": [
+    {
+     "options": [
+      "have",
+      "has",
+      "are"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Modifiers",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "{0}, volunteers meet every Saturday to plant, water and harvest.",
+   "blanks": [
+    {
+     "options": [
+      "Working together",
+      "Worked together",
+      "Work together"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Verb tense",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "When the first garden opened in 2019, only twelve families {0} part.",
+   "blanks": [
+    {
+     "options": [
+      "take",
+      "took",
+      "have taken"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "Today, there {0} more than three hundred registered gardeners.",
+   "blanks": [
+    {
+     "options": [
+      "is",
+      "are",
+      "was"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "Many gardeners grow food for their families{0} others give their harvest to local food banks.",
+   "blanks": [
+    {
+     "options": [
+      ", while",
+      ",",
+      "(no punctuation)"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Pronouns",
+   "type": "dropdown",
+   "q": "Continue the article.",
+   "text": "The city council supports the project, and {0} has promised free water for every garden next year.",
+   "blanks": [
+    {
+     "options": [
+      "they",
+      "it",
+      "them"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "mc",
+   "q": "Which is the best revision? \"The elevator was broken, we used the stairs.\"",
+   "options": [
+    "The elevator was broken we used the stairs.",
+    "The elevator was broken, so we used the stairs.",
+    "The elevator was broken, and, we used the stairs.",
+    "The elevator, was broken, we used the stairs."
+   ]
+  },
+  {
+   "skill": "Fragments",
+   "type": "mc",
+   "q": "Which is a complete sentence?",
+   "options": [
+    "When the supervisor, who had worked at the plant for nineteen years, finally retired.",
+    "The supervisor, who had worked at the plant for nineteen years, finally retired.",
+    "Although the supervisor finally retired.",
+    "The supervisor working at the plant for nineteen years."
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "mc",
+   "q": "Choose the correct sentence.",
+   "options": [
+    "The collection of rare coins and stamps are in the east room.",
+    "The collection of rare coins and stamps is in the east room.",
+    "The collection of rare coins and stamps were in the east room.",
+    "The collection of rare coins and stamps have been in the east room."
+   ]
+  },
+  {
+   "skill": "Pronouns",
+   "type": "mc",
+   "q": "Which sentence is clearest?",
+   "options": [
+    "The report criticized the plan. This was unexpected.",
+    "The report criticized the plan. This criticism was unexpected.",
+    "The report criticized the plan. It was unexpected that.",
+    "The report criticized the plan, this was unexpected."
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "mc",
+   "q": "Which is the best revision? \"Every driver must renew the licence, the deadline is in June.\"",
+   "options": [
+    "Every driver must renew the licence the deadline is in June.",
+    "Every driver must renew the licence; the deadline is in June.",
+    "Every driver must renew the licence, the deadline, is in June.",
+    "Every driver must renew, the licence the deadline is in June."
+   ]
+  },
+  {
+   "skill": "Verb tense",
+   "type": "mc",
+   "q": "Which sentence keeps the same tense?",
+   "options": [
+    "She walked into the room and sits down.",
+    "She walks into the room and sat down.",
+    "She walked into the room and sat down.",
+    "She walking into the room and sat down."
+   ]
+  },
+  {
+   "skill": "Parallel structure",
+   "type": "mc",
+   "q": "Which sentence is parallel?",
+   "options": [
+    "The course teaches reading, writing and how to speak.",
+    "The course teaches reading, writing and speaking.",
+    "The course teaches to read, writing and speaking.",
+    "The course teaches reading, to write and speaking."
+   ]
+  },
+  {
+   "skill": "Modifiers",
+   "type": "mc",
+   "q": "Which sentence is correct?",
+   "options": [
+    "Driving to work, the traffic was terrible.",
+    "Driving to work, I found the traffic terrible.",
+    "The traffic was terrible driving to work.",
+    "Driving to work, terrible was the traffic."
+   ]
+  },
+  {
+   "skill": "Fragments",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Select the sentence that is a fragment.",
+   "sentences": [
+    "The bakery opens at six.",
+    "Fresh bread is ready by seven.",
+    "While most of the town is still asleep.",
+    "Customers often wait outside the door."
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Select the sentence with a subject–verb agreement error.",
+   "sentences": [
+    "The new bus route starts next week.",
+    "Buses on the new route stops at the hospital.",
+    "Tickets cost three riyals.",
+    "Students travel for free."
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Select the sentence that is a comma splice.",
+   "sentences": [
+    "The museum reopened on Friday.",
+    "More than two thousand people visited on the first day.",
+    "The new hall shows old maps, visitors can also see old coins.",
+    "Entry is free for children."
+   ]
+  },
+  {
+   "skill": "Verb tense",
+   "type": "hotspot",
+   "ptitle": "Paragraph",
+   "q": "Select the sentence with an unnecessary tense change.",
+   "sentences": [
+    "In 2015, Ali started a small repair shop.",
+    "At first, he fixed only phones.",
+    "Later, he begins to repair laptops too.",
+    "By 2020, he employed five people."
+   ]
+  },
+  {
+   "skill": "Fragments",
+   "type": "drag",
+   "q": "Sort each group of words.",
+   "items": [
+    "The store closed early we went home.",
+    "The store closed early, we went home.",
+    "Because the store closed early.",
+    "The store closed early, so we went home."
+   ],
+   "targets": [
+    "Run-on",
+    "Comma splice",
+    "Fragment",
+    "Correct"
+   ]
+  },
+  {
+   "skill": "Run-ons",
+   "type": "drag",
+   "q": "Match each fix with its name.",
+   "items": [
+    "The rain stopped. We went out.",
+    "The rain stopped; we went out.",
+    "The rain stopped, so we went out.",
+    "When the rain stopped, we went out."
+   ],
+   "targets": [
+    "Period",
+    "Semicolon",
+    "Comma + FANBOYS",
+    "Waiting word"
+   ]
+  },
+  {
+   "skill": "Subject–verb agreement",
+   "type": "drag",
+   "q": "Does each subject take a singular or a plural verb?",
+   "items": [
+    "Everyone",
+    "The manager and the clerk",
+    "The committee",
+    "Three new reasons"
+   ],
+   "targets": [
+    "Singular (is)",
+    "Plural (are)"
+   ]
+  },
+  {
+   "skill": "Pronouns",
+   "type": "drag",
+   "q": "Is each sentence correct or incorrect?",
+   "items": [
+    "Give the keys to Omar and me.",
+    "Give the keys to Omar and I.",
+    "The company changed its name.",
+    "Me and Omar went to the bank."
+   ],
+   "targets": [
+    "Correct",
+    "Incorrect"
+   ]
+  }
+ ],
+ "checklist": [
+  "use S.C.A.N. on an editing question",
+  "tell an independent clause from a dependent clause",
+  "find and fix a fragment with the 3-question test",
+  "find a run-on or comma splice with the finger test",
+  "fix a run-on four ways: period, semicolon, comma + FANBOYS, waiting word",
+  "make subjects and verbs agree, even when the subject is hidden",
+  "use pronouns that are clear and correct",
+  "keep verb tenses consistent",
+  "make lists parallel and put describing phrases in the right place"
+ ]
+}

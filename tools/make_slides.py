@@ -9,7 +9,12 @@ L = json.load(open(f"{root}/{folder}/session{n:02d}.json", encoding="utf-8"))
 course = {"rla": "Reasoning Through Language Arts", "social-studies": "Social Studies"}[folder]
 # the same colours as the subject site: RLA pink, Social Studies green; blue for the brand band and buttons
 theme = {"rla": ("#F8DFE3", "#E39AB6"), "social-studies": ("#DDF3E4", "#8CCB9F")}[folder]
-def fmt(s): return re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", html.escape(s)).replace("\n", "<br>")
+def fmt(s):
+    s = html.escape(s)
+    s = re.sub(r"~~(.+?)~~", r"<s>\1</s>", s)
+    s = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", s)
+    s = re.sub(r"\*([^*]+?)\*", r"<i>\1</i>", s)
+    return s.replace("\n", "<br>")
 def block(b):
     if "p" in b: return f"<p>{fmt(b['p'])}</p>"
     if "list" in b: return "<ul>" + "".join(f"<li>{fmt(x)}</li>" for x in b["list"]) + "</ul>"

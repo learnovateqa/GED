@@ -2,7 +2,7 @@
    Based on Ms. Maria's student syllabus, with corrections and additions (see README: "Syllabus changes").
    A session opens on the site when its number is in "ready" and its sessionNN.json file exists. */
 window.COURSE = {
-  ready: [1, 2, 3],
+  ready: [1, 2, 3, 4, 5],
   tagline: "Twelve sessions. One step at a time.",
   facts: [
     ["Test length", "150 minutes", "3 sections · 10-minute break"],

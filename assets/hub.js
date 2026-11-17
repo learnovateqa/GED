@@ -4,7 +4,7 @@
 (function () {
   const { esc, t, store, toast } = GED, $ = s => document.querySelector(s), main = $("#main");
   const two = n => String(n).padStart(2, "0");
-  const fmt = s => esc(s).replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\n/g, "<br>");
+  const fmt = s => esc(s).replace(/~~(.+?)~~/g, "<s>$1</s>").replace(/\*\*(.+?)\*\*/g, "<b>$1</b>").replace(/\*([^*\n]+?)\*/g, "<i>$1</i>").replace(/\n/g, "<br>");
   const norm = s => String(s == null ? "" : s).toLowerCase().replace(/[\s ]+/g, " ").replace(/[.!?,;:]+$/, "").trim();
   const LEVELS = [["easy", "Easy", "green"], ["guided", "Guided", "blue"], ["application", "Application", "peach"], ["challenge", "Challenge", "lav"]];
   const TYPE = { mc: "Multiple choice", dropdown: "Drop-down", fill: "Fill in the blank", drag: "Drag and drop", hotspot: "Hot spot (select an area)" };
