@@ -76,6 +76,20 @@ function savePassword_(pw) {
   if (st.getLastRow() >= 2) st.getRange(2, 2).setValue('Set on ' + new Date().toDateString() + '. To change it, use the menu again.');
 }
 
+/* ---------- second way to set the password (if the GED Academy menu does not appear) ----------
+   1. In Apps Script: Project Settings (gear icon) > Script Properties > Add script property.
+      Property: NEW_TEACHER_PASSWORD   Value: your new password (10 characters or more). Save.
+   2. Back in the Editor, choose the function applyNewPassword and press Run.
+   The password is turned into a scrambled code and the property is deleted at once. */
+function applyNewPassword() {
+  const p = PropertiesService.getScriptProperties(), pw = p.getProperty('NEW_TEACHER_PASSWORD');
+  if (!pw) { Logger.log('No NEW_TEACHER_PASSWORD found. Add it in Project Settings > Script Properties, then run this again.'); return; }
+  p.deleteProperty('NEW_TEACHER_PASSWORD');
+  if (pw.length < 10) { Logger.log('Too short. Use 10 characters or more, then try again.'); return; }
+  savePassword_(pw);
+  Logger.log('Password saved. You can now sign in to the teacher portal.');
+}
+
 /* ---------- the teacher password: checked here, never on the website ---------- */
 function teacherOk_(pw) {
   const cache = CacheService.getScriptCache(), fails = Number(cache.get('fails') || 0);
