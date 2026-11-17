@@ -824,20 +824,41 @@
    ]
   },
   {
+   "h": "Let's get writing",
+   "blocks": [
+    {
+     "p": "You have **20 minutes**. Write 5 to 8 sentences."
+    },
+    {
+     "steps": [
+      "Who are you? Tell us a little about yourself.",
+      "Why do you want your GED now?",
+      "What is one goal for this course?"
+     ]
+    },
+    {
+     "tip": "Do not worry about mistakes. This helps Ms. Maria get to know your writing."
+    }
+   ]
+  },
+  {
    "h": "What is RLA?",
    "blocks": [
     {
      "p": "**Reasoning Through Language Arts** is one of the four GED® subjects."
     },
     {
-     "p": "It tests three things:"
+     "p": "It has three parts:"
     },
     {
-     "list": [
-      "**Reading:** do you understand the text?",
-      "**Arguments:** can you judge a claim and its evidence?",
-      "**Language:** can you use correct written English?"
+     "flow": [
+      "Reading for meaning",
+      "Arguments and evidence",
+      "Grammar and language"
      ]
+    },
+    {
+     "p": "Plus one essay: the **extended response**."
     }
    ]
   },
@@ -884,6 +905,78 @@
     },
     {
      "p": "You need 145 on **each** of the four GED subjects."
+    }
+   ]
+  },
+  {
+   "h": "Part 1: Reading for meaning",
+   "blocks": [
+    {
+     "p": "You read a passage. Then you answer questions like these:"
+    },
+    {
+     "list": [
+      "**Order:** What happened first, next and last?",
+      "**Main idea:** What is the most important point?",
+      "**Inference:** What does the text show, but not say?",
+      "**Purpose and tone:** Why did the author write it? How does the author feel?",
+      "**Compare:** How are two texts on one topic different?"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Part 2: Arguments and evidence",
+   "blocks": [
+    {
+     "p": "You read an argument. Then you judge it."
+    },
+    {
+     "list": [
+      "**Claim:** What does the author want you to believe?",
+      "**Evidence:** What proof does the author give?",
+      "**Strong or weak:** Is the proof on topic, and is there enough of it?",
+      "**Graphs and data:** How does a chart support the claim?",
+      "**Two arguments:** Which one has better evidence?"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Part 3: Grammar and language",
+   "blocks": [
+    {
+     "p": "You fix errors in a short text, often with a **drop-down** list."
+    },
+    {
+     "table": {
+      "head": [
+       "You fix",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Confused words",
+        "their / there / they're"
+       ],
+       [
+        "Agreement",
+        "The students **is** → **are** ready."
+       ],
+       [
+        "Sentences",
+        "run-ons and fragments"
+       ],
+       [
+        "Transitions",
+        "however, also, as a result"
+       ],
+       [
+        "Capitals and punctuation",
+        "commas, apostrophes, capital letters"
+       ]
+      ]
+     }
     }
    ]
   },
@@ -1082,6 +1175,11 @@
      "p": "Read the reviewer. Do the workbook. Take the short quiz. Tick the checklist and earn your badge."
     }
    ]
+  },
+  {
+   "kind": "title",
+   "h": "Thank you!",
+   "sub": "See you in Session 2: Reading for Meaning."
   }
  ]
 }
