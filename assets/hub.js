@@ -198,7 +198,7 @@
     q.querySelectorAll("input,select").forEach(x => { x.disabled = true; });
     if (it.type === "mc") q.querySelectorAll(".opt").forEach(l => {
       const k = +l.querySelector("input").value;
-      if (k === it.answer) { l.classList.add("is-ok"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(true)} Correct answer</span>`); }
+      if (k === it.answer) { l.classList.add("is-ok"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(true)} ${k === a ? "Your answer · correct" : "Correct answer"}</span>`); }
       else if (k === a) { l.classList.add("is-bad"); l.insertAdjacentHTML("beforeend", `<span class="tagr">${M(false)} Your answer</span>`); }
     });
     if (it.type === "hotspot") q.querySelectorAll(".hot button").forEach(b => { const k = +b.dataset.k; if (k === it.answer) { b.classList.add("is-ok"); b.insertAdjacentHTML("beforeend", " ✓"); } else if (k === a) { b.classList.add("is-bad"); b.insertAdjacentHTML("beforeend", " ✗"); } });
@@ -349,15 +349,17 @@
       const sk = {}; items.forEach((it, i) => { const k = it.skill || "General"; sk[k] = sk[k] || [0, 0]; sk[k][1]++; if (r.ok[i]) sk[k][0]++; });
       const strong = Object.keys(sk).filter(k => sk[k][0] / sk[k][1] >= 0.75), weak = Object.keys(sk).filter(k => sk[k][0] / sk[k][1] < 0.75);
       return `<div class="score" role="status"><p class="eyebrow">${esc(CFG.SHORT)} · Session ${n} · Workbook</p><span class="big">${r.score} / ${r.total}</span>
+        <p class="sayso">${esc(r.score / r.total >= 0.8 ? "Great work. You are ready for the quiz." : r.score / r.total >= 0.5 ? "Good start. Read the WHY for the questions you missed, then take the quiz." : n === 1 ? "This is your starting point, not a pass or fail. Read the WHY for each question. Then try again." : "Read the WHY for each question you missed. Then look at the reviewer again and try the workbook once more.")}</p>
         <div class="bylvl">${lvl.map(x => `<div>${x[0]}<b>${x[1]} / ${x[2]}</b></div>`).join("")}</div>
-        <div style="text-align:start">${strong.length ? `<p><b>✓ Your strong skills:</b> ${esc(strong.join(", "))}</p>` : ""}${weak.length ? `<p><b>➜ Skills to practise:</b> ${esc(weak.map(k => `${k} (${sk[k][0]}/${sk[k][1]})`).join(", "))}</p>` : ""}</div>
+        <div style="text-align:start">${strong.length ? `<p><b>✓ Your strong skills:</b> ${esc(strong.join(", "))}</p>` : ""}${weak.length ? `<p><b>➜ Skills to practise:</b> ${esc(weak.map(k => `${k} (${sk[k][0]} of ${sk[k][1]} right)`).join(", "))}</p>` : ""}</div>
+        <div class="row" style="justify-content:center;margin:4px 0 10px"><button class="btn soft sm" type="button" data-again>Try the workbook again</button><a class="btn primary sm" href="#/session/${n}/quiz">Go to the quiz <span aria-hidden="true">→</span></a></div>
         <p class="small muted" style="margin:0">${API.on() ? "✓ Saved. Ms. Maria can see your workbook result. You do not need to send it." : "Saved on this device."}</p></div>`;
     }
     function showKey(a, r) {
       items.forEach((it, i) => reveal(Q(i), it, a[i]));
       $("#wbTop").innerHTML = summary(r);
       $("#wbEnd").innerHTML = `<div class="row" style="margin-top:14px"><button class="btn soft" type="button" id="wbAgain">Try the workbook again</button><a class="btn primary" href="#/session/${n}/quiz" style="flex:1">Go to the quiz <span aria-hidden="true">→</span></a></div>`;
-      $("#wbAgain").onclick = () => { store.del(K("wbA" + n)); store.del(K("wbD" + n)); pageWorkbook(L); window.scrollTo(0, 0); };
+      main.querySelectorAll("#wbAgain,[data-again]").forEach(b => b.onclick = () => { store.del(K("wbA" + n)); store.del(K("wbD" + n)); pageWorkbook(L); window.scrollTo(0, 0); });
     }
     if (review) { showKey(last, res); return; }
     if (res) $("#wbTop").innerHTML = `<div class="box t-blue">Your last workbook score: <b>${res.score} / ${res.total}</b>. You can do the workbook again here.</div>`;

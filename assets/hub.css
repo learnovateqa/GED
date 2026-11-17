@@ -158,3 +158,4 @@ html[dir=rtl] .dbar{direction:ltr}
 .backl:hover{border-color:var(--navy)}
 .pcard{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
 @media (max-width:520px){.shero{margin:-18px -16px 16px;border-radius:0 0 22px 22px;border-width:0 0 1.5px;padding:16px 16px 22px}}
+.score .sayso{font-weight:600;margin:6px auto 4px;max-width:36em}
