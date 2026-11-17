@@ -24,7 +24,7 @@ const HEAD = {
   Students: ['Name', 'Access code', 'Group', 'Active (yes / no)', 'Notes', 'Name the student typed', 'Last sign-in'],
   Progress: ['Access code', 'Name', 'Subject', 'Sessions completed', 'Data (JSON)', 'Last updated'],
   Workbooks: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'By level', 'Wrong question numbers'],
-  Quiz_Scores: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'Attempt'],
+  Quiz_Scores: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'Attempt', 'Minutes used', 'Unanswered', 'Error log (question: skill)', 'Skills to review'],
   Mock_Tests: ['Timestamp', 'Access code', 'Name', 'Subject', 'Session', 'Score', 'Total', 'By skill', 'Wrong question numbers', 'Minutes used'],
   Quiz_Keys: ['Quiz (subject-session)', 'Answer key (JSON) · imported from the teacher portal · do not edit']
 };
@@ -159,11 +159,17 @@ function right_(key, ans) {
   return typeof key === 'number' ? Number(ans) === key && ans !== '' : norm_(key) === norm_(ans);
 }
 function quiz_(b, code, name, prog) {
-  const n = Number(b.session) || 0, key = key_(prog + '-' + n), ans = Array.isArray(b.answers) ? b.answers : [];
+  const n = Number(b.session) || 0, key = key_(prog + '-' + n), ans = Array.isArray(b.answers) ? b.answers : [], skills = Array.isArray(b.skills) ? b.skills : [];
   if (!key) return { ok: false, error: 'nokey' };
-  let score = 0; key.forEach(function (k, i) { if (right_(k, ans[i])) score++; });
+  let score = 0; const log = [], miss = {};
+  key.forEach(function (k, i) {
+    if (right_(k, ans[i])) { score++; return; }
+    const s = clean_(skills[i] || 'General', 40); log.push('Q' + (i + 1) + ': ' + s); miss[s] = (miss[s] || 0) + 1;
+  });
+  const review = Object.keys(miss).sort(function (x, y) { return miss[y] - miss[x]; }).map(function (s) { return s + ' (' + miss[s] + ')'; }).join(', ');
   let attempt = 1; rows_(TAB.quiz).forEach(function (r) { if (code_(r[1]) === code && r[3] === SUBJECTS[prog] && Number(r[4]) === n) attempt++; });
-  sheet_(TAB.quiz).appendRow([new Date(), code, name, SUBJECTS[prog], n, score, key.length, attempt]);
+  const mins = Math.round((Number(b.seconds) || 0) / 6) / 10;
+  sheet_(TAB.quiz).appendRow([new Date(), code, name, SUBJECTS[prog], n, score, key.length, attempt, mins || '', Number(b.blank) || 0, log.join('; ') || 'none', review || 'none']);
   return { ok: true, score: score, total: key.length, attempt: attempt };
 }
 function mock_(b, code, name, prog) {
@@ -187,7 +193,7 @@ function teacher_(b) {
     students: rows_(TAB.students).filter(function (r) { return r[1]; }).map(function (r) { return { name: r[0], code: code_(r[1]), group: r[2], active: !/^(no|n|false|0)$/i.test(String(r[3]).trim()), typed: r[5], last: r[6] ? iso(r[6]) : '' }; }),
     progress: rows_(TAB.progress).map(function (r) { let s = {}; try { s = JSON.parse(r[4]); } catch (e) {} return { code: code_(r[0]), subject: r[2], done: r[3], state: s, at: iso(r[5]) }; }),
     workbooks: rows_(TAB.wb).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], levels: r[7], wrong: r[8] }; }),
-    quizzes: rows_(TAB.quiz).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], attempt: r[7] }; }),
+    quizzes: rows_(TAB.quiz).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], attempt: r[7], minutes: r[8], blank: r[9], log: r[10], review: r[11] }; }),
     mocks: rows_(TAB.mock).map(function (r) { return { at: iso(r[0]), code: code_(r[1]), subject: r[3], session: r[4], score: r[5], total: r[6], bySkill: r[7], wrong: r[8], minutes: r[9] }; }),
     keys: rows_(TAB.keys).map(function (r) { return String(r[0]); })
   };

@@ -1032,7 +1032,8 @@
     "Drinking enough water is important for the body and mind.",
     "Water is cold.",
     "People think clearly at night."
-   ]
+   ],
+   "skill": "Main idea"
   },
   {
    "type": "mc",
@@ -1043,7 +1044,8 @@
     "Water helps your body stay cool.",
     "Doctors work in hospitals.",
     "Rain falls in winter."
-   ]
+   ],
+   "skill": "Details"
   },
   {
    "type": "mc",
@@ -1055,7 +1057,8 @@
     "To a job interview",
     "To bed",
     "To the dentist"
-   ]
+   ],
+   "skill": "Inference"
   },
   {
    "type": "drag",
@@ -1069,7 +1072,8 @@
     "Persuade",
     "Inform",
     "Entertain"
-   ]
+   ],
+   "skill": "Author's purpose"
   },
   {
    "type": "mc",
@@ -1081,7 +1085,8 @@
     "Strong and long-lasting",
     "Small",
     "Easy to lose"
-   ]
+   ],
+   "skill": "Vocabulary in context"
   },
   {
    "type": "dropdown",
@@ -1102,7 +1107,8 @@
       "Both"
      ]
     }
-   ]
+   ],
+   "skill": "Structure"
   },
   {
    "type": "hotspot",
@@ -1112,7 +1118,8 @@
     "It has over fifty stalls.",
     "It is the best place in the city to buy fresh fish.",
     "It closes at noon on Fridays."
-   ]
+   ],
+   "skill": "Point of view"
   },
   {
    "type": "mc",
@@ -1124,7 +1131,8 @@
     "Practice and patience lead to success.",
     "Weddings are noisy.",
     "Brothers and sisters often argue."
-   ]
+   ],
+   "skill": "Theme"
   },
   {
    "type": "mc",
@@ -1136,14 +1144,343 @@
     "Worried and urgent",
     "Funny",
     "Bored"
+   ],
+   "skill": "Tone"
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "q": "Which statement best describes an inference?",
+   "options": [
+    "A sentence copied from the text",
+    "An idea the text shows through clues but does not say directly",
+    "The title of a passage",
+    "A guess with no clues"
    ]
   },
   {
-   "type": "fill",
-   "q": "Type the missing word.",
-   "text": "An idea that the text shows through clues, but does not say directly, is an {0}.",
+   "skill": "Main idea",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Ten years ago, most people visited the public library to borrow books. Today, libraries do much more. In our city, the central library offers free computer classes, help with job applications and a quiet room for students. On weekends, families come for story hour and craft activities.\n\nThese changes did not happen by chance. When fewer people borrowed books, the library asked the community what it needed. Many adults said they needed help with computers and with finding work. The library listened, and now more people visit than ever before.",
+   "q": "Which statement best expresses the main idea of the passage?",
+   "options": [
+    "Libraries now offer many services because they listened to what people needed.",
+    "People no longer read books.",
+    "Story hour is popular with families.",
+    "Computer classes are free."
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "mc",
+   "again": true,
+   "q": "According to the passage, why did the library change its services?",
+   "options": [
+    "The city closed other libraries.",
+    "It asked the community what it needed.",
+    "Books became too expensive.",
+    "Students asked for more books."
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "In paragraph 2, what does the phrase \"did not happen by chance\" mean?",
+   "options": [
+    "happened by accident",
+    "happened because of a plan",
+    "happened very quickly",
+    "did not happen"
+   ]
+  },
+  {
+   "skill": "Structure",
+   "type": "mc",
+   "again": true,
+   "q": "How is paragraph 2 organized?",
+   "options": [
+    "It compares two libraries.",
+    "It explains the cause of the changes described in paragraph 1.",
+    "It lists events in time order only.",
+    "It tells a story about one student."
+   ]
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "Based on the passage, which statement would the library managers most likely agree with?",
+   "options": [
+    "Libraries should only lend books.",
+    "A library should change to meet the needs of its users.",
+    "Families should stay at home on weekends.",
+    "Computers are bad for learning."
+   ]
+  },
+  {
+   "skill": "Summarizing",
+   "type": "drag",
+   "again": true,
+   "q": "Put the events in the order they happened.",
+   "items": [
+    "The library asked the community what it needed.",
+    "Fewer people borrowed books.",
+    "More people visit than ever before.",
+    "The library added computer classes and job help."
+   ],
+   "targets": [
+    "1st",
+    "2nd",
+    "3rd",
+    "4th"
+   ]
+  },
+  {
+   "skill": "Setting",
+   "type": "mc",
+   "ptitle": "From a story",
+   "passage": "The bus was late again, and Mariam stood in the heat with her heavy bag. Inside the bag were twelve plates of food she had cooked since five in the morning for the community dinner. She checked her phone. Forty minutes until the dinner began.\n\nAn old man waiting beside her noticed the bag. \"That smells like my mother's kitchen,\" he said, smiling. Mariam laughed and told him about the dinner. When the bus finally came, he carried one side of the bag up the steps. \"Then I will come and eat,\" he said. \"Nobody should eat alone.\"\n\nThat evening, the old man sat at the long table between two families he had never met. Mariam watched him laugh and thought that the late bus had been lucky after all.",
+   "q": "Where does most of the first paragraph take place?",
+   "options": [
+    "In Mariam's kitchen",
+    "At a bus stop",
+    "At the community dinner",
+    "On the bus"
+   ]
+  },
+  {
+   "skill": "Character",
+   "type": "mc",
+   "again": true,
+   "q": "Which word best describes Mariam, based on paragraph 1?",
+   "options": [
+    "Lazy",
+    "Hard-working",
+    "Rude",
+    "Careless"
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that shows how the old man helped Mariam.",
+   "sentences": [
+    "An old man waiting beside her noticed the bag.",
+    "\"That smells like my mother's kitchen,\" he said, smiling.",
+    "When the bus finally came, he carried one side of the bag up the steps.",
+    "Mariam watched him laugh and thought that the late bus had been lucky after all."
+   ]
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "What can the reader infer from the old man's words, \"Nobody should eat alone\"?",
+   "options": [
+    "He is often hungry.",
+    "He may often eat alone and values company.",
+    "He does not like Mariam's food.",
+    "He is late for work."
+   ]
+  },
+  {
+   "skill": "Tone",
+   "type": "mc",
+   "again": true,
+   "q": "How does the mood of the story change from beginning to end?",
+   "options": [
+    "From happy to sad",
+    "From stressful to warm",
+    "From calm to angry",
+    "It does not change."
+   ]
+  },
+  {
+   "skill": "Theme",
+   "type": "mc",
+   "again": true,
+   "q": "Which statement best expresses a theme of the story?",
+   "options": [
+    "Buses are always late.",
+    "Small, unexpected meetings can bring people together.",
+    "Cooking takes a long time.",
+    "Old people should not take buses."
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "In the last sentence, why does Mariam think the late bus was \"lucky after all\"?",
+   "options": [
+    "Because she arrived early",
+    "Because waiting led her to meet the old man, who joined the dinner",
+    "Because the bus was free",
+    "Because the food stayed hot"
+   ]
+  },
+  {
+   "skill": "Main idea",
+   "type": "mc",
+   "ptitle": "Article",
+   "passage": "For years, city planners measured success by how fast cars could move. Wider roads, more lanes and bigger car parks were seen as signs of progress. Yet in many cities, these projects produced a surprising result: traffic did not get better. Within a few years, the new lanes filled with cars again. Researchers call this \"induced demand\": when driving becomes easier, more people choose to drive, and the roads become crowded once more.\n\nSome cities have taken a different path. Instead of adding lanes, they invested in buses that come every ten minutes, safe cycling routes and shaded pavements. The results have been encouraging. In several of these cities, the number of daily car trips has fallen, while local shops on pedestrian streets report more customers.\n\nNone of this means that cars will disappear, nor should they. Families, workers and emergency services still depend on them. But the evidence suggests that a city designed only for cars is not designed for people. The most successful streets, it seems, are the ones that give everyone a fair way to move.",
+   "q": "Which statement best summarizes the central idea of the article?",
+   "options": [
+    "Cars should be banned from cities.",
+    "Building more roads often fails to fix traffic, and cities designed for all ways of moving work better.",
+    "Buses are faster than cars.",
+    "Shops prefer customers who drive."
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "As it is used in paragraph 1, what does \"induced demand\" mean?",
+   "options": [
+    "Making roads more expensive",
+    "More people choosing to drive because driving became easier",
+    "Fewer cars on new roads",
+    "A law that limits cars"
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that best supports the idea that the different approach has worked.",
+   "sentences": [
+    "Some cities have taken a different path.",
+    "Instead of adding lanes, they invested in buses that come every ten minutes, safe cycling routes and shaded pavements.",
+    "In several of these cities, the number of daily car trips has fallen, while local shops on pedestrian streets report more customers.",
+    "Families, workers and emergency services still depend on them."
+   ]
+  },
+  {
+   "skill": "Point of view",
+   "type": "mc",
+   "again": true,
+   "q": "Which statement best describes the author's point of view about cars?",
+   "options": [
+    "Cars should disappear from cities.",
+    "Cars are still needed, but cities should not be designed only for them.",
+    "Cars are the best way to move in every city.",
+    "The author has no opinion about cars."
+   ]
+  },
+  {
+   "skill": "Structure",
+   "type": "mc",
+   "again": true,
+   "q": "What is the purpose of paragraph 3?",
+   "options": [
+    "To introduce a new problem",
+    "To balance the argument by accepting that cars are still needed, then give a conclusion",
+    "To give statistics about buses",
+    "To tell the history of roads"
+   ]
+  },
+  {
+   "skill": "Tone",
+   "type": "mc",
+   "again": true,
+   "q": "Which word best describes the tone of the article?",
+   "options": [
+    "Angry",
+    "Thoughtful and balanced",
+    "Humorous",
+    "Fearful"
+   ]
+  },
+  {
+   "skill": "Author's purpose",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the sentence about the article.",
+   "text": "The author's main purpose is to {0} readers that cities should plan for more than just cars.",
    "blanks": [
-    {}
+    {
+     "options": [
+      "entertain",
+      "persuade",
+      "instruct"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Author's purpose",
+   "type": "mc",
+   "ptitle": "Memo",
+   "passage": "To all drivers:\n\nOur delivery routes will change from 1 April. Because of new road works near the port, Route 3 will use the coast road instead of the industrial area. This will add about fifteen minutes to each trip. To keep deliveries on time, Route 3 will now start at 6:30 a.m. instead of 7:00 a.m. Drivers on other routes will not be affected.\n\nOperations Office",
+   "q": "What is the main purpose of the memo?",
+   "options": [
+    "To explain a change to Route 3 and its new start time",
+    "To announce new road works at the port",
+    "To ask drivers to work weekends",
+    "To praise the drivers"
+   ]
+  },
+  {
+   "skill": "Structure",
+   "type": "mc",
+   "again": true,
+   "q": "What is the cause of the change to Route 3?",
+   "options": [
+    "Drivers asked for a later start",
+    "New road works near the port",
+    "A new delivery truck",
+    "Fewer customers"
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the sentence using the memo.",
+   "text": "From 1 April, Route 3 will start at {0} because the new road adds about {1} minutes to each trip.",
+   "blanks": [
+    {
+     "options": [
+      "6:30 a.m.",
+      "7:00 a.m.",
+      "7:30 a.m."
+     ]
+    },
+    {
+     "options": [
+      "five",
+      "fifteen",
+      "fifty"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "Based on the memo, which drivers need to change their plans?",
+   "options": [
+    "All drivers",
+    "Only drivers on Route 3",
+    "Only drivers in the industrial area",
+    "No drivers"
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "In the memo, \"affected\" most nearly means…",
+   "options": [
+    "changed by something",
+    "paid more",
+    "made angry",
+    "moved to another city"
    ]
   }
  ],

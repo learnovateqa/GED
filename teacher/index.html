@@ -129,7 +129,7 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
       return `<h3>${esc(x)}</h3>
         <h4>Sessions completed (${done.length} of 12)</h4><p>${done.length ? done.map(n => "Session " + n).join(" · ") : "None yet."}${typeof s.typed === "string" && s.typed && s.typed !== s.name ? ` <span class="small muted">· Name typed at sign-in: ${esc(s.typed)}</span>` : ""}</p>
         <h4>Workbook results</h4>${T(["Date", "Session", "Score", "By level", "Wrong questions"], of(D.workbooks, s.code, x).map(w => [day(w.at), w.session, w.score + " / " + w.total, String(w.levels).replace(/[{}"]/g, "").replace(/,/g, " · "), w.wrong || "none"]))}
-        <h4>Every quiz attempt</h4>${T(["Date", "Session", "Attempt", "Score"], of(D.quizzes, s.code, x).map(q => [day(q.at), q.session, q.attempt, q.score + " / " + q.total]))}
+        <h4>Every quiz attempt, with error log</h4>${T(["Date", "Session", "Attempt", "Score", "Minutes", "Blank", "Skills to review", "Error log"], of(D.quizzes, s.code, x).map(q => [day(q.at), q.session, q.attempt, q.score + " / " + q.total, q.minutes, q.blank, q.review || "", q.log || ""]))}
         <h4>Mock test results</h4>${T(["Date", "Session", "Score", "By skill", "Wrong questions", "Minutes"], of(D.mocks, s.code, x).map(m => [day(m.at), m.session, m.score + " / " + m.total, String(m.bySkill).replace(/[{}"]/g, "").replace(/\],/g, "] · "), m.wrong || "none", m.minutes]))}`;
     }).join("<hr style='border:0;border-top:1.5px dashed var(--line2);margin:14px 0'>");
   }
@@ -144,10 +144,10 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   }
   function all() {
     const ok = new Set(filtered().map(s => s.code)), nm = {}, gp = {}; D.students.forEach(s => { nm[s.code] = s.name || s.typed; gp[s.code] = s.group; });
-    const out = [["Type", "Date", "Name", "Access code", "Group", "Subject", "Session", "Attempt", "Score", "Total", "Percent", "Details", "Wrong questions"]];
+    const out = [["Type", "Date", "Name", "Access code", "Group", "Subject", "Session", "Attempt", "Score", "Total", "Percent", "Details / skills to review", "Wrong questions (error log)"]];
     const add = (type, x, att, det, wrong) => { if (ok.has(x.code)) out.push([type, day(x.at), nm[x.code], x.code, gp[x.code], x.subject, x.session, att, x.score, x.total, x.total ? Math.round(x.score / x.total * 100) : "", det, wrong]); };
     D.workbooks.forEach(w => add("Workbook", w, "", w.levels, w.wrong));
-    D.quizzes.forEach(q => add("Quiz", q, q.attempt, "", ""));
+    D.quizzes.forEach(q => add("Quiz", q, q.attempt, (q.minutes ? q.minutes + " min · " : "") + (q.blank ? q.blank + " blank · " : "") + (q.review || ""), q.log || ""));
     D.mocks.forEach(m => add("Mock test", m, "", m.bySkill, m.wrong));
     return out;
   }

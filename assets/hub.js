@@ -385,7 +385,7 @@
   function scoreCard(n, q, i) {
     const d = new Date(q.at);
     return `<div class="score" role="status"><p class="eyebrow">${esc(CFG.SHORT)} · Session ${n} · Short quiz</p><span class="big">${q.score} / ${q.total}</span>
-      <p style="margin:6px 0 0"><b class="en">${esc(auth ? auth.name : "")}</b><br><span class="small">Attempt ${i} · ${esc(d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }))}, ${esc(d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }))}</span></p></div>
+      <p style="margin:6px 0 0"><b class="en">${esc(auth ? auth.name : "")}</b><br><span class="small">Attempt ${i} · ${esc(d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }))}, ${esc(d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }))}${q.secs ? ` · ${Math.floor(q.secs / 60)} min ${q.secs % 60} s` : ""}</span></p></div>
       <div class="box t-rose">📸 <b>Take a screenshot of your score and send it to Ms. Maria.</b><br>The quiz does not show the answers, because you can try again.</div>`;
   }
   function pageQuiz(L, fresh) {
@@ -393,7 +393,7 @@
     if (!API.on() || !auth) {
       main.innerHTML = `${top}<div class="box t-gold"><b>The short quiz is not open yet.</b><br>The quiz is marked by Ms. Maria's grade book. It opens when the grade book is connected and you are signed in.</div><a class="btn primary" style="width:100%" href="#/session/${n}/checklist">Go to the checklist <span aria-hidden="true">→</span></a>`; return;
     }
-    if (tries.length && !fresh) {
+    if (tries.length && !fresh && !store.get(K("qzRun" + n), null)) {
       const q = tries[tries.length - 1];
       main.innerHTML = `${top}${scoreCard(n, q, tries.length)}
         ${tries.length > 1 ? `<p class="small muted">All your attempts: ${tries.map((x, i) => `#${i + 1}: ${x.score}/${x.total}`).join(" · ")}</p>` : ""}
@@ -401,26 +401,53 @@
         <a class="btn primary" style="width:100%;margin-top:10px" href="#/session/${n}/checklist">Go to the checklist <span aria-hidden="true">→</span></a>`;
       $("#qAgain").onclick = () => { pageQuiz(L, true); window.scrollTo(0, 0); }; return;
     }
-    /* new attempt: the answer choices are in a new order each time */
-    const items = L.quiz.map(it => it.type === "mc" ? Object.assign({}, it, { _order: it.options.map((_, k) => k).sort(() => Math.random() - 0.5) }) : it);
-    main.innerHTML = `${top}<div class="box t-blue"><b>${items.length} questions.</b> No time limit. You see only your final score. You can try again later.</div>
+    /* a new attempt is timed. The clock keeps running if the student leaves the page, and answers are kept on the phone until they submit. */
+    const mins = L.quizMinutes || Math.ceil(L.quiz.length * 1.5), KS = K("qzRun" + n);
+    let run = store.get(KS, null);
+    if (!run || !run.order || run.order.length !== L.quiz.length) {
+      run = { start: Date.now(), order: L.quiz.map(it => (it.type === "mc" ? it.options.map((_, k) => k).sort(() => Math.random() - 0.5) : null)), a: {} };
+      store.set(KS, run);
+    }
+    const items = L.quiz.map((it, i) => (run.order[i] ? Object.assign({}, it, { _order: run.order[i] }) : it));
+    main.innerHTML = `${top}<div class="box t-blue"><b>${items.length} questions · ${mins} minutes.</b> The clock does not stop. When the time ends, your quiz is sent as it is. You see only your final score, and you can try again later.</div>
+      <div class="qclock" id="qClock" role="timer" aria-live="off"><span>⏱ <b id="qLeft"></b> left</span><span id="qDone"></span></div>
       <form id="qz">${items.map((it, i) => qHTML(it, i, items.length, "z")).join("")}</form>
       <p class="err" id="qErr" role="alert"></p><button class="btn primary" style="width:100%" type="button" id="qGo">Submit my quiz</button>`;
-    wire($("#qz"));
-    $("#qGo").onclick = async () => {
-      const a = items.map((it, i) => read($("#z" + i), it)), miss = items.map((it, i) => i).filter(i => !answered(items[i], a[i])), btn = $("#qGo");
-      if (miss.length) { $("#qErr").textContent = `Please answer every question. No answer yet: ${miss.map(i => i + 1).join(", ")}.`; $("#z" + miss[0]).scrollIntoView({ behavior: "smooth", block: "center" }); return; }
-      btn.disabled = true; btn.innerHTML = `<span class="wait">Marking your quiz…</span>`;
+    const collect = () => items.map((it, i) => read($("#z" + i), it));
+    items.forEach((it, i) => write($("#z" + i), it, run.a[i]));
+    const count = () => { const a = collect(); $("#qDone").textContent = `${items.filter((it, i) => answered(it, a[i])).length} / ${items.length} answered`; return a; };
+    wire($("#qz"), () => { run.a = Object.assign({}, count()); store.set(KS, run); });
+    count();
+    let sent = false;
+    const tick = () => {
+      if (!document.body.contains($("#qLeft") || document.createElement("i"))) { clearInterval(tm); return; }
+      const left = Math.max(0, Math.round((run.start + mins * 60000 - Date.now()) / 1000));
+      $("#qLeft").textContent = Math.floor(left / 60) + ":" + String(left % 60).padStart(2, "0");
+      $("#qClock").classList.toggle("low", left <= 300);
+      if (left === 0 && !sent) { clearInterval(tm); toast("Time is up. Your quiz is being sent."); submit(true); }
+    };
+    const tm = setInterval(tick, 1000);
+    async function submit(timeUp) {
+      const a = collect(), miss = items.map((it, i) => i).filter(i => !answered(items[i], a[i])), btn = $("#qGo");
+      if (!timeUp && miss.length && !btn.dataset.sure) {
+        $("#qErr").textContent = `You have ${miss.length} question${miss.length > 1 ? "s" : ""} with no answer: ${miss.map(i => i + 1).join(", ")}. A blank answer is wrong. Answer them, or press Submit again to finish now.`;
+        btn.dataset.sure = 1; $("#z" + miss[0]).scrollIntoView({ behavior: "smooth", block: "center" }); return;
+      }
+      sent = true; btn.disabled = true; btn.innerHTML = `<span class="wait">Marking your quiz…</span>`;
+      const secs = Math.min(mins * 60, Math.round((Date.now() - run.start) / 1000));
       try {
-        const r = await API.post({ action: "quiz", code: auth.code, name: auth.name, session: n, answers: a });
+        const r = await API.post({ action: "quiz", code: auth.code, name: auth.name, session: n, answers: a, skills: L.quiz.map(it => it.skill || ""), seconds: secs, blank: miss.length });
         if (!r.ok) throw new Error(r.error || "error");
-        (ss(n).quiz = ss(n).quiz || []).push({ score: r.score, total: r.total, at: new Date().toISOString() }); save();
+        clearInterval(tm); store.del(KS);
+        (ss(n).quiz = ss(n).quiz || []).push({ score: r.score, total: r.total, at: new Date().toISOString(), secs }); save();
         pageQuiz(L); window.scrollTo(0, 0);
       } catch (e) {
-        btn.disabled = false; btn.textContent = "Submit my quiz";
-        $("#qErr").textContent = e.message === "nokey" ? "This quiz is not ready yet. Please tell Ms. Maria." : e.message === "code" ? "Your access code is not active. Please tell Ms. Maria." : "No internet, or the grade book did not answer. Your answers are still here. Please try again.";
+        sent = false; btn.disabled = false; btn.textContent = "Submit my quiz";
+        $("#qErr").textContent = e.message === "nokey" ? "This quiz is not ready yet. Please tell Ms. Maria." : e.message === "code" ? "Your access code is not active. Please tell Ms. Maria." : "No internet, or the grade book did not answer. Your answers are still here. Please press Submit again.";
       }
-    };
+    }
+    $("#qGo").onclick = () => submit(false);
+    tick();
   }
 
   /* ---------- 4 · Checklist and badge ---------- */

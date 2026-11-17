@@ -159,3 +159,7 @@ html[dir=rtl] .dbar{direction:ltr}
 .pcard{display:flex;gap:18px;align-items:center;flex-wrap:wrap;margin:0 0 14px}
 @media (max-width:520px){.shero{margin:-18px -16px 16px;border-radius:0 0 22px 22px;border-width:0 0 1.5px;padding:16px 16px 22px}}
 .score .sayso{font-weight:600;margin:6px auto 4px;max-width:36em}
+.qclock{position:sticky;top:62px;z-index:6;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;background:var(--navy);color:#fff;border-radius:12px;padding:10px 14px;margin:10px 0;font-size:.95rem}
+.qclock b{font-size:1.15rem;font-variant-numeric:tabular-nums}
+.qclock.low{background:var(--bad)}
+.qclock.low span:first-child::after{content:" · less than 5 minutes"}

@@ -1110,7 +1110,8 @@
     "The park opened in 2019.",
     "The park is the nicest place in the city.",
     "The park closes at 10 p.m."
-   ]
+   ],
+   "skill": "Fact and opinion"
   },
   {
    "type": "hotspot",
@@ -1120,7 +1121,8 @@
     "Doctors link too much screen time to poor sleep.",
     "Parents should set a daily screen limit for young children.",
     "One school found that pupils slept better after a screen-free week."
-   ]
+   ],
+   "skill": "Claim"
   },
   {
    "type": "mc",
@@ -1131,7 +1133,8 @@
     "One school found that pupils slept better after a screen-free week.",
     "Screens are bright.",
     "Children like games."
-   ]
+   ],
+   "skill": "Evidence"
   },
   {
    "type": "drag",
@@ -1145,7 +1148,8 @@
     "Statistics",
     "Expert opinion",
     "Personal story"
-   ]
+   ],
+   "skill": "Evidence"
   },
   {
    "type": "mc",
@@ -1155,7 +1159,8 @@
     "To persuade readers to sign a petition",
     "The author supports electric cars.",
     "The author disagrees with the mayor."
-   ]
+   ],
+   "skill": "Position and purpose"
   },
   {
    "type": "dropdown",
@@ -1176,7 +1181,8 @@
       "conclusion"
      ]
     }
-   ]
+   ],
+   "skill": "Counterclaim"
   },
   {
    "type": "mc",
@@ -1186,7 +1192,8 @@
     "A report from the health ministry",
     "\"My neighbour tried it and loved it.\"",
     "Results from three hospitals"
-   ]
+   ],
+   "skill": "Strong and weak evidence"
   },
   {
    "type": "mc",
@@ -1198,14 +1205,18 @@
     "It assumes one more clinic will end all waiting, without proof.",
     "It uses too many statistics.",
     "It is a story."
-   ]
+   ],
+   "skill": "Assumption"
   },
   {
-   "type": "fill",
-   "q": "Type the missing word.",
-   "text": "The other side of an argument is called the {0}.",
-   "blanks": [
-    {}
+   "skill": "Counterclaim",
+   "type": "mc",
+   "q": "What is a counterclaim?",
+   "options": [
+    "The author's main claim",
+    "The other side of the argument",
+    "A list of statistics",
+    "The conclusion"
    ]
   },
   {
@@ -1216,6 +1227,331 @@
     "Decide which argument is better supported and explain why",
     "Write a story",
     "Summarize only one passage"
+   ],
+   "skill": "Extended response"
+  },
+  {
+   "skill": "Claim",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Every school in our city should have a vegetable garden. Students who grow food learn science and maths in a practical way: they measure plants, count seeds and record the weather. A garden also teaches students where food comes from. At Al Rayyan Primary, where a garden opened two years ago, teachers say students now try more vegetables at lunch. Gardens do not need much space. A few boxes on a roof are enough to start.",
+   "q": "What is the author's claim?",
+   "options": [
+    "Students learn science in class.",
+    "Every school in the city should have a vegetable garden.",
+    "Al Rayyan Primary has a garden.",
+    "Gardens need a lot of space."
+   ]
+  },
+  {
+   "skill": "Evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that gives an example from a real school as evidence.",
+   "sentences": [
+    "Every school in our city should have a vegetable garden.",
+    "Students who grow food learn science and maths in a practical way: they measure plants, count seeds and record the weather.",
+    "At Al Rayyan Primary, where a garden opened two years ago, teachers say students now try more vegetables at lunch.",
+    "A few boxes on a roof are enough to start."
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "The last two sentences answer which possible objection?",
+   "options": [
+    "Gardens are too expensive.",
+    "Schools do not have enough space for gardens.",
+    "Students do not like vegetables.",
+    "Teachers do not have time."
+   ]
+  },
+  {
+   "skill": "Reasons",
+   "type": "drag",
+   "again": true,
+   "q": "Sort the sentences: is each one a reason or evidence?",
+   "items": [
+    "Students learn science and maths in a practical way.",
+    "At Al Rayyan Primary, teachers say students now try more vegetables.",
+    "A garden teaches students where food comes from."
+   ],
+   "targets": [
+    "Reason",
+    "Evidence"
+   ]
+  },
+  {
+   "skill": "Strong and weak evidence",
+   "type": "mc",
+   "again": true,
+   "q": "Which addition would make the argument STRONGER?",
+   "options": [
+    "\"Gardens are very pretty.\"",
+    "\"A study of 40 schools found higher science scores in schools with gardens.\"",
+    "\"My niece likes tomatoes.\"",
+    "\"Everyone agrees that gardens are good.\""
+   ]
+  },
+  {
+   "skill": "Position and purpose",
+   "type": "mc",
+   "again": true,
+   "q": "What is the author's purpose?",
+   "options": [
+    "To persuade schools or leaders to start gardens",
+    "To explain how to grow tomatoes",
+    "To describe one school's lunch menu",
+    "To entertain children"
+   ]
+  },
+  {
+   "skill": "Claim",
+   "type": "mc",
+   "ptitle": "Article",
+   "passage": "Many companies are now testing a four-day working week. Under this plan, staff work four days but keep the same pay. Supporters say this makes workers happier and more productive. In one large trial, 61 companies in the United Kingdom tried a four-day week for six months, and most of them chose to keep it afterwards.\n\nCritics argue that a four-day week cannot work in every job. A hospital, for example, must be open every day. This is a fair point. However, the four-day week does not mean that a workplace closes for three days. Staff can work different days, so the service continues. Companies that want happier, healthier staff should at least test the idea.",
+   "q": "Which statement best expresses the author's claim?",
+   "options": [
+    "Hospitals must be open every day.",
+    "Companies should test a four-day working week.",
+    "Workers should be paid more.",
+    "The United Kingdom has 61 companies."
+   ]
+  },
+  {
+   "skill": "Evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that gives the strongest evidence for the author's claim.",
+   "sentences": [
+    "Many companies are now testing a four-day working week.",
+    "Supporters say this makes workers happier and more productive.",
+    "In one large trial, 61 companies in the United Kingdom tried a four-day week for six months, and most of them chose to keep it afterwards.",
+    "Companies that want happier, healthier staff should at least test the idea."
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "Which sentence introduces the counterclaim?",
+   "options": [
+    "\"Many companies are now testing a four-day working week.\"",
+    "\"Critics argue that a four-day week cannot work in every job.\"",
+    "\"Staff can work different days, so the service continues.\"",
+    "\"Companies that want happier, healthier staff should at least test the idea.\""
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does the author respond to the critics?",
+   "options": [
+    "By saying they are wrong about hospitals",
+    "By accepting their point and explaining that staff can work different days",
+    "By ignoring them",
+    "By changing the claim"
+   ]
+  },
+  {
+   "skill": "Position and purpose",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the sentences about the article.",
+   "text": "The phrase \"This is a fair point\" shows that the author is trying to sound {0}. The word \"However\" signals that the author is about to {1}.",
+   "blanks": [
+    {
+     "options": [
+      "angry",
+      "reasonable",
+      "uncertain"
+     ]
+    },
+    {
+     "options": [
+      "agree completely",
+      "answer the counterclaim",
+      "change the topic"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Assumption",
+   "type": "mc",
+   "again": true,
+   "q": "Which assumption does the author make?",
+   "options": [
+    "Results from the UK trial could also apply to other companies.",
+    "Hospitals will close.",
+    "Workers want less pay.",
+    "All jobs are the same."
+   ]
+  },
+  {
+   "skill": "Strong and weak evidence",
+   "type": "mc",
+   "again": true,
+   "q": "Which statement is the weakest support in the article?",
+   "options": [
+    "The trial with 61 companies",
+    "\"Supporters say this makes workers happier\"",
+    "Most companies kept the four-day week",
+    "The trial lasted six months"
+   ]
+  },
+  {
+   "skill": "Claim",
+   "type": "mc",
+   "ptitle": "Editorial",
+   "passage": "Last year, our country introduced a small fee for plastic shopping bags in supermarkets. Some shoppers complained that the fee was unfair, especially for families on low incomes. Their concern deserves attention. But the results of the policy speak clearly. According to the environment ministry, the number of plastic bags given out by supermarkets fell by 70 percent in the first twelve months.\n\nPlastic bags do not disappear. They break into tiny pieces that enter the sea, where fish and birds eat them. Clean-up teams on our beaches have reported fewer bags since the fee began. The money from the fee also pays for reusable bags, which are given free to families who receive social support.\n\nThe fee is small, and the benefit is large. Instead of removing it, the government should extend it to restaurants and small shops.",
+   "q": "What is the author's main claim?",
+   "options": [
+    "The plastic bag fee is unfair.",
+    "The plastic bag fee works and should be extended to restaurants and small shops.",
+    "Fish eat plastic.",
+    "Supermarkets give out too many bags."
+   ]
+  },
+  {
+   "skill": "Evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Select the sentence that provides statistical evidence.",
+   "sentences": [
+    "Some shoppers complained that the fee was unfair, especially for families on low incomes.",
+    "According to the environment ministry, the number of plastic bags given out by supermarkets fell by 70 percent in the first twelve months.",
+    "Clean-up teams on our beaches have reported fewer bags since the fee began.",
+    "The fee is small, and the benefit is large."
+   ]
+  },
+  {
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does the author address the concern about low-income families?",
+   "options": [
+    "By saying the concern is silly",
+    "By explaining that fee money pays for free reusable bags for families who receive support",
+    "By removing the fee for everyone",
+    "By not mentioning it"
+   ]
+  },
+  {
+   "skill": "Structure",
+   "type": "drag",
+   "again": true,
+   "q": "Match each paragraph of the editorial with its main job.",
+   "items": [
+    "Paragraph 1",
+    "Paragraph 2",
+    "Paragraph 3"
+   ],
+   "targets": [
+    "Introduces the policy, the objection and the main result",
+    "Explains the harm of plastic and answers the fairness concern",
+    "Concludes and calls for action"
+   ]
+  },
+  {
+   "skill": "Position and purpose",
+   "type": "mc",
+   "again": true,
+   "q": "What is the author's purpose in the final paragraph?",
+   "options": [
+    "To give new statistics",
+    "To call on the government to extend the fee",
+    "To describe the sea",
+    "To accept the critics' view"
+   ]
+  },
+  {
+   "skill": "Evidence",
+   "type": "mc",
+   "again": true,
+   "q": "Why does the author include the information from the environment ministry?",
+   "options": [
+    "To show that the claim is supported by an official source",
+    "To criticize the ministry",
+    "To change the topic",
+    "To entertain the reader"
+   ]
+  },
+  {
+   "skill": "Assumption",
+   "type": "mc",
+   "again": true,
+   "q": "The author says the policy \"speaks clearly\". Which assumption is behind this?",
+   "options": [
+    "Fewer bags given out means less plastic pollution.",
+    "Shoppers like paying fees.",
+    "All plastic comes from supermarkets.",
+    "Restaurants already charge a fee."
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "ptitle": "Two writers",
+   "passage": "Writer 1: Our city should make public buses free. Free buses would take thousands of cars off the road. When the city of Tallinn made its buses free for residents, the number of bus trips rose by about 14 percent in the first year. Cleaner air and less traffic would benefit everyone.\n\nWriter 2: Free buses sound good, but they are not the answer. My brother lives near the city centre and he still drives, because the bus is too slow. If buses are free but slow, people will keep driving. The money should go to more buses and faster routes instead.",
+   "q": "On which point do both writers agree?",
+   "options": [
+    "Buses should be free.",
+    "Fewer people driving would be a good thing.",
+    "Buses are too slow everywhere.",
+    "The city has no money."
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "drag",
+   "again": true,
+   "q": "Match each piece of evidence to its type.",
+   "items": [
+    "Bus trips in Tallinn rose by about 14 percent.",
+    "My brother still drives because the bus is too slow."
+   ],
+   "targets": [
+    "Statistics from a real case",
+    "Personal story"
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "again": true,
+   "q": "Which writer gives better-supported evidence?",
+   "options": [
+    "Writer 1, because the claim uses data from a real city",
+    "Writer 2, because a family story is more reliable",
+    "Both are equally supported",
+    "Neither gives any evidence"
+   ]
+  },
+  {
+   "skill": "Comparing arguments",
+   "type": "mc",
+   "again": true,
+   "q": "What is the main weakness in Writer 2's argument?",
+   "options": [
+    "It uses too many numbers.",
+    "It relies on one person's experience.",
+    "It has no claim.",
+    "It agrees with Writer 1."
+   ]
+  },
+  {
+   "skill": "Extended response",
+   "type": "mc",
+   "again": true,
+   "q": "In an extended response about these two writers, which sentence is the best start?",
+   "options": [
+    "I think buses should be free because I take the bus.",
+    "Writer 1 presents the better-supported argument because it uses data from a real city, while Writer 2 relies on a single personal story.",
+    "Buses are good and bad.",
+    "Writer 2 is wrong because he has a brother."
    ]
   }
  ],

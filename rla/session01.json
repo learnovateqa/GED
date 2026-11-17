@@ -680,7 +680,8 @@
     "45 minutes",
     "70 minutes",
     "150 minutes"
-   ]
+   ],
+   "skill": "Test format"
   },
   {
    "type": "mc",
@@ -690,7 +691,8 @@
     "You need 100 on each subject.",
     "You need 145 on two subjects only.",
     "You need 200 on each subject."
-   ]
+   ],
+   "skill": "Test format"
   },
   {
    "type": "dropdown",
@@ -711,7 +713,8 @@
       "three"
      ]
     }
-   ]
+   ],
+   "skill": "Test format"
   },
   {
    "type": "drag",
@@ -727,7 +730,8 @@
     "Step 2",
     "Step 3",
     "Step 4"
-   ]
+   ],
+   "skill": "Test format"
   },
   {
    "type": "mc",
@@ -739,7 +743,8 @@
     "More and more schools offer night classes.",
     "Schools open at 6 p.m.",
     "Night classes are too expensive."
-   ]
+   ],
+   "skill": "Main idea"
   },
   {
    "type": "mc",
@@ -750,7 +755,8 @@
     "Six",
     "Eleven"
    ],
-   "again": true
+   "again": true,
+   "skill": "Details"
   },
   {
    "type": "hotspot",
@@ -760,7 +766,8 @@
     "Five years ago, only two schools offered them.",
     "Today, eleven schools open their doors after 6 p.m.",
     "Most of the students work during the day, and they say evening lessons are their only chance to study."
-   ]
+   ],
+   "skill": "Details"
   },
   {
    "type": "mc",
@@ -772,7 +779,8 @@
     "Very long",
     "Very strict",
     "Friendly"
-   ]
+   ],
+   "skill": "Vocabulary in context"
   },
   {
    "type": "mc",
@@ -784,14 +792,344 @@
     "She has lost her phone.",
     "She is ready to sleep.",
     "She is cooking dinner."
+   ],
+   "skill": "Inference"
+  },
+  {
+   "type": "mc",
+   "q": "In the four-step method, what is step 3?",
+   "options": [
+    "Read the question",
+    "Read the passage",
+    "Find the evidence",
+    "Answer"
+   ],
+   "skill": "Test format"
+  },
+  {
+   "skill": "Test format",
+   "type": "mc",
+   "q": "Which question type asks you to choose words from a short list inside a sentence?",
+   "options": [
+    "Multiple choice",
+    "Drop-down",
+    "Extended response",
+    "Select an area"
    ]
   },
   {
-   "type": "fill",
-   "q": "Type the missing word.",
-   "text": "In the four-step method, step 3 is: find the {0}.",
+   "skill": "Test format",
+   "type": "mc",
+   "q": "What does the extended response ask you to do?",
+   "options": [
+    "Write a story about your life",
+    "Decide which of two arguments is better supported and explain why",
+    "Summarize one passage",
+    "Correct ten sentences"
+   ]
+  },
+  {
+   "skill": "Test format",
+   "type": "drag",
+   "q": "Match each question type with what you do.",
+   "items": [
+    "Multiple choice",
+    "Drag and drop",
+    "Select an area (hot spot)"
+   ],
+   "targets": [
+    "Choose the best of four answers",
+    "Move items into boxes",
+    "Tap part of a text"
+   ]
+  },
+  {
+   "skill": "Test format",
+   "type": "mc",
+   "q": "You do not know an answer, and time is short. What is the best thing to do?",
+   "options": [
+    "Leave it blank",
+    "Remove the wrong answers, choose the best one left, and move on",
+    "Stop the test",
+    "Spend ten minutes on it"
+   ]
+  },
+  {
+   "type": "dropdown",
+   "q": "Choose the correct number.",
+   "text": "To pass, you need a score of {0} or higher on each GED subject.",
    "blanks": [
-    {}
+    {
+     "options": [
+      "100",
+      "145",
+      "165"
+     ]
+    }
+   ],
+   "skill": "Test format"
+  },
+  {
+   "skill": "Main idea",
+   "type": "mc",
+   "ptitle": "Notice to staff",
+   "passage": "From next Monday, the staff kitchen will close at 3 p.m. every day for cleaning. Please take your lunch boxes home before 3 p.m. Any food left in the fridge after 3 p.m. on Thursday will be thrown away. The kitchen will open again at 7 a.m. each morning. Thank you for helping us keep the kitchen clean and safe.",
+   "q": "What is the main purpose of the notice?",
+   "options": [
+    "To invite staff to a lunch party",
+    "To tell staff about new kitchen hours and rules",
+    "To complain about dirty lunch boxes",
+    "To sell new fridges"
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "mc",
+   "again": true,
+   "q": "When will food left in the fridge be thrown away?",
+   "options": [
+    "Every morning at 7 a.m.",
+    "On Monday",
+    "After 3 p.m. on Thursday",
+    "At lunchtime every day"
+   ]
+  },
+  {
+   "type": "mc",
+   "again": true,
+   "q": "Based on the notice, when does the kitchen open each morning?",
+   "options": [
+    "7 a.m.",
+    "3 p.m.",
+    "Noon",
+    "It does not open."
+   ],
+   "skill": "Details"
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "Why does the kitchen close at 3 p.m.?",
+   "options": [
+    "Because staff go home at 3 p.m.",
+    "So that it can be cleaned",
+    "Because the fridge is broken",
+    "Because lunch is not allowed"
+   ]
+  },
+  {
+   "skill": "Author's purpose",
+   "type": "mc",
+   "again": true,
+   "q": "What is the tone of the notice?",
+   "options": [
+    "Angry",
+    "Polite and clear",
+    "Funny",
+    "Sad"
+   ]
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "ptitle": "From a story",
+   "passage": "Fatima had saved for three years. Every month she put a little money in an envelope under her bed. On Saturday, she walked into the driving school, put the envelope on the desk and said, \"I want to start today.\" The teacher smiled. Fatima's hands were shaking, but she was smiling too.",
+   "q": "How does Fatima feel at the end?",
+   "options": [
+    "Bored",
+    "Nervous but happy",
+    "Angry",
+    "Tired"
+   ]
+  },
+  {
+   "skill": "Details",
+   "type": "mc",
+   "again": true,
+   "q": "How long did Fatima save money?",
+   "options": [
+    "Three months",
+    "One year",
+    "Three years",
+    "One week"
+   ]
+  },
+  {
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "What can you infer about Fatima?",
+   "options": [
+    "She already has a car.",
+    "Learning to drive is very important to her.",
+    "She does not like the teacher.",
+    "She found the money on the street."
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "\"Her hands were shaking.\" What does this detail suggest?",
+   "options": [
+    "She was cold.",
+    "She was nervous or excited.",
+    "She was ill.",
+    "She was angry with the teacher."
+   ]
+  },
+  {
+   "skill": "Main idea",
+   "type": "mc",
+   "again": true,
+   "q": "What is the main idea of the story?",
+   "options": [
+    "Driving schools are expensive.",
+    "Fatima saved patiently to reach her goal of learning to drive.",
+    "Teachers smile a lot.",
+    "Envelopes are useful."
+   ]
+  },
+  {
+   "skill": "Argument and evidence",
+   "type": "mc",
+   "ptitle": "Letter to the editor",
+   "passage": "Our town needs more pedestrian crossings on Al Wahda Street. The street has six lanes and only one crossing in two kilometres. Last year, police recorded 14 accidents involving people walking on this street. Many of them were children going to the two schools nearby. A new crossing costs much less than the cost of one serious accident. The council should add at least two crossings before the new school year.",
+   "q": "What is the author's claim?",
+   "options": [
+    "Al Wahda Street has six lanes.",
+    "The council should add at least two crossings on Al Wahda Street.",
+    "Children go to school.",
+    "Accidents are expensive."
+   ]
+  },
+  {
+   "skill": "Argument and evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Tap the sentence that gives the strongest evidence.",
+   "sentences": [
+    "Our town needs more pedestrian crossings on Al Wahda Street.",
+    "Last year, police recorded 14 accidents involving people walking on this street.",
+    "A new crossing costs much less than the cost of one serious accident.",
+    "The council should add at least two crossings before the new school year."
+   ]
+  },
+  {
+   "skill": "Author's purpose",
+   "type": "mc",
+   "again": true,
+   "q": "What is the author's purpose?",
+   "options": [
+    "To entertain",
+    "To persuade the council to act",
+    "To describe a school",
+    "To give directions"
+   ]
+  },
+  {
+   "skill": "Argument and evidence",
+   "type": "drag",
+   "again": true,
+   "q": "Is each sentence from the letter a fact or an opinion?",
+   "items": [
+    "The street has six lanes.",
+    "Our town needs more pedestrian crossings.",
+    "Police recorded 14 accidents last year.",
+    "The council should add two crossings."
+   ],
+   "targets": [
+    "Fact",
+    "Opinion"
+   ]
+  },
+  {
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "again": true,
+   "q": "A \"pedestrian\" is…",
+   "options": [
+    "a person who walks",
+    "a car driver",
+    "a police officer",
+    "a bus"
+   ]
+  },
+  {
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Read the email. Choose the option that correctly completes each sentence.",
+   "text": "Dear Mr. Rahman,\n\nThank you for meeting with me last week. The information you gave me {0} very helpful.",
+   "blanks": [
+    {
+     "options": [
+      "were",
+      "was",
+      "be"
+     ]
+    }
+   ],
+   "ptitle": "Email"
+  },
+  {
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "I have now finished the online application, and I {0} it on Sunday.",
+   "blanks": [
+    {
+     "options": [
+      "submit",
+      "submitted",
+      "will submitted"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "The team leaders asked me to bring {0} certificates to the interview.",
+   "blanks": [
+    {
+     "options": [
+      "my",
+      "mine",
+      "me"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "Please let me know if {0} anything else I should prepare.",
+   "blanks": [
+    {
+     "options": [
+      "their",
+      "there's",
+      "theirs"
+     ]
+    }
+   ]
+  },
+  {
+   "skill": "Grammar",
+   "type": "dropdown",
+   "q": "Continue the email.",
+   "text": "I look forward to working with your team{0} thank you again for your help.\n\nKind regards,\nSara Ali",
+   "blanks": [
+    {
+     "options": [
+      ". And",
+      ", and",
+      ", And"
+     ]
+    }
    ]
   }
  ],

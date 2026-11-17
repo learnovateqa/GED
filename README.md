@@ -18,7 +18,7 @@ A learning website for GED® students. It is the sister site of *The English Aca
 0. **Slides** – one idea per slide in the site's own design, with arrows, swipe, keyboard and full screen (for class or self-study). Slides are written in `sessionNN.json` under `slides`, so they need no image files.
 1. **Reviewer** – the full explanation, with weak and strong examples, "Remember this", "Common mistake" and a glossary.
 2. **E-workbook** – easy → guided → application → challenge. After Submit, the student sees every answer with a short WHY, and a list of strong skills and skills to practise.
-3. **Short quiz** – shows only the final score. No answer key and no review, because students can retry. The quiz is marked by the grade book, so the answers are never on the website.
+3. **Short quiz** – 35 questions on the session's topic, in the GED pattern (passage sets; for RLA only the question types ged.com lists for RLA). Timed at 1.5 minutes per question (53 minutes; a teaching estimate, not an official GED rule). The clock keeps running if the student leaves, answers are kept on the phone, and the quiz is sent automatically when time ends. The student sees only the final score. Each attempt is saved in the grade book with the minutes used, blank answers and an **error log** (question number and skill for every wrong answer).
 4. **Checklist and badge.**
 
 Question types: multiple choice, drag and drop (tap an item, then tap a box), drop-down, hot spot (select an area) and fill in the blank.
