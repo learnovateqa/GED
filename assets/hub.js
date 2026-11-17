@@ -113,7 +113,7 @@
   const canvaReady = fetch("canva.json", { cache: "no-cache" }).then(r => (r.ok ? r.json() : {})).then(j => Object.assign(CANVA, j)).catch(() => {});
   const canvaFor = n => { const m = String(CANVA[n] || "").match(/^https:\/\/(?:www\.)?canva\.com\/design\/([A-Za-z0-9_-]+)(?:\/([A-Za-z0-9_-]+))?/); return m ? `https://www.canva.com/design/${m[1]}/${m[2] && !/^(view|edit|watch)$/.test(m[2]) ? m[2] + "/" : ""}view` : ""; };
   /* a question marked "again" shows the passage of the question before it in a fold */
-  const linkPassages = items => { let last = ""; items.forEach(it => { if (it.passage) last = it.passage; else if (it.again) it._prev = last; }); return items; };
+  const linkPassages = items => { let last = ""; items.forEach(it => { if (it.passage) last = it.passage; else if (it.again) it._prev = last; else if (it.sentences) last = it.sentences.join(" "); }); return items; };
 
   /* ====================== QUESTION TYPES ======================
      mc · dropdown · fill · drag (tap an item, then tap a box) · hotspot (tap the right sentence) */

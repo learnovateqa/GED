@@ -1,0 +1,1160 @@
+{
+ "n": 2,
+ "title": "Reading for Meaning",
+ "minutes": 90,
+ "intro": "You learn to find the main idea and the details that support it, to make inferences, and to find the author's purpose, point of view and tone. You also learn to work out new words from context and to read stories.",
+ "slides": [
+  {
+   "kind": "title",
+   "h": "Reading for Meaning",
+   "sub": "Main idea, details, inference and purpose."
+  },
+  {
+   "h": "Today you will",
+   "blocks": [
+    {
+     "list": [
+      "find the main idea and the supporting details",
+      "make an inference from clues",
+      "find the author's purpose, point of view and tone",
+      "work out a new word from the words around it",
+      "read a story: character, setting and theme"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Remember the four steps",
+   "blocks": [
+    {
+     "flow": [
+      "Read the question",
+      "Read the passage",
+      "Find the evidence",
+      "Answer"
+     ]
+    },
+    {
+     "p": "Use them for every question today."
+    }
+   ]
+  },
+  {
+   "h": "Main idea and details",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "",
+       "What it is",
+       "Ask yourself"
+      ],
+      "rows": [
+       [
+        "**Main idea**",
+        "the most important point",
+        "What is the whole text about?"
+       ],
+       [
+        "**Detail**",
+        "a fact or example that supports it",
+        "How does the author show it?"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "The main idea is often in the first or last sentence, but not always."
+    }
+   ]
+  },
+  {
+   "h": "Try it: main idea",
+   "blocks": [
+    {
+     "passage": "Many towns now have community fridges. People leave extra food inside, and anyone can take it for free. Shops give bread they cannot sell. Families leave fruit from their gardens. Less food is thrown away, and fewer people go hungry.",
+     "title": "Passage"
+    },
+    {
+     "question": "What is the main idea?"
+    }
+   ]
+  },
+  {
+   "h": "Weak answer, strong answer",
+   "blocks": [
+    {
+     "weak": "Shops give bread they cannot sell.",
+     "note": "This is one detail, not the whole idea."
+    },
+    {
+     "strong": "Community fridges share extra food, so less food is wasted and fewer people go hungry.",
+     "note": "This covers the whole passage."
+    }
+   ]
+  },
+  {
+   "h": "Summarize in one sentence",
+   "blocks": [
+    {
+     "p": "A good summary gives the main idea and the most important details. It is short, and it does not add your opinion."
+    },
+    {
+     "steps": [
+      "Who or what is the text about?",
+      "What is the main point?",
+      "What are one or two key details?"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Inference: read the clues",
+   "blocks": [
+    {
+     "p": "An **inference** is an idea the text does not say directly. You put the clues together."
+    },
+    {
+     "flow": [
+      "Clue",
+      "+ Clue",
+      "= Inference"
+     ]
+    },
+    {
+     "remember": "An inference must be supported by the text. It is not a guess."
+    }
+   ]
+  },
+  {
+   "h": "Try it: inference",
+   "blocks": [
+    {
+     "passage": "Karim looked at the clock again. He had ironed his shirt twice. He read his notes one more time and whispered the answers to himself. When his phone rang, he jumped.",
+     "title": "Passage"
+    },
+    {
+     "question": "How does Karim feel?"
+    },
+    {
+     "strong": "Nervous. He checks the clock, practises again and again, and jumps when the phone rings.",
+     "label": "inference"
+    }
+   ]
+  },
+  {
+   "h": "Author's purpose",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Purpose",
+       "The author wants to…",
+       "Example"
+      ],
+      "rows": [
+       [
+        "**Inform**",
+        "give facts",
+        "a news report"
+       ],
+       [
+        "**Explain**",
+        "show how or why",
+        "instructions"
+       ],
+       [
+        "**Persuade**",
+        "change your mind",
+        "a letter to the editor"
+       ],
+       [
+        "**Entertain**",
+        "tell a story",
+        "a short story"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "Read the first word of each answer choice."
+    }
+   ]
+  },
+  {
+   "h": "Point of view and tone",
+   "blocks": [
+    {
+     "list": [
+      "**Point of view:** what the author thinks about the topic.",
+      "**Tone:** the feeling in the words: hopeful, angry, worried, serious."
+     ]
+    },
+    {
+     "weak": "The new park is fine.",
+     "label": "word choice",
+     "note": "Neutral tone."
+    },
+    {
+     "strong": "The new park is a gift to every family in our town.",
+     "label": "word choice",
+     "note": "Warm, positive tone. The author strongly approves."
+    }
+   ]
+  },
+  {
+   "h": "Words in context",
+   "blocks": [
+    {
+     "p": "You meet a new word. Do not stop. Look around it."
+    },
+    {
+     "list": [
+      "**Definition:** the sentence explains it.",
+      "**Example:** the sentence gives examples.",
+      "**Opposite:** a word like *but* shows the opposite.",
+      "**Test it:** put your meaning in the sentence. Does it make sense?"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Try it: word in context",
+   "blocks": [
+    {
+     "passage": "The old bridge was fragile, so the city closed it before it could break.",
+     "title": "Passage"
+    },
+    {
+     "question": "What does \"fragile\" mean?"
+    },
+    {
+     "strong": "Easy to break. The clue is \"before it could break\".",
+     "label": "answer"
+    }
+   ]
+  },
+  {
+   "h": "How a text is organized",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Structure",
+       "Signal words"
+      ],
+      "rows": [
+       [
+        "Sequence",
+        "first, then, finally"
+       ],
+       [
+        "Cause and effect",
+        "because, so, as a result"
+       ],
+       [
+        "Compare and contrast",
+        "both, however, unlike"
+       ],
+       [
+        "Problem and solution",
+        "the problem is, one answer is"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Reading a story",
+   "blocks": [
+    {
+     "list": [
+      "**Character:** Who is it? What do they want? How do they change?",
+      "**Setting:** Where and when?",
+      "**Plot:** What happens, and in what order?",
+      "**Theme:** What lesson does the story teach?"
+     ]
+    },
+    {
+     "mistake": "Giving the theme as one word, like \"family\". A theme is a sentence: \"Family can help us through hard times.\""
+    }
+   ]
+  },
+  {
+   "h": "Cite the evidence",
+   "blocks": [
+    {
+     "p": "Every answer needs proof from the text."
+    },
+    {
+     "weak": "She is kind because she seems nice.",
+     "label": "answer"
+    },
+    {
+     "strong": "She is kind. The text says she \"carried her neighbour's shopping up four floors\".",
+     "label": "answer"
+    }
+   ]
+  },
+  {
+   "h": "Now it is your turn",
+   "blocks": [
+    {
+     "flow": [
+      "Reviewer",
+      "Workbook",
+      "Quiz",
+      "Checklist"
+     ]
+    },
+    {
+     "p": "Read the reviewer. Do the workbook. Take the short quiz. Tick the checklist."
+    }
+   ]
+  },
+  {
+   "kind": "title",
+   "h": "Thank you!",
+   "sub": "See you in Session 3: Analyzing Arguments."
+  }
+ ],
+ "reviewer": [
+  {
+   "h": "Main idea and supporting details",
+   "blocks": [
+    {
+     "p": "The **main idea** is the most important point of a text. **Supporting details** are the facts, examples and reasons that show the main idea is true."
+    },
+    {
+     "passage": "Many towns now have community fridges. People leave extra food inside, and anyone can take it for free. Shops give bread they cannot sell. Families leave fruit from their gardens. Less food is thrown away, and fewer people go hungry.",
+     "title": "Passage"
+    },
+    {
+     "question": "What is the main idea of the passage?"
+    },
+    {
+     "weak": "Shops give bread they cannot sell.",
+     "note": "This is true, but it is only one detail."
+    },
+    {
+     "strong": "Community fridges let people share extra food, so less food is wasted and fewer people go hungry.",
+     "note": "This covers the whole passage."
+    },
+    {
+     "remember": "A main idea is big enough to cover all the details. A detail covers only one part."
+    },
+    {
+     "mistake": "Choosing the most interesting sentence. Ask: does this answer cover the **whole** text?"
+    }
+   ]
+  },
+  {
+   "h": "Summarizing",
+   "blocks": [
+    {
+     "p": "A **summary** retells a text in a few words. It gives the main idea and the most important details. It does not add your opinion."
+    },
+    {
+     "steps": [
+      "Who or what is the text about?",
+      "What is the main point?",
+      "What are one or two key details?"
+     ]
+    },
+    {
+     "weak": "Community fridges are a great idea and every town should have one.",
+     "label": "summary",
+     "note": "This adds the writer's opinion."
+    },
+    {
+     "strong": "Community fridges let shops and families share extra food, which reduces waste and hunger.",
+     "label": "summary",
+     "note": "Short, complete and neutral."
+    }
+   ]
+  },
+  {
+   "h": "Making inferences",
+   "blocks": [
+    {
+     "p": "An **inference** is an idea that the text does not say directly, but the clues show it. Clue + clue = inference."
+    },
+    {
+     "passage": "Karim looked at the clock again. He had ironed his shirt twice. He read his notes one more time and whispered the answers to himself. When his phone rang, he jumped.",
+     "title": "Passage"
+    },
+    {
+     "question": "How does Karim feel, and why?"
+    },
+    {
+     "weak": "Karim is angry with his phone.",
+     "note": "No clue in the text shows anger."
+    },
+    {
+     "strong": "Karim is nervous about something important, maybe an interview or a test. He checks the time, practises again and again, and jumps at a small sound.",
+     "note": "Every part is supported by a clue."
+    },
+    {
+     "remember": "A good inference stays close to the clues. If you cannot point to the clues, it is a guess."
+    }
+   ]
+  },
+  {
+   "h": "Author's purpose and point of view",
+   "blocks": [
+    {
+     "p": "The **purpose** is why the author wrote the text. The **point of view** is what the author thinks about the topic."
+    },
+    {
+     "table": {
+      "head": [
+       "Purpose",
+       "The author wants to…",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Inform",
+        "give facts",
+        "a news report, a notice"
+       ],
+       [
+        "Explain",
+        "show how or why something happens",
+        "instructions, a science article"
+       ],
+       [
+        "Persuade",
+        "make you believe or do something",
+        "a letter to the editor, an advert"
+       ],
+       [
+        "Entertain",
+        "tell a story or amuse you",
+        "a short story"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "In answer choices, look at the first word: to inform, to persuade, to warn, to criticize. Remove the verbs that do not fit the text."
+    },
+    {
+     "mistake": "Thinking a text is only informative because it has numbers. A writer can use numbers **to persuade**."
+    }
+   ]
+  },
+  {
+   "h": "Tone and word choice",
+   "blocks": [
+    {
+     "p": "**Tone** is the feeling in the author's words. The same fact can sound very different."
+    },
+    {
+     "weak": "The new park is fine.",
+     "label": "example",
+     "note": "Neutral. We do not learn much about the author's feeling."
+    },
+    {
+     "strong": "The new park is a gift to every family in our town.",
+     "label": "example",
+     "note": "Warm and positive. The word \"gift\" shows strong approval."
+    },
+    {
+     "table": {
+      "head": [
+       "Tone",
+       "Words that show it"
+      ],
+      "rows": [
+       [
+        "Hopeful",
+        "a brighter future, at last, a chance"
+       ],
+       [
+        "Worried",
+        "danger, risk, we cannot wait"
+       ],
+       [
+        "Angry",
+        "unfair, shameful, enough is enough"
+       ],
+       [
+        "Serious",
+        "facts and careful words, no jokes"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Vocabulary in context",
+   "blocks": [
+    {
+     "p": "You will meet words you do not know. Look at the words around them for clues."
+    },
+    {
+     "list": [
+      "**Definition clue:** the sentence explains the word.",
+      "**Example clue:** examples show the meaning.",
+      "**Opposite clue:** words like *but* or *unlike* show the opposite meaning.",
+      "**Cause clue:** words like *so* or *because* link the word to a result."
+     ]
+    },
+    {
+     "passage": "The old bridge was fragile, so the city closed it before it could break.",
+     "title": "Example"
+    },
+    {
+     "p": "The clue \"before it could break\" shows that **fragile** means *easy to break*."
+    },
+    {
+     "remember": "Put your meaning into the sentence. If the sentence still makes sense, you are probably right."
+    },
+    {
+     "mistake": "Choosing the most common meaning of a word. Many words have several meanings. Choose the one that fits **this** sentence."
+    }
+   ]
+  },
+  {
+   "h": "How a text is organized",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Structure",
+       "What it does",
+       "Signal words"
+      ],
+      "rows": [
+       [
+        "Sequence",
+        "events in order",
+        "first, then, after that, finally"
+       ],
+       [
+        "Cause and effect",
+        "why something happens and the result",
+        "because, so, as a result, therefore"
+       ],
+       [
+        "Compare and contrast",
+        "same and different",
+        "both, also, however, unlike"
+       ],
+       [
+        "Problem and solution",
+        "a problem and a way to fix it",
+        "the problem is, one answer is"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "Signal words are road signs. Circle them on your note board in the test."
+    }
+   ]
+  },
+  {
+   "h": "Reading stories",
+   "blocks": [
+    {
+     "p": "Some passages are stories. The questions ask about people, places and lessons."
+    },
+    {
+     "list": [
+      "**Character:** Who is it? What do they want? How do they change?",
+      "**Setting:** Where and when does it happen?",
+      "**Plot:** What happens, and in what order?",
+      "**Theme:** What lesson or message does the story give?"
+     ]
+    },
+    {
+     "weak": "The theme is family.",
+     "label": "theme",
+     "note": "One word is a topic, not a theme."
+    },
+    {
+     "strong": "Family can help us through hard times.",
+     "label": "theme",
+     "note": "A theme is a full sentence with a message."
+    }
+   ]
+  },
+  {
+   "h": "Citing evidence",
+   "blocks": [
+    {
+     "p": "Every answer needs proof from the text. This is also how you will write the extended response."
+    },
+    {
+     "weak": "She is kind because she seems nice.",
+     "label": "answer",
+     "note": "No proof from the text."
+    },
+    {
+     "strong": "She is kind. The story says she \"carried her neighbour's shopping up four floors\".",
+     "label": "answer",
+     "note": "The quotation proves the point."
+    },
+    {
+     "remember": "Claim + proof from the text. Always both."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  [
+   "main idea",
+   "the most important point of a text"
+  ],
+  [
+   "supporting detail",
+   "a fact, example or reason that shows the main idea is true"
+  ],
+  [
+   "summary",
+   "a short retelling of the main idea and key details, with no opinion"
+  ],
+  [
+   "inference",
+   "an idea the text shows through clues but does not say directly"
+  ],
+  [
+   "purpose",
+   "why the author wrote the text"
+  ],
+  [
+   "point of view",
+   "what the author thinks about the topic"
+  ],
+  [
+   "tone",
+   "the feeling or attitude in the author's words"
+  ],
+  [
+   "context",
+   "the words and sentences around a word"
+  ],
+  [
+   "structure",
+   "the way a text is organized"
+  ],
+  [
+   "signal word",
+   "a word that shows how ideas connect, such as because or however"
+  ],
+  [
+   "character",
+   "a person in a story"
+  ],
+  [
+   "setting",
+   "where and when a story happens"
+  ],
+  [
+   "theme",
+   "the message or lesson of a story, written as a sentence"
+  ],
+  [
+   "cite",
+   "to point to the exact words in a text that prove your answer"
+  ]
+ ],
+ "workbook": [
+  {
+   "level": "easy",
+   "skill": "Main idea",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Walking is good for your body and your mind. A daily walk makes your heart stronger. It helps you sleep better at night. Many people also say that walking helps them feel calm after a busy day.",
+   "q": "What is the main idea of the passage?",
+   "options": [
+    "Walking helps you sleep.",
+    "Walking is good for the body and the mind.",
+    "Many people are busy.",
+    "Your heart is a muscle."
+   ],
+   "answer": 1,
+   "why": "The first sentence gives the main idea. Sleep, the heart and feeling calm are details that support it."
+  },
+  {
+   "level": "easy",
+   "skill": "Details",
+   "type": "mc",
+   "again": true,
+   "q": "Which detail shows that walking is good for the mind?",
+   "options": [
+    "A daily walk makes your heart stronger.",
+    "Walking helps people feel calm after a busy day.",
+    "Walking is free.",
+    "People walk in the morning."
+   ],
+   "answer": 1,
+   "why": "Feeling calm is about the mind. A stronger heart is about the body. The passage does not say walking is free or talk about the morning."
+  },
+  {
+   "level": "easy",
+   "skill": "Author's purpose",
+   "type": "drag",
+   "q": "What is the main purpose of each text? Put each one in the correct box.",
+   "items": [
+    "A recipe for lentil soup",
+    "A story about a lost cat",
+    "A notice: the pool is closed on Friday",
+    "A letter asking people to vote for a new library"
+   ],
+   "targets": [
+    "Explain",
+    "Entertain",
+    "Inform",
+    "Persuade"
+   ],
+   "answer": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "why": "A recipe explains how to do something. A story entertains. A notice gives facts, so it informs. A letter asking people to vote tries to persuade."
+  },
+  {
+   "level": "easy",
+   "skill": "Vocabulary in context",
+   "type": "mc",
+   "ptitle": "Sentence",
+   "passage": "After the long hike, the children were exhausted and fell asleep in the car.",
+   "q": "What does \"exhausted\" mean?",
+   "options": [
+    "Very tired",
+    "Very happy",
+    "Very hungry",
+    "Very fast"
+   ],
+   "answer": 0,
+   "why": "The clue is \"fell asleep in the car\" after a long hike. People fall asleep when they are very tired."
+  },
+  {
+   "level": "easy",
+   "skill": "Structure",
+   "type": "dropdown",
+   "q": "Choose the signal words.",
+   "text": "{0} you mix the flour and water. {1} you add the eggs. {2}, you bake the bread for forty minutes.",
+   "blanks": [
+    {
+     "options": [
+      "Because",
+      "First",
+      "However"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "Then",
+      "Unlike",
+      "So"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "Although",
+      "Finally",
+      "Both"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "Recipes follow a sequence. First, then and finally are sequence words. Because, however and although show other links."
+  },
+  {
+   "level": "guided",
+   "skill": "Main idea",
+   "type": "hotspot",
+   "q": "Tap the sentence that gives the main idea of the paragraph.",
+   "sentences": [
+    "Last year our office started a four-day week.",
+    "Some people worried that we would finish less work.",
+    "In fact, the four-day week has made our team happier and more productive.",
+    "Sick days fell by half, and we finished every project on time."
+   ],
+   "answer": 2,
+   "why": "Sentence 3 is the main point. Sentence 4 gives the evidence for it. Sentences 1 and 2 give the background."
+  },
+  {
+   "level": "guided",
+   "skill": "Inference",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Amal opened the front door quietly and took off her shoes. She walked slowly past the baby's room. In the kitchen, she put her keys down without a sound.",
+   "q": "What can you infer?",
+   "options": [
+    "Amal is angry.",
+    "Amal does not want to wake the baby.",
+    "Amal has lost her keys.",
+    "Amal is going out again."
+   ],
+   "answer": 1,
+   "why": "Amal is quiet in every action, and she walks slowly past the baby's room. The clues show she does not want to wake the baby. Nothing shows anger, and she put her keys down, so they are not lost."
+  },
+  {
+   "level": "guided",
+   "skill": "Tone",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "At last, after ten long years, our town will have its own hospital. Families will no longer drive two hours in an emergency. This is a proud day for all of us.",
+   "q": "What is the tone of the passage?",
+   "options": [
+    "Worried",
+    "Bored",
+    "Hopeful and proud",
+    "Angry"
+   ],
+   "answer": 2,
+   "why": "Words like \"at last\" and \"a proud day\" show a happy, hopeful feeling about the new hospital."
+  },
+  {
+   "level": "guided",
+   "skill": "Summarizing",
+   "type": "mc",
+   "q": "Read the passage about the hospital again. Which is the best summary?",
+   "options": [
+    "Hospitals are expensive to build.",
+    "After ten years, the town is getting a hospital, so families will not need to drive two hours in an emergency.",
+    "The writer likes driving.",
+    "Emergencies happen every day."
+   ],
+   "answer": 1,
+   "again": true,
+   "why": "A summary gives the main idea and the key detail in a short, neutral way. The other answers are not in the passage or miss the main point."
+  },
+  {
+   "level": "guided",
+   "skill": "Structure",
+   "type": "drag",
+   "q": "Match each sentence to the structure it shows.",
+   "items": [
+    "The road flooded because the drains were blocked.",
+    "Both cities have hot summers, but only Doha has a sea breeze.",
+    "The problem is the traffic. One answer is a new metro line."
+   ],
+   "targets": [
+    "Cause and effect",
+    "Compare and contrast",
+    "Problem and solution"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "\"Because\" shows a cause. \"Both… but\" shows things that are the same and different. \"The problem is… one answer is\" shows a problem and a solution."
+  },
+  {
+   "level": "application",
+   "skill": "Author's purpose",
+   "type": "mc",
+   "ptitle": "Workplace email",
+   "passage": "Dear team,\n\nFrom 1 March, all staff must scan their ID card at the main door. The old side door will be locked at all times. This change will keep the building safe. Please bring your card every day. If you have lost your card, visit the security desk before 1 March.\n\nThank you,\nFacilities Manager",
+   "q": "What is the main purpose of the email?",
+   "options": [
+    "To entertain the team with a story",
+    "To inform staff about a new entry rule and what to do",
+    "To complain about lost ID cards",
+    "To persuade staff to work from home"
+   ],
+   "answer": 1,
+   "why": "The email gives facts (the date, the rule, what to do). Its main purpose is to inform. It is not a story, a complaint or a request to work from home."
+  },
+  {
+   "level": "application",
+   "skill": "Details",
+   "type": "fill",
+   "again": true,
+   "q": "Type the answer from the email.",
+   "text": "If you have lost your card, go to the {0} desk.",
+   "blanks": [
+    {
+     "accept": [
+      "security"
+     ]
+    }
+   ],
+   "why": "The email says, \"visit the security desk before 1 March.\""
+  },
+  {
+   "level": "application",
+   "skill": "Inference",
+   "type": "mc",
+   "ptitle": "From a story",
+   "passage": "Mr. Hassan had sold vegetables at the same corner for thirty years. Every morning, children waved at him on their way to school, and he gave each of them an orange. When the city told him he had to move, the parents wrote letters, and the children made a big sign: \"Our corner needs Mr. Hassan.\"",
+   "q": "What can you infer about Mr. Hassan?",
+   "options": [
+    "He is new in the city.",
+    "The neighbours care about him very much.",
+    "He wants to move to a bigger shop.",
+    "The children do not know him."
+   ],
+   "answer": 1,
+   "why": "The parents wrote letters and the children made a sign to keep him. These actions show he is loved. He has been there thirty years, so he is not new."
+  },
+  {
+   "level": "application",
+   "skill": "Theme",
+   "type": "mc",
+   "again": true,
+   "q": "Which sentence best states the theme of the story?",
+   "options": [
+    "Vegetables are healthy.",
+    "Small acts of kindness can bring a community together.",
+    "Cities should build more shops.",
+    "Children should walk to school."
+   ],
+   "answer": 1,
+   "why": "A theme is a message in a full sentence. Mr. Hassan's small daily kindness (an orange for each child) made the whole neighbourhood stand up for him."
+  },
+  {
+   "level": "application",
+   "skill": "Vocabulary in context",
+   "type": "dropdown",
+   "q": "Choose the meaning that fits each sentence.",
+   "text": "The workers will **address** the problem next week. In this sentence, address means {0}. Please write your home **address** on the form. Here, address means {1}.",
+   "blanks": [
+    {
+     "options": [
+      "to deal with",
+      "to give a speech",
+      "a place where you live"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "to deal with",
+      "to give a speech",
+      "a place where you live"
+     ],
+     "answer": 2
+    }
+   ],
+   "why": "The same word can have different meanings. You \"address\" (deal with) a problem. You write your \"address\" (where you live) on a form."
+  },
+  {
+   "level": "challenge",
+   "skill": "Point of view",
+   "type": "mc",
+   "ptitle": "Opinion article",
+   "passage": "Every summer, our city spends millions of riyals on fireworks for the national celebration. The show lasts twenty minutes. Meanwhile, the public library has cut its opening hours because it cannot pay enough staff. I am not against celebration. A city should be proud of itself. But pride should also mean open libraries, safe playgrounds and free classes for adults who want to learn. Perhaps next year, a shorter fireworks show could pay for a longer library year.",
+   "q": "What is the author's point of view?",
+   "options": [
+    "The city should stop all celebrations.",
+    "Some of the money for fireworks should go to public services like the library.",
+    "Fireworks are dangerous for children.",
+    "The library has too many staff."
+   ],
+   "answer": 1,
+   "why": "The author says, \"I am not against celebration,\" so A is wrong. The last sentence suggests using some fireworks money for the library. That is the point of view."
+  },
+  {
+   "level": "challenge",
+   "skill": "Tone",
+   "type": "hotspot",
+   "again": true,
+   "q": "Tap the sentence that shows the author is trying to be fair and not extreme.",
+   "sentences": [
+    "Every summer, our city spends millions of riyals on fireworks for the national celebration.",
+    "Meanwhile, the public library has cut its opening hours because it cannot pay enough staff.",
+    "I am not against celebration.",
+    "Perhaps next year, a shorter fireworks show could pay for a longer library year."
+   ],
+   "answer": 2,
+   "why": "\"I am not against celebration\" shows the author accepts the other side's value. This makes the tone balanced. Sentences 1 and 2 give facts, and sentence 4 gives a suggestion."
+  },
+  {
+   "level": "challenge",
+   "skill": "Structure",
+   "type": "mc",
+   "again": true,
+   "q": "Why does the author put the fireworks and the library next to each other with the word \"Meanwhile\"?",
+   "options": [
+    "To show that both events happen in summer",
+    "To contrast how money is spent, so the reader questions the choice",
+    "To explain how fireworks are made",
+    "To prove that libraries are older than fireworks"
+   ],
+   "answer": 1,
+   "why": "\"Meanwhile\" puts two facts side by side: a lot of money for a short show, and too little money for the library. The contrast makes the reader think about the choice."
+  },
+  {
+   "level": "challenge",
+   "skill": "Vocabulary in context",
+   "type": "fill",
+   "again": true,
+   "q": "Type one word from the article.",
+   "text": "The author uses the word {0} to show that a city can feel good about itself in more than one way.",
+   "blanks": [
+    {
+     "accept": [
+      "pride",
+      "proud"
+     ]
+    }
+   ],
+   "why": "The author says a city \"should be proud of itself\" and that \"pride should also mean open libraries\". The word pride (or proud) carries that idea."
+  },
+  {
+   "level": "challenge",
+   "skill": "Inference",
+   "type": "mc",
+   "again": true,
+   "q": "Which statement would the author MOST likely agree with?",
+   "options": [
+    "A city shows its pride only through big shows.",
+    "Spending choices show what a city values.",
+    "Libraries should close in summer.",
+    "Adults do not need free classes."
+   ],
+   "answer": 1,
+   "why": "The whole article compares how money is spent and says pride should include libraries and classes. So the author believes spending shows what a city values."
+  }
+ ],
+ "quiz": [
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Drinking enough water is important. Water helps your body stay cool. It helps you think clearly. Doctors say many headaches start when people do not drink enough.",
+   "q": "What is the main idea?",
+   "options": [
+    "Doctors have headaches.",
+    "Drinking enough water is important for the body and mind.",
+    "Water is cold.",
+    "People think clearly at night."
+   ]
+  },
+  {
+   "type": "mc",
+   "again": true,
+   "q": "Which detail supports the main idea?",
+   "options": [
+    "Water is free in some places.",
+    "Water helps your body stay cool.",
+    "Doctors work in hospitals.",
+    "Rain falls in winter."
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Noor packed her bag with a towel, sun cream and a big hat. She checked the weather twice and smiled at the bright sky.",
+   "q": "Where is Noor probably going?",
+   "options": [
+    "To the beach",
+    "To a job interview",
+    "To bed",
+    "To the dentist"
+   ]
+  },
+  {
+   "type": "drag",
+   "q": "Match each text to its main purpose.",
+   "items": [
+    "An advert: buy one, get one free!",
+    "A train timetable",
+    "A funny story about a talking parrot"
+   ],
+   "targets": [
+    "Persuade",
+    "Inform",
+    "Entertain"
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Sentence",
+   "passage": "The new phone is very durable; it still works after falling on the floor many times.",
+   "q": "What does \"durable\" mean?",
+   "options": [
+    "Expensive",
+    "Strong and long-lasting",
+    "Small",
+    "Easy to lose"
+   ]
+  },
+  {
+   "type": "dropdown",
+   "q": "Choose the signal words.",
+   "text": "The bus was late {0} the road was closed. {1}, many workers arrived late.",
+   "blanks": [
+    {
+     "options": [
+      "because",
+      "first",
+      "unlike"
+     ]
+    },
+    {
+     "options": [
+      "As a result",
+      "For example",
+      "Both"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "hotspot",
+   "q": "Tap the sentence that shows the writer's opinion.",
+   "sentences": [
+    "The market opens at 7 a.m.",
+    "It has over fifty stalls.",
+    "It is the best place in the city to buy fresh fish.",
+    "It closes at noon on Fridays."
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "From a story",
+   "passage": "Every evening, Ravi practised the guitar alone in his room. His fingers hurt, and he often made mistakes. A year later, he played at his sister's wedding, and everyone stood up to clap.",
+   "q": "What is the best statement of the theme?",
+   "options": [
+    "Guitars are hard to buy.",
+    "Practice and patience lead to success.",
+    "Weddings are noisy.",
+    "Brothers and sisters often argue."
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "We cannot wait any longer. Every week, more trees are cut down in our valley. If we do nothing, our children will never see the forest we love.",
+   "q": "What is the tone?",
+   "options": [
+    "Calm and relaxed",
+    "Worried and urgent",
+    "Funny",
+    "Bored"
+   ]
+  },
+  {
+   "type": "fill",
+   "q": "Type the missing word.",
+   "text": "An idea that the text shows through clues, but does not say directly, is an {0}.",
+   "blanks": [
+    {}
+   ]
+  }
+ ],
+ "checklist": [
+  "find the main idea of a passage",
+  "tell the difference between the main idea and a detail",
+  "write a one-sentence summary with no opinion",
+  "make an inference and point to the clues",
+  "name the author's purpose: inform, explain, persuade or entertain",
+  "describe the tone and the author's point of view",
+  "work out a new word from the words around it",
+  "state the theme of a story as a full sentence"
+ ]
+}

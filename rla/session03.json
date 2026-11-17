@@ -1,0 +1,1233 @@
+{
+ "n": 3,
+ "title": "Analyzing Arguments",
+ "minutes": 90,
+ "intro": "You learn what an argument is and how to find its claim, reasons and evidence. You learn the difference between fact and opinion, between the author's position and the author's purpose, and how a strong argument answers the other side.",
+ "slides": [
+  {
+   "kind": "title",
+   "h": "Analyzing Arguments",
+   "sub": "Claim, reasons and evidence."
+  },
+  {
+   "h": "Today you will",
+   "blocks": [
+    {
+     "list": [
+      "say what an argument is",
+      "find the claim, the reasons and the evidence",
+      "tell a fact from an opinion",
+      "tell the author's position from the author's purpose",
+      "see how an author answers the other side"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "The key question",
+   "blocks": [
+    {
+     "remember": "What is the author trying to convince me to believe or do?"
+    },
+    {
+     "p": "Ask it before you read any argument. Write it on your note board in the test."
+    }
+   ]
+  },
+  {
+   "h": "What is an argument?",
+   "blocks": [
+    {
+     "p": "An argument is **not** a fight. It is writing that tries to make you believe or do something."
+    },
+    {
+     "table": {
+      "head": [
+       "Report",
+       "Argument"
+      ],
+      "rows": [
+       [
+        "It rained 5 cm yesterday.",
+        "The city must fix the drains before the next storm."
+       ],
+       [
+        "gives facts",
+        "takes a side and gives reasons"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Fact or opinion?",
+   "blocks": [
+    {
+     "list": [
+      "**Fact:** you can check it. *The bus fare is 3 riyals.*",
+      "**Opinion:** a belief or feeling. *The bus is the best way to travel.*"
+     ]
+    },
+    {
+     "tip": "Words like **should, must, best, worst, unfair, essential** often show an opinion or a claim."
+    }
+   ]
+  },
+  {
+   "h": "The claim",
+   "blocks": [
+    {
+     "p": "The **claim** is the main point the author wants you to accept."
+    },
+    {
+     "list": [
+      "It is often in the **first** paragraph.",
+      "It is often repeated in the **last** paragraph.",
+      "Sometimes it is not written directly. Then you infer it."
+     ]
+    },
+    {
+     "strong": "Schools should give every student a free breakfast.",
+     "label": "claim"
+    }
+   ]
+  },
+  {
+   "h": "Three kinds of claims",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Kind",
+       "It says…",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Fact",
+        "something is true",
+        "Online classes help working adults finish their studies."
+       ],
+       [
+        "Value",
+        "something is good or bad",
+        "Long homework is unfair to young children."
+       ],
+       [
+        "Policy",
+        "something should be done",
+        "The city should build more bus lanes."
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "An argument is a building",
+   "blocks": [
+    {
+     "flow": [
+      "Evidence",
+      "Reasons",
+      "Claim"
+     ]
+    },
+    {
+     "list": [
+      "The **claim** is the roof.",
+      "The **reasons** are the walls that hold it up.",
+      "The **evidence** is the ground under everything."
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Types of evidence",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Type",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Statistics",
+        "30% of household rubbish is food."
+       ],
+       [
+        "Expert",
+        "A doctor at the national hospital says…"
+       ],
+       [
+        "Example",
+        "When Al Khor added bus lanes, travel time fell."
+       ],
+       [
+        "Personal story",
+        "My neighbour stopped driving and saves money."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "A personal story alone is usually weaker than numbers or an expert."
+    }
+   ]
+  },
+  {
+   "h": "Strong or weak evidence?",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Check",
+       "Strong",
+       "Weak"
+      ],
+      "rows": [
+       [
+        "On topic?",
+        "supports this claim",
+        "about something else"
+       ],
+       [
+        "Enough?",
+        "several facts or a large study",
+        "one story"
+       ],
+       [
+        "Who says it?",
+        "a named expert or study",
+        "\"people say\""
+       ],
+       [
+        "Fair?",
+        "calm and clear",
+        "insults or big emotions"
+       ]
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "h": "Position or purpose?",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "",
+       "Position",
+       "Purpose"
+      ],
+      "rows": [
+       [
+        "Question",
+        "What does the author think?",
+        "Why did the author write this?"
+       ],
+       [
+        "Example",
+        "The author supports free school breakfast.",
+        "To persuade parents to support the plan."
+       ]
+      ]
+     }
+    },
+    {
+     "mistake": "Mixing them up. Position = the opinion. Purpose = the goal of writing."
+    }
+   ]
+  },
+  {
+   "h": "How an argument is built",
+   "blocks": [
+    {
+     "steps": [
+      "Introduction and claim",
+      "Reasons",
+      "Evidence for each reason",
+      "The other side (counterclaim) and the author's answer",
+      "Conclusion"
+     ]
+    }
+   ]
+  },
+  {
+   "h": "Answering the other side",
+   "blocks": [
+    {
+     "p": "A strong author shows the other side, then answers it."
+    },
+    {
+     "passage": "**Some people say** free breakfast costs too much. **However**, hungry students learn less, and that costs more in the end.",
+     "title": "Example"
+    },
+    {
+     "tip": "Signal words: some people say, critics argue, however, on the other hand, while it is true that."
+    }
+   ]
+  },
+  {
+   "h": "Hidden beliefs (assumptions)",
+   "blocks": [
+    {
+     "p": "An **assumption** is something the author believes but does not say."
+    },
+    {
+     "passage": "We should build a new car park, because more parking will bring more shoppers to the market.",
+     "title": "Example"
+    },
+    {
+     "p": "Hidden belief: shoppers stay away **because** there is not enough parking. Is that true? The author does not prove it."
+    }
+   ]
+  },
+  {
+   "h": "Try it",
+   "blocks": [
+    {
+     "passage": "Our town should plant 1,000 trees this year. Trees cool the streets: one study found that shaded streets are up to 5°C cooler in summer. Some people say trees cost too much to water. However, the city can use recycled water, which is cheap.",
+     "title": "Passage"
+    },
+    {
+     "question": "What is the claim? What is one piece of evidence? Where is the counterclaim?"
+    }
+   ]
+  },
+  {
+   "h": "Answer",
+   "blocks": [
+    {
+     "strong": "Our town should plant 1,000 trees this year.",
+     "label": "claim"
+    },
+    {
+     "strong": "Shaded streets are up to 5°C cooler in summer (a study).",
+     "label": "evidence"
+    },
+    {
+     "strong": "\"Some people say trees cost too much to water.\" The author answers it with recycled water.",
+     "label": "counterclaim"
+    }
+   ]
+  },
+  {
+   "h": "Link to the essay",
+   "blocks": [
+    {
+     "p": "In the extended response, you judge two arguments."
+    },
+    {
+     "remember": "Do not give your own opinion on the topic. Say which argument is **better supported**, and prove it with evidence from the passages."
+    }
+   ]
+  },
+  {
+   "h": "Now it is your turn",
+   "blocks": [
+    {
+     "flow": [
+      "Reviewer",
+      "Workbook",
+      "Quiz",
+      "Checklist"
+     ]
+    },
+    {
+     "p": "Read the reviewer. Do the workbook. Take the short quiz. Tick the checklist."
+    }
+   ]
+  },
+  {
+   "kind": "title",
+   "h": "Thank you!",
+   "sub": "See you in Session 4: Evidence and Comparing Arguments."
+  }
+ ],
+ "reviewer": [
+  {
+   "h": "What is an argument?",
+   "blocks": [
+    {
+     "p": "In everyday English, an argument can be a fight. In the GED test, an **argument** is a piece of writing that tries to make you believe or do something. The author takes a side and gives reasons."
+    },
+    {
+     "table": {
+      "head": [
+       "Report",
+       "Argument"
+      ],
+      "rows": [
+       [
+        "It rained 5 cm yesterday.",
+        "The city must fix the drains before the next storm."
+       ],
+       [
+        "gives facts only",
+        "takes a side and gives reasons"
+       ]
+      ]
+     }
+    },
+    {
+     "remember": "Ask: **What is the author trying to convince me to believe or do?**"
+    }
+   ]
+  },
+  {
+   "h": "Fact, opinion and claim",
+   "blocks": [
+    {
+     "list": [
+      "A **fact** can be checked: a number, a date, an event.",
+      "An **opinion** is a belief or a feeling. People can disagree with it.",
+      "A **claim** is the main opinion that the author tries to prove."
+     ]
+    },
+    {
+     "table": {
+      "head": [
+       "Sentence",
+       "Type"
+      ],
+      "rows": [
+       [
+        "The library opens at 8 a.m.",
+        "Fact"
+       ],
+       [
+        "The library is the friendliest place in town.",
+        "Opinion"
+       ],
+       [
+        "The library should open on Fridays.",
+        "Claim (the author will try to prove it)"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "Words like **should, must, best, worst, unfair, essential** often show an opinion or a claim."
+    },
+    {
+     "mistake": "Thinking a sentence is a fact because it sounds sure. \"Everyone knows buses are better\" sounds sure, but it is an opinion."
+    }
+   ]
+  },
+  {
+   "h": "Finding the claim",
+   "blocks": [
+    {
+     "p": "The claim is often in the first paragraph. It is often repeated in the last paragraph. Sometimes the author does not write it directly, and you must infer it from the reasons."
+    },
+    {
+     "table": {
+      "head": [
+       "Kind of claim",
+       "It says…",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Claim of fact",
+        "something is true",
+        "Online classes help working adults finish their studies."
+       ],
+       [
+        "Claim of value",
+        "something is good or bad",
+        "Long homework is unfair to young children."
+       ],
+       [
+        "Claim of policy",
+        "something should be done",
+        "The city should build more bus lanes."
+       ]
+      ]
+     }
+    },
+    {
+     "passage": "Every year, thousands of students arrive at school hungry. Hungry students find it hard to concentrate. Schools that give free breakfast report better attendance. Our schools should give every student a free breakfast.",
+     "title": "Passage"
+    },
+    {
+     "weak": "Hungry students find it hard to concentrate.",
+     "label": "claim",
+     "note": "This is a reason, not the main point."
+    },
+    {
+     "strong": "Our schools should give every student a free breakfast.",
+     "label": "claim",
+     "note": "This is what the author wants. The other sentences support it."
+    }
+   ]
+  },
+  {
+   "h": "Reasons and evidence",
+   "blocks": [
+    {
+     "p": "**Reasons** answer the question *why should I accept the claim?* **Evidence** proves the reasons are true."
+    },
+    {
+     "flow": [
+      "Evidence",
+      "Reasons",
+      "Claim"
+     ]
+    },
+    {
+     "table": {
+      "head": [
+       "Type of evidence",
+       "Example"
+      ],
+      "rows": [
+       [
+        "Statistics",
+        "30% of household rubbish is food."
+       ],
+       [
+        "Expert opinion",
+        "A doctor at the national hospital says…"
+       ],
+       [
+        "Example or case",
+        "When one town added bus lanes, travel time fell."
+       ],
+       [
+        "Personal story",
+        "My neighbour stopped driving and saves money."
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "A personal story can make a point clear, but on its own it is usually weaker than statistics or an expert."
+    }
+   ]
+  },
+  {
+   "h": "Strong and weak evidence",
+   "blocks": [
+    {
+     "table": {
+      "head": [
+       "Check",
+       "Strong evidence",
+       "Weak evidence"
+      ],
+      "rows": [
+       [
+        "Relevant",
+        "supports this exact claim",
+        "is about something else"
+       ],
+       [
+        "Enough",
+        "several facts or a large study",
+        "one story or a tiny group"
+       ],
+       [
+        "Source",
+        "a named expert, study or report",
+        "\"people say\", no source"
+       ],
+       [
+        "Fair",
+        "calm and clear",
+        "insults, exaggeration, big emotions"
+       ]
+      ]
+     }
+    },
+    {
+     "mistake": "Thinking more emotion means a stronger argument. Strong feelings do not prove anything."
+    },
+    {
+     "tip": "Strong evidence usually wins, but not always. Always check if the evidence really fits the claim."
+    }
+   ]
+  },
+  {
+   "h": "Author's position and author's purpose",
+   "blocks": [
+    {
+     "p": "The **position** is what the author thinks. The **purpose** is why the author wrote the text."
+    },
+    {
+     "table": {
+      "head": [
+       "",
+       "Position",
+       "Purpose"
+      ],
+      "rows": [
+       [
+        "Question",
+        "Where does the author stand?",
+        "What does the author want the reader to do or feel?"
+       ],
+       [
+        "Example",
+        "The author supports free school breakfast.",
+        "To persuade parents to vote for the plan."
+       ]
+      ]
+     }
+    },
+    {
+     "table": {
+      "head": [
+       "Purpose verb",
+       "Meaning"
+      ],
+      "rows": [
+       [
+        "persuade",
+        "make the reader agree or act"
+       ],
+       [
+        "criticize",
+        "show what is wrong with an idea or plan"
+       ],
+       [
+        "inform",
+        "give facts without taking a side"
+       ],
+       [
+        "compare",
+        "show two sides fairly"
+       ]
+      ]
+     }
+    },
+    {
+     "tip": "In answer choices, read the verb first. Remove choices with a verb that does not fit the text."
+    }
+   ]
+  },
+  {
+   "h": "How an argument is built",
+   "blocks": [
+    {
+     "steps": [
+      "**Introduction and claim:** the issue and the author's side.",
+      "**Reasons:** why the claim is right.",
+      "**Evidence:** facts and examples for each reason.",
+      "**Counterclaim and answer:** the other side, and why the author still disagrees.",
+      "**Conclusion:** the claim again, often with a call to action."
+     ]
+    },
+    {
+     "passage": "**Some people say** free breakfast costs too much. **However**, hungry students learn less, and that costs more in the end.",
+     "title": "Counterclaim and answer"
+    },
+    {
+     "tip": "Signal words for the other side: some people say, critics argue, on the other hand, while it is true that. Then look for: however, but, yet."
+    }
+   ]
+  },
+  {
+   "h": "Assumptions and persuasive language",
+   "blocks": [
+    {
+     "p": "An **assumption** is something the author believes but does not say or prove."
+    },
+    {
+     "passage": "We should build a new car park, because more parking will bring more shoppers to the market.",
+     "title": "Example"
+    },
+    {
+     "p": "Hidden belief: shoppers stay away **because** there is not enough parking. If that is not true, the argument is weak."
+    },
+    {
+     "p": "Authors also use **loaded words** to push your feelings: *a shameful waste, a wonderful chance, dangerous*. Notice them, and ask: where is the proof?"
+    },
+    {
+     "remember": "Feelings are not evidence. Look for the facts under the words."
+    }
+   ]
+  },
+  {
+   "h": "Arguments and the extended response",
+   "blocks": [
+    {
+     "p": "In the essay, you read two arguments on one topic and decide which one is better supported."
+    },
+    {
+     "weak": "I agree with Passage 2 because I like trees.",
+     "label": "essay sentence",
+     "note": "This is the writer's own opinion."
+    },
+    {
+     "strong": "Passage 2 is better supported because it uses a study on street temperatures, while Passage 1 relies on one person's story.",
+     "label": "essay sentence",
+     "note": "This judges the evidence."
+    },
+    {
+     "remember": "Your job is to judge the evidence, not to choose the side you like."
+    }
+   ]
+  }
+ ],
+ "glossary": [
+  [
+   "argument",
+   "writing that tries to make the reader believe or do something"
+  ],
+  [
+   "claim",
+   "the main point the author wants you to accept"
+  ],
+  [
+   "fact",
+   "a statement that can be checked"
+  ],
+  [
+   "opinion",
+   "a belief or feeling that people can disagree with"
+  ],
+  [
+   "reason",
+   "a statement that explains why the claim is right"
+  ],
+  [
+   "evidence",
+   "facts, numbers, examples or expert words that prove a reason"
+  ],
+  [
+   "statistics",
+   "facts given as numbers"
+  ],
+  [
+   "relevant",
+   "connected to the claim"
+  ],
+  [
+   "position",
+   "what the author thinks about the issue"
+  ],
+  [
+   "purpose",
+   "why the author wrote the text"
+  ],
+  [
+   "counterclaim",
+   "the other side of the argument"
+  ],
+  [
+   "assumption",
+   "something the author believes but does not say or prove"
+  ],
+  [
+   "loaded word",
+   "a word chosen to create a strong feeling"
+  ],
+  [
+   "better supported",
+   "having stronger and more evidence"
+  ]
+ ],
+ "workbook": [
+  {
+   "level": "easy",
+   "skill": "Fact and opinion",
+   "type": "drag",
+   "q": "Is each sentence a fact or an opinion?",
+   "items": [
+    "The museum is open six days a week.",
+    "The museum is the most beautiful building in Doha.",
+    "Entry is free for students.",
+    "Students should visit the museum every month."
+   ],
+   "targets": [
+    "Fact",
+    "Opinion"
+   ],
+   "answer": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "why": "Opening days and free entry can be checked, so they are facts. \"Most beautiful\" and \"should\" show beliefs, so they are opinions."
+  },
+  {
+   "level": "easy",
+   "skill": "Argument",
+   "type": "mc",
+   "q": "Which sentence is an argument, not a report?",
+   "options": [
+    "The new road opened on Sunday.",
+    "The new road is 12 km long.",
+    "The city should add a bus lane to the new road.",
+    "Cars use the new road every day."
+   ],
+   "answer": 2,
+   "why": "Only C takes a side (\"should\") and could be supported with reasons. The others only report facts."
+  },
+  {
+   "level": "easy",
+   "skill": "Claim",
+   "type": "hotspot",
+   "q": "Tap the claim.",
+   "sentences": [
+    "Many workers sit for eight hours a day.",
+    "Sitting for a long time can cause back pain.",
+    "Companies should give workers a short walking break every two hours.",
+    "One company found that walking breaks reduced sick days."
+   ],
+   "answer": 2,
+   "why": "The claim is the main point the author wants us to accept: companies should give walking breaks. The other sentences are reasons and evidence."
+  },
+  {
+   "level": "easy",
+   "skill": "Evidence",
+   "type": "mc",
+   "again": true,
+   "q": "Which sentence is evidence for the claim?",
+   "options": [
+    "Many workers sit for eight hours a day.",
+    "One company found that walking breaks reduced sick days.",
+    "Companies should give workers a short walking break.",
+    "Walking is nice."
+   ],
+   "answer": 1,
+   "why": "Evidence proves the claim. A company's result after giving walking breaks is real proof. C is the claim itself."
+  },
+  {
+   "level": "easy",
+   "skill": "Fact and opinion",
+   "type": "fill",
+   "q": "Type the missing word.",
+   "text": "Words like should, must and best often show an {0}.",
+   "blanks": [
+    {
+     "accept": [
+      "opinion",
+      "a opinion",
+      "an opinion",
+      "claim"
+     ]
+    }
+   ],
+   "why": "These words show what someone believes or wants, not something you can check. They signal an opinion or a claim."
+  },
+  {
+   "level": "guided",
+   "skill": "Kinds of claims",
+   "type": "drag",
+   "q": "What kind of claim is each sentence?",
+   "items": [
+    "Learning a second language improves memory.",
+    "Fast food adverts aimed at children are wrong.",
+    "The government should lower the price of public transport."
+   ],
+   "targets": [
+    "Claim of fact",
+    "Claim of value",
+    "Claim of policy"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "A claim of fact says something is true. A claim of value says something is good or bad (\"wrong\"). A claim of policy says something should be done."
+  },
+  {
+   "level": "guided",
+   "skill": "Evidence",
+   "type": "drag",
+   "q": "What type of evidence is each sentence?",
+   "items": [
+    "Seven out of ten parents support the plan.",
+    "Dr. Salma Idris, a heart specialist, says daily walking lowers blood pressure.",
+    "My cousin lost 5 kg after she started walking."
+   ],
+   "targets": [
+    "Statistics",
+    "Expert opinion",
+    "Personal story"
+   ],
+   "answer": [
+    0,
+    1,
+    2
+   ],
+   "why": "\"Seven out of ten\" is a number, so it is a statistic. A named specialist is an expert. \"My cousin\" is one person's story."
+  },
+  {
+   "level": "guided",
+   "skill": "Position and purpose",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "Our neighbourhood has no safe place for children to play. Children play in the car park, where cars come and go all day. The empty land on Al Noor Street could become a small playground. I ask the council to approve this plan at its next meeting.",
+   "q": "What is the author's purpose?",
+   "options": [
+    "To describe the car park",
+    "To persuade the council to build a playground",
+    "To entertain children with a story",
+    "To compare two neighbourhoods"
+   ],
+   "answer": 1,
+   "why": "The last sentence asks the council to approve the plan. The author writes to persuade. Describing the car park is only a reason."
+  },
+  {
+   "level": "guided",
+   "skill": "Position and purpose",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the sentences about the passage.",
+   "text": "The author's position is that the neighbourhood {0} a playground. The author's purpose is to {1} the council.",
+   "blanks": [
+    {
+     "options": [
+      "needs",
+      "does not need",
+      "already has"
+     ],
+     "answer": 0
+    },
+    {
+     "options": [
+      "entertain",
+      "persuade",
+      "inform only"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "Position = what the author thinks: the area needs a playground. Purpose = why the author wrote: to persuade the council to act."
+  },
+  {
+   "level": "guided",
+   "skill": "Strong and weak evidence",
+   "type": "mc",
+   "q": "A writer claims that a new medicine works. Which evidence is the STRONGEST?",
+   "options": [
+    "\"My friend took it and felt better.\"",
+    "\"Many people online say it is great.\"",
+    "\"A study of 2,000 patients found that 80% improved.\"",
+    "\"The box looks very professional.\""
+   ],
+   "answer": 2,
+   "why": "A large study with numbers is strong: it is on topic, it is enough, and it has a clear source. One friend, unnamed online posts and the box design are weak."
+  },
+  {
+   "level": "application",
+   "skill": "Counterclaim",
+   "type": "hotspot",
+   "ptitle": "Passage",
+   "q": "Tap the sentence that gives the other side (the counterclaim).",
+   "sentences": [
+    "Our company should let staff work from home two days a week.",
+    "Staff would save up to two hours of driving each day.",
+    "Some managers worry that people will work less at home.",
+    "However, a two-year study of 16,000 workers found that people working from home finished more work, not less."
+   ],
+   "answer": 2,
+   "why": "\"Some managers worry\" introduces the opposite view. The next sentence, starting with \"However\", is the author's answer to it."
+  },
+  {
+   "level": "application",
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does the author answer the managers' worry?",
+   "options": [
+    "By ignoring it",
+    "By agreeing that people work less at home",
+    "By giving evidence from a large study",
+    "By attacking the managers"
+   ],
+   "answer": 2,
+   "why": "The author answers with a study of 16,000 workers. Answering the other side with evidence makes an argument stronger."
+  },
+  {
+   "level": "application",
+   "skill": "Assumption",
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "We should give every student a tablet computer. Then their exam results will improve.",
+   "q": "What does the author assume without saying it?",
+   "options": [
+    "Tablets are cheap.",
+    "Having a tablet will make students learn more.",
+    "Students do not like exams.",
+    "Teachers want new tablets."
+   ],
+   "answer": 1,
+   "why": "The author jumps from \"give tablets\" to \"results will improve\". The hidden belief is that tablets alone help students learn more. The author gives no proof."
+  },
+  {
+   "level": "application",
+   "skill": "Persuasive language",
+   "type": "drag",
+   "q": "Sort the words. Which words are loaded (they push a strong feeling)?",
+   "items": [
+    "a shameful waste",
+    "the plan costs 2 million riyals",
+    "a disaster for our children",
+    "the report was published in May"
+   ],
+   "targets": [
+    "Loaded words",
+    "Neutral facts"
+   ],
+   "answer": [
+    0,
+    1,
+    0,
+    1
+   ],
+   "why": "\"Shameful waste\" and \"disaster\" are chosen to make you feel strongly. A cost and a date are neutral facts you can check."
+  },
+  {
+   "level": "application",
+   "skill": "Structure",
+   "type": "drag",
+   "q": "Put the parts of a strong argument in the usual order.",
+   "items": [
+    "Conclusion",
+    "Claim",
+    "Counterclaim and answer",
+    "Reasons and evidence"
+   ],
+   "targets": [
+    "1st",
+    "2nd",
+    "3rd",
+    "4th"
+   ],
+   "answer": [
+    3,
+    0,
+    2,
+    1
+   ],
+   "why": "A typical argument starts with the claim, then gives reasons and evidence, then answers the other side, and ends with a conclusion."
+  },
+  {
+   "level": "challenge",
+   "skill": "Claim",
+   "type": "mc",
+   "ptitle": "Letter to the editor",
+   "passage": "Last month, the council announced that the city's three public swimming pools will close for the summer to save money. This is the wrong decision at the worst possible time. In July and August, temperatures in our city often reach 45°C. The pools are the only cool place where many families can afford to take their children. According to the council's own records, more than 40,000 visits were made to the pools last summer, and a swimming lesson costs just 10 riyals.\n\nSome council members argue that the pools are expensive to run. That is true: each pool costs about 300,000 riyals a summer. But the city recently spent 1.5 million riyals on new signs for the city centre. If the council can find money for signs, it can find money for children to stay cool and learn to swim. I urge the council to reopen the pools before July.",
+   "q": "What is the author's main claim?",
+   "options": [
+    "Swimming pools are expensive to run.",
+    "The council should keep the public pools open this summer.",
+    "The city spent money on new signs.",
+    "Temperatures in summer are very high."
+   ],
+   "answer": 1,
+   "why": "The author says closing the pools is \"the wrong decision\" and ends: \"I urge the council to reopen the pools.\" The other choices are details or the other side."
+  },
+  {
+   "level": "challenge",
+   "skill": "Evidence",
+   "type": "hotspot",
+   "again": true,
+   "q": "Tap the sentence that gives the strongest evidence that many people use the pools.",
+   "sentences": [
+    "This is the wrong decision at the worst possible time.",
+    "The pools are the only cool place where many families can afford to take their children.",
+    "According to the council's own records, more than 40,000 visits were made to the pools last summer, and a swimming lesson costs just 10 riyals.",
+    "If the council can find money for signs, it can find money for children to stay cool and learn to swim."
+   ],
+   "answer": 2,
+   "why": "Sentence 3 gives a number from an official source, so it is strong and on topic. Sentence 1 is an opinion, sentence 2 has no numbers, and sentence 4 is a conclusion."
+  },
+  {
+   "level": "challenge",
+   "skill": "Counterclaim",
+   "type": "mc",
+   "again": true,
+   "q": "How does the author respond to the claim that the pools are expensive?",
+   "options": [
+    "The author says the claim is false.",
+    "The author accepts the cost but compares it with money spent on signs.",
+    "The author ignores the cost.",
+    "The author says pools should be private."
+   ],
+   "answer": 1,
+   "why": "\"That is true\" accepts the cost. Then the author compares it with 1.5 million riyals for signs, to show the city can afford the pools."
+  },
+  {
+   "level": "challenge",
+   "skill": "Assumption",
+   "type": "mc",
+   "again": true,
+   "q": "The author writes: \"If the council can find money for signs, it can find money for children to stay cool.\" What does the author assume?",
+   "options": [
+    "The money for signs could have been used for the pools.",
+    "Signs are more important than pools.",
+    "Children do not like swimming.",
+    "The council has no money at all."
+   ],
+   "answer": 0,
+   "why": "The comparison only works if the sign money could have paid for the pools. The author does not prove this, so it is a hidden assumption."
+  },
+  {
+   "level": "challenge",
+   "skill": "Position and purpose",
+   "type": "dropdown",
+   "again": true,
+   "q": "Complete the analysis of the letter.",
+   "text": "The author's purpose is to {0}. The tone of the letter is {1}.",
+   "blanks": [
+    {
+     "options": [
+      "inform readers about pool opening times",
+      "persuade the council to reopen the pools",
+      "entertain readers with a summer story"
+     ],
+     "answer": 1
+    },
+    {
+     "options": [
+      "calm and neutral",
+      "urgent and critical",
+      "funny and light"
+     ],
+     "answer": 1
+    }
+   ],
+   "why": "The letter ends with \"I urge the council\", so the purpose is to persuade. Phrases like \"the wrong decision at the worst possible time\" show an urgent, critical tone."
+  }
+ ],
+ "quiz": [
+  {
+   "type": "mc",
+   "q": "Which sentence is an opinion?",
+   "options": [
+    "The park has 200 trees.",
+    "The park opened in 2019.",
+    "The park is the nicest place in the city.",
+    "The park closes at 10 p.m."
+   ]
+  },
+  {
+   "type": "hotspot",
+   "q": "Tap the claim.",
+   "sentences": [
+    "Many children spend four hours a day on screens.",
+    "Doctors link too much screen time to poor sleep.",
+    "Parents should set a daily screen limit for young children.",
+    "One school found that pupils slept better after a screen-free week."
+   ]
+  },
+  {
+   "type": "mc",
+   "again": true,
+   "q": "Which sentence is evidence for the claim?",
+   "options": [
+    "Parents should set a daily screen limit.",
+    "One school found that pupils slept better after a screen-free week.",
+    "Screens are bright.",
+    "Children like games."
+   ]
+  },
+  {
+   "type": "drag",
+   "q": "What type of evidence is each sentence?",
+   "items": [
+    "65% of drivers support the new speed limit.",
+    "Traffic engineer Omar Saleh says lower speeds save lives.",
+    "I once saw an accident near my house."
+   ],
+   "targets": [
+    "Statistics",
+    "Expert opinion",
+    "Personal story"
+   ]
+  },
+  {
+   "type": "mc",
+   "q": "Which is the author's PURPOSE, not the author's position?",
+   "options": [
+    "The author thinks the tax is unfair.",
+    "To persuade readers to sign a petition",
+    "The author supports electric cars.",
+    "The author disagrees with the mayor."
+   ]
+  },
+  {
+   "type": "dropdown",
+   "q": "Choose the correct words.",
+   "text": "\"Some people say the new bridge is too expensive. {0}, it will cut travel time in half.\" The first sentence is the {1}.",
+   "blanks": [
+    {
+     "options": [
+      "However",
+      "Because",
+      "First"
+     ]
+    },
+    {
+     "options": [
+      "claim",
+      "counterclaim",
+      "conclusion"
+     ]
+    }
+   ]
+  },
+  {
+   "type": "mc",
+   "q": "A writer says a diet works. Which evidence is the WEAKEST?",
+   "options": [
+    "A university study of 500 people",
+    "A report from the health ministry",
+    "\"My neighbour tried it and loved it.\"",
+    "Results from three hospitals"
+   ]
+  },
+  {
+   "type": "mc",
+   "ptitle": "Passage",
+   "passage": "We should open a second clinic in the north of the city, because then nobody will ever have to wait to see a doctor.",
+   "q": "What is the problem with this argument?",
+   "options": [
+    "It has no claim.",
+    "It assumes one more clinic will end all waiting, without proof.",
+    "It uses too many statistics.",
+    "It is a story."
+   ]
+  },
+  {
+   "type": "fill",
+   "q": "Type the missing word.",
+   "text": "The other side of an argument is called the {0}.",
+   "blanks": [
+    {}
+   ]
+  },
+  {
+   "type": "mc",
+   "q": "In the extended response, what must you do?",
+   "options": [
+    "Give your own opinion on the topic",
+    "Decide which argument is better supported and explain why",
+    "Write a story",
+    "Summarize only one passage"
+   ]
+  }
+ ],
+ "checklist": [
+  "explain what an argument is",
+  "tell a fact from an opinion",
+  "find the claim in a passage",
+  "name the kind of claim: fact, value or policy",
+  "find the reasons and the evidence",
+  "say if evidence is strong or weak, and why",
+  "tell the author's position from the author's purpose",
+  "find the counterclaim and the author's answer",
+  "spot a hidden assumption and loaded words"
+ ]
+}
