@@ -153,3 +153,17 @@ html[dir=rtl] .skip:focus{right:0}
 /* ---------- comfortable on every screen: tap targets of at least 44 px ---------- */
 summary{min-height:44px;display:flex;align-items:center}
 .iconbtn{min-height:44px;min-width:44px}
+
+/* ---------- notebook grid background (graph paper) ----------
+   Fine lines every 24 px and a slightly stronger line every 120 px. Cards, questions, tables and slides stay solid white. */
+:root{--grid:rgba(27,42,74,.055);--grid-strong:rgba(27,42,74,.085);--grid-light:rgba(255,255,255,.55)}
+body{background-color:#FCFCFE;background-image:
+  linear-gradient(var(--grid-strong) 1px,transparent 1px),linear-gradient(90deg,var(--grid-strong) 1px,transparent 1px),
+  linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);
+  background-size:120px 120px,120px 120px,24px 24px,24px 24px;background-position:-1px -1px}
+body .hero,body .shero2,body .pbanner,body .end,body .top{background-image:linear-gradient(var(--grid-light) 1px,transparent 1px),linear-gradient(90deg,var(--grid-light) 1px,transparent 1px);background-size:24px 24px;background-position:-1px -1px}
+body .tbrand{background-image:linear-gradient(rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.08) 1px,transparent 1px),linear-gradient(150deg,#0E9CC4 0%,#017A9C 55%,#1B2A4A 100%);background-size:24px 24px,24px 24px,auto}
+body .card:not([style*="--c"]):not([class*=" t-"]),body .tbl,body table,body .q,body .srow,body .facts,body .facts2,body .opt,body .tsess,body .mtab,body .rev .pass{background-color:#fff}
+.tbl tbody tr:nth-child(even){background:var(--soft)}
+.foot{background-image:none}
+@media print{body{background:#fff}}
