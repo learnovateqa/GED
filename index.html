@@ -22,19 +22,19 @@
 <style>
 .top{position:sticky;top:0;z-index:50;background:rgba(220,238,244,.94);backdrop-filter:blur(8px);border-bottom:1px solid #B9DAE5}
 .top .wrap{display:flex;align-items:center;gap:14px;min-height:66px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;margin-inline-end:auto;min-height:44px}
 .logo img{width:40px;height:40px;border-radius:11px}
 .logo b{display:block;font-size:1.02rem;line-height:1.1}
-.logo small{display:block;font-size:.72rem;color:var(--ink2);letter-spacing:.04em}
+.logo small{display:block;font-size:.76rem;color:var(--ink2);letter-spacing:.04em}
 .top nav{display:flex;gap:4px}
-.top nav a{padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:500;font-size:.92rem}
+.top nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:10px;text-decoration:none;font-weight:500;font-size:.92rem}
 .top nav a:hover{background:#fff}
 .hero{background:var(--pink);padding:46px 0 86px}
 .hero .wrap{display:grid;grid-template-columns:1.25fr 1fr;gap:36px;align-items:center}
 .hero h1{font-size:clamp(1.9rem,5.2vw,3.1rem);margin:8px 0 14px}
 .hero .lede{font-size:1.08rem;max-width:56ch;color:#2E3B5C}
-.by{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1.5px solid var(--tint-b);border-radius:999px;padding:6px 16px;margin-top:18px;font-size:.92rem}
-.by::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--brand);flex:none}
+.by{display:inline-block;background:#fff;border:1.5px solid var(--tint-b);border-radius:999px;padding:6px 16px;margin-top:18px;font-size:.92rem}
+.by::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-inline-end:8px;vertical-align:middle}
 .tiles4{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .tiles4 a{min-height:112px;border-radius:16px;border:1.5px solid var(--b);background:var(--c);font-weight:600;font-size:1.02rem;display:grid;place-items:center;align-content:center;gap:2px;padding:12px;text-align:center;text-decoration:none;transition:transform .15s;line-height:1.25}
 .tiles4 a:hover{transform:translateY(-3px) rotate(-1deg)}
@@ -42,7 +42,7 @@
 .facts{margin-top:-52px;background:#fff;border:1.5px solid var(--navy);border-radius:16px;display:grid;grid-template-columns:repeat(4,1fr);position:relative;z-index:2}
 .facts div{padding:16px 20px;border-inline-start:1.5px solid var(--line2)}
 .facts div:first-child{border:0}
-.facts small{display:block;font-size:.66rem;letter-spacing:.2em;font-weight:600;text-transform:uppercase}
+.facts small{display:block;font-size:.78rem;letter-spacing:.2em;font-weight:600;text-transform:uppercase}
 .facts b{display:block;font-size:1.15rem;margin-top:4px}
 .facts span{font-size:.8rem;color:var(--ink2)}
 .paths{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
@@ -54,7 +54,7 @@
 .subj h3{font-size:1.15rem;margin:0}
 .subj dl{margin:4px 0 0;display:grid;gap:6px}
 .subj dl div{background:#fff;border-radius:12px;padding:8px 12px}
-.subj dt{font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink2)}
+.subj dt{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;color:var(--ink2)}
 .subj dd{margin:0;font-size:.9rem}
 .subj dd b{font-size:1.02rem}
 .subj .go{margin-top:auto}

@@ -35,7 +35,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 [hidden]{display:none!important}
 
 /* eyebrow + numbered section heading like the syllabus ("01 What You'll Master") */
-.eyebrow{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--navy);margin:0 0 6px}
+.eyebrow{font-size:.76rem;letter-spacing:.2em;text-transform:uppercase;font-weight:600;color:var(--navy);margin:0 0 6px}
 .sh{display:flex;align-items:center;gap:12px;margin:34px 0 6px}
 .sh .no{font-size:.78rem;font-weight:600;background:var(--tint);border:1.5px solid var(--tint-b);border-radius:8px;padding:1px 8px}
 .sh h2{margin:0;white-space:nowrap}
@@ -58,7 +58,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 .btn.primary{background:var(--brand-d);border-color:var(--brand-d);color:#fff}
 .btn.soft{border-color:var(--line2);background:#fff}
 .btn.pink{background:var(--tint);border-color:var(--tint-b)}
-.btn.sm{min-height:38px;padding:6px 12px;font-size:.88rem;border-radius:10px}
+.btn.sm{min-height:44px;padding:8px 14px;font-size:.9rem;border-radius:10px}
 .btn[disabled]{opacity:.45;cursor:not-allowed;transform:none;box-shadow:none}
 .row{display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .iconbtn{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:42px;min-height:42px;padding:0 10px;border-radius:12px;border:1.5px solid var(--line);background:#fff;cursor:pointer;font-weight:600;color:var(--navy);text-decoration:none}
@@ -68,8 +68,8 @@ button,input,select,textarea{font:inherit;color:inherit}
 .speak:hover,.speak.on{background:var(--tint);border-color:var(--tint-b)}
 
 /* chips */
-.chip{display:inline-flex;align-items:center;gap:6px;font-size:.78rem;font-weight:600;padding:3px 11px;border-radius:999px;background:var(--c,#fff);border:1.5px solid var(--b,var(--line2))}
-.tag{display:inline-block;font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:var(--gold);border:1.5px solid var(--gold-b);border-radius:999px;padding:2px 10px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:.8rem;font-weight:600;padding:3px 11px;border-radius:999px;background:var(--c,#fff);border:1.5px solid var(--b,var(--line2))}
+.tag{display:inline-block;font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;font-weight:700;background:var(--gold);border:1.5px solid var(--gold-b);border-radius:999px;padding:2px 10px}
 
 /* cards & grids */
 .grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
@@ -77,10 +77,10 @@ button,input,select,textarea{font:inherit;color:inherit}
 .card{display:block;background:var(--c,#fff);border:1.5px solid var(--b,var(--line));border-radius:var(--r);padding:18px 20px;text-decoration:none;color:var(--navy);position:relative}
 a.card{transition:transform .15s, box-shadow .15s}
 a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
-.card .pill{display:inline-block;background:#fff;border-radius:999px;padding:2px 10px;font-size:.74rem;font-weight:600;margin-bottom:10px}
+.card .pill{display:inline-block;background:#fff;border-radius:999px;padding:2px 10px;font-size:.8rem;font-weight:600;margin-bottom:10px}
 .card.off{opacity:.65}
 .pillar{background:var(--c);border:1.5px solid var(--b);border-radius:14px;padding:12px 14px;min-height:84px}
-.pillar small{display:block;font-weight:600;font-size:.72rem;letter-spacing:.1em}
+.pillar small{display:block;font-weight:600;font-size:.76rem;letter-spacing:.1em}
 .pillar b{font-weight:600}
 
 /* progress */
@@ -89,7 +89,7 @@ a.card:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
 .ring{--p:0;width:120px;height:120px;border-radius:50%;background:conic-gradient(var(--brand) calc(var(--p)*1%),#E3EEF2 0);display:grid;place-items:center;flex:none}
 .ring>div{width:92px;height:92px;border-radius:50%;background:#fff;display:grid;place-items:center;text-align:center;line-height:1.05}
 .ring b{font-size:1.6rem}
-.ring small{display:block;font-size:.62rem;letter-spacing:.12em;color:var(--muted)}
+.ring small{display:block;font-size:.78rem;letter-spacing:.12em;color:var(--muted)}
 
 /* toast + dialog */
 .toast{position:fixed;left:50%;bottom:86px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:12px;z-index:90;box-shadow:var(--shadow);max-width:calc(100vw - 32px);text-align:center}
@@ -149,3 +149,7 @@ html[dir=rtl] .skip:focus{right:0}
 /* correct / wrong: never colour alone */
 .mark{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:50%;color:#fff;font-weight:700;font-size:.85rem;flex:none}
 .mark.ok{background:var(--ok)}.mark.bad{background:var(--bad)}
+
+/* ---------- comfortable on every screen: tap targets of at least 44 px ---------- */
+summary{min-height:44px;display:flex;align-items:center}
+.iconbtn{min-height:44px;min-width:44px}

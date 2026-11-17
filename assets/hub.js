@@ -489,7 +489,7 @@
 
   /* ---------- Help ---------- */
   function pageHelp() {
-    const H = (q, a) => `<details class="card" style="margin:8px 0"><summary style="font-weight:600;cursor:pointer;min-height:32px">${q}</summary><div style="margin-top:8px">${a}</div></details>`;
+    const H = (q, a) => `<details class="card" style="margin:8px 0"><summary style="font-weight:600;cursor:pointer;min-height:44px">${q}</summary><div style="margin-top:8px">${a}</div></details>`;
     main.innerHTML = `<h1>${esc(t("help"))}</h1>
       ${H("How do I sign in?", "<p>Ms. Maria gives you an access code. Type the code and your full name. You sign in one time on each phone or computer.</p>")}
       ${H("What do I do in each session?", "<ol><li><b>Slides:</b> look at the main ideas, one slide at a time.</li><li><b>Reviewer:</b> read the notes and examples.</li><li><b>Workbook:</b> answer the questions. After you submit, you see each answer and why.</li><li><b>Quiz:</b> take the short quiz. You see your score only. You can try again.</li><li><b>Checklist:</b> tick what you can do, and earn the badge.</li></ol>")}
