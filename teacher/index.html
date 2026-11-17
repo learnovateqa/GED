@@ -46,6 +46,42 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
 .code{font-family:ui-monospace,Menlo,Consolas,monospace;letter-spacing:2px;font-size:1.05rem}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--navy);color:#fff;padding:10px 18px;border-radius:12px;z-index:90}
 .linkb{background:none;border:0;padding:0;font-weight:600;text-decoration:underline;cursor:pointer;color:var(--navy)}
+
+/* ---------- sign-in: brand panel + form ---------- */
+body.signin{background:radial-gradient(1200px 600px at 110% -10%,var(--rose) 0,transparent 60%),radial-gradient(900px 500px at -10% 110%,var(--pink) 0,transparent 55%),#fff;min-height:100vh}
+body.signin .top{background:transparent;border-bottom:0}
+.tlog{display:grid;grid-template-columns:1.1fr 1fr;gap:0;max-width:1000px;margin:4vh auto;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(27,42,74,.16);background:#fff}
+.tbrand{position:relative;background:linear-gradient(150deg,#0E9CC4 0%,#017A9C 55%,#1B2A4A 100%);color:#fff;padding:44px 40px;overflow:hidden}
+.tbrand::after{content:"";position:absolute;right:-90px;bottom:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.08)}
+.tbrand::before{content:"";position:absolute;right:60px;top:-70px;width:160px;height:160px;border-radius:50%;background:rgba(248,223,227,.18)}
+.tbrand .eyebrow{color:#DCEEF4}
+.tbrand h1{font-size:clamp(1.7rem,3.4vw,2.4rem);margin:6px 0 10px;color:#fff}
+.tlogo{width:68px;height:68px;border-radius:18px;box-shadow:0 8px 24px rgba(0,0,0,.25);margin-bottom:18px}
+.tlede{color:#E6F3F8;font-size:1.02rem;max-width:34ch}
+.tfeat{list-style:none;padding:0;margin:22px 0 0;display:grid;gap:12px;position:relative;z-index:1}
+.tfeat li{display:flex;gap:12px;align-items:flex-start;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.22);border-radius:14px;padding:10px 14px;font-size:.92rem;line-height:1.45}
+.tfeat li>span{font-size:1.3rem;line-height:1.2}
+.tdots{display:flex;gap:8px;margin-top:22px}.tdots i{width:12px;height:12px;border-radius:50%;background:#8DB4E2}.tdots i:nth-child(2){background:#8CCB9F}.tdots i:nth-child(3){background:#EDAE7E}.tdots i:nth-child(4){background:#E39AB6}
+.tformwrap{display:grid;align-content:center;padding:40px}
+.tform h2{font-size:1.6rem;margin:4px 0 14px}
+.pwrow{display:flex;gap:8px}.pwrow input{flex:1}
+.tnote{margin:14px 0 10px}
+@media (max-width:760px){.tlog{grid-template-columns:1fr;margin:0 -16px;border-radius:0;box-shadow:none}.tbrand{padding:28px 22px}.tfeat{display:none}.tformwrap{padding:26px 22px}}
+
+.pbanner{display:flex;gap:16px;align-items:flex-start;background:var(--pink);border:1.5px solid #B9DAE5;border-radius:22px;padding:20px 22px;margin:0 0 16px;position:relative;overflow:hidden}
+.pbanner::after{content:"";position:absolute;right:-50px;top:-50px;width:170px;height:170px;border-radius:50%;background:rgba(255,255,255,.5)}
+.pbanner h1{margin:2px 0 4px;font-size:clamp(1.7rem,5vw,2.4rem)}
+.pbanner .pbsub{margin:0;color:#2E3B5C;max-width:60ch}
+.pbanner>div{position:relative;z-index:1}
+.pbic{flex:none;width:58px;height:58px;border-radius:16px;background:#fff;display:grid;place-items:center;font-size:1.8rem;box-shadow:0 6px 16px rgba(27,42,74,.08);position:relative;z-index:1}
+.kp{position:relative}.kp>span{position:absolute;right:12px;top:10px;font-size:1.4rem}
+.kp b{font-size:1.8rem}
+table{border-radius:14px}
+tbody tr:nth-child(even):not(.st+tr){background:var(--soft)}
+.tsess{box-shadow:0 2px 8px rgba(27,42,74,.05)}
+.foot .tm{font-size:.78rem;opacity:.85;margin-top:12px;flex-basis:100%}
+.foot .fl{display:flex;flex-wrap:wrap;gap:6px 16px}.foot .fl a{display:inline-flex;align-items:center;min-height:44px}
+body.signin .foot{margin-top:24px}
 </style>
 </head>
 <body>
@@ -54,6 +90,13 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
  <button class="btn sm soft" id="out" type="button" hidden>Sign out</button>
 </div></header>
 <main id="main"></main>
+<footer class="foot">
+ <div class="wrap">
+  <div><b style="font-size:1.1rem">The GED Academy</b><br><span class="small">Teacher portal · Elevate with Ms. Maria · Learnovate</span><br><span class="small">© 2026 Elevate with Ms. Maria · Learnovate Qatar</span></div>
+  <nav class="small fl" aria-label="Footer"><a href="../">Website</a><a href="../rla/">Language Arts</a><a href="../social-studies/">Social Studies</a></nav>
+  <p class="tm">GED® is a registered trademark. This site is not affiliated with or endorsed by GED Testing Service.</p>
+ </div>
+</footer>
 
 <script src="../rla/config.js"></script>
 <script>
@@ -70,11 +113,33 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   function login(msg) {
     $("#out").hidden = true;
     if (!API) { main.innerHTML = `<div class="card t-gold" style="background:var(--c);max-width:560px;margin:6vh auto"><h1 style="font-size:1.4rem">The grade book is not connected yet</h1><p>The portal shows data from your Google Sheet. Follow the set-up steps in the README (section “Grade book”), then give the Web app URL to Claude.</p><a class="btn soft" href="../">Back to the site</a></div>`; return; }
-    main.innerHTML = `<div class="card t-rose" style="background:var(--c);max-width:460px;margin:6vh auto"><p class="eyebrow">🔒 Teacher only</p><h1 style="font-size:1.5rem">Teacher portal</h1>
-      <form id="f"><label class="field"><span>Password</span><input type="password" name="p" required autocomplete="current-password"></label>
-      <p class="err" role="alert" id="e">${esc(msg || "")}</p><button class="btn primary" style="width:100%" type="submit">Sign in</button></form>
-      <p class="small muted" style="margin-top:10px">The password is checked by your Google Sheet. It is not stored on this website.</p></div>`;
-    $("#f").onsubmit = async ev => { ev.preventDefault(); pw = ev.target.p.value; const b = ev.target.querySelector("button"); b.disabled = true; b.innerHTML = '<span class="wait">Checking…</span>'; await load(); };
+    document.body.classList.add("signin");
+    main.innerHTML = `<section class="tlog">
+      <div class="tbrand">
+        <img src="../icons/academy.svg" alt="" class="tlogo">
+        <p class="eyebrow">The GED Academy · Teacher only</p>
+        <h1>Welcome back, Ms. Maria</h1>
+        <p class="tlede">Teach your sessions, follow every student and manage your class, all in one place.</p>
+        <ul class="tfeat">
+          <li><span>🎓</span><div><b>Teach</b><br>Present slides, show workbook and quiz answers, run a class timer.</div></li>
+          <li><span>📊</span><div><b>Results</b><br>Sessions, workbooks, every quiz attempt with its error log, and mock tests.</div></li>
+          <li><span>👤</span><div><b>Manage students</b><br>Add students, print access codes, give new codes, stop a student.</div></li>
+        </ul>
+        <div class="tdots" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+      </div>
+      <div class="tformwrap"><div class="tform">
+        <p class="eyebrow">🔒 Sign in</p><h2>Teacher portal</h2>
+        <form id="f"><label class="field"><span>Password</span>
+          <span class="pwrow"><input type="password" name="p" id="pw" required autocomplete="current-password"><button class="iconbtn" type="button" id="eye" aria-pressed="false" aria-label="Show password">👁️</button></span></label>
+          <p class="err" role="alert" id="e">${esc(msg || "")}</p>
+          <button class="btn primary" style="width:100%" type="submit">Sign in <span aria-hidden="true">→</span></button></form>
+        <p class="small muted tnote">🔐 Your password is checked by your Google Sheet. It is never stored on this website. After 5 wrong tries, the portal waits 10 minutes.</p>
+        <a class="small" href="../">← Back to The GED Academy</a>
+      </div></div>
+    </section>`;
+    $("#eye").onclick = () => { const i = $("#pw"), on = i.type === "password"; i.type = on ? "text" : "password"; $("#eye").setAttribute("aria-pressed", on); $("#eye").setAttribute("aria-label", on ? "Hide password" : "Show password"); i.focus(); };
+    $("#pw").focus();
+    $("#f").onsubmit = async ev => { ev.preventDefault(); pw = ev.target.p.value; const b = ev.target.querySelector("button[type=submit]"); b.disabled = true; b.innerHTML = '<span class="wait">Checking…</span>'; await load(); };
   }
   async function load() {
     try {
@@ -90,16 +155,19 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
 
   let view = location.hash === "#teach" ? "teach" : "results";
   function draw() {
-    $("#out").hidden = false;
+    $("#out").hidden = false; document.body.classList.remove("signin");
     const tabs = `<nav class="ptabs" aria-label="Teacher portal"><button type="button" data-v="teach" aria-pressed="${view === "teach"}">🎓 Teach</button><button type="button" data-v="results" aria-pressed="${view === "results"}">📊 Results</button><button type="button" data-v="manage" aria-pressed="${view === "manage"}">👤 Manage students</button></nav>`;
+    const hello = () => { const h = new Date().getHours(); return h < 12 ? "Good morning" : h < 17 ? "Good afternoon" : "Good evening"; };
+    const today = new Date().toLocaleDateString(undefined, { weekday: "long", day: "numeric", month: "long" });
+    window.__pb = (icon, title, sub) => `<section class="pbanner"><span class="pbic" aria-hidden="true">${icon}</span><div><p class="eyebrow">${esc(hello())}, Ms. Maria · ${esc(today)}</p><h1>${esc(title)}</h1><p class="pbsub">${sub}</p></div></section>`;
     if (view === "manage") { manage(tabs); return; }
     if (view === "teach") { teach(tabs); return; }
-    main.innerHTML = `${tabs}<h1>Results</h1>
+    main.innerHTML = `${tabs}${__pb("📊", "Results", "Every student's sessions, workbooks, quiz attempts with error logs, and mock tests. Tap a student to see the details.")}
       <div class="kpi">
-        <div class="pillar t-blue"><small>STUDENTS</small><b>${D.students.length}</b></div>
-        <div class="pillar t-green"><small>WORKBOOKS SUBMITTED</small><b>${D.workbooks.length}</b></div>
-        <div class="pillar t-peach"><small>QUIZ ATTEMPTS</small><b>${D.quizzes.length}</b></div>
-        <div class="pillar t-lav"><small>MOCK TESTS</small><b>${D.mocks.length}</b></div>
+        <div class="pillar t-blue kp"><span aria-hidden="true">👥</span><small>STUDENTS</small><b>${D.students.filter(s => s.active).length}</b></div>
+        <div class="pillar t-green kp"><span aria-hidden="true">✏️</span><small>WORKBOOKS SUBMITTED</small><b>${D.workbooks.length}</b></div>
+        <div class="pillar t-peach kp"><span aria-hidden="true">📝</span><small>QUIZ ATTEMPTS</small><b>${D.quizzes.length}</b></div>
+        <div class="pillar t-lav kp"><span aria-hidden="true">⏱️</span><small>MOCK TESTS</small><b>${D.mocks.length}</b></div>
       </div>
       <div class="bar2">
         <label><span>Subject</span><select id="s"><option value="">Both subjects</option>${SUBJ.map(g => `<option>${esc(g)}</option>`).join("")}</select></label>
@@ -132,7 +200,7 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
     return COURSES[dir];
   }
   async function teach(tabs) {
-    main.innerHTML = `${tabs}<h1>Teach</h1><p>Open any session to teach it. You do not need a student code, and nothing you do here is saved as student work.</p>
+    main.innerHTML = `${tabs}${__pb("🎓", "Teach", "Open any session to teach it: present the slides, go through the reviewer, show the answers, and time activities. Nothing you do here is saved as student work.")}
       <div class="ptabs" role="group" aria-label="Subject">${SUBJECTS_T.map(s => `<button type="button" data-s="${s[0]}" aria-pressed="${tSubj === s[0]}">${esc(s[1])}</button>`).join("")}</div>
       <div id="tList"><p class="wait">Loading sessions…</p></div>
       <div class="sh"><span class="no">⏱</span><h2>Class timer</h2></div>
@@ -181,7 +249,7 @@ td.det{white-space:normal;background:var(--soft);padding:14px}
   }
   function manage(tabs) {
     const list = D.students.filter(s => showStopped || s.active).sort((a, b) => String(a.name).localeCompare(String(b.name)));
-    main.innerHTML = `${tabs}<h1>Manage students</h1>
+    main.innerHTML = `${tabs}${__pb("👤", "Manage students", "Add students and print their access codes, fix names, give a new code, or stop a student. Their results always stay.")}
       <div class="card t-blue" style="background:var(--c)"><h3>Add students</h3>
         <p class="small">Type one full name per line. Each student gets an access code automatically.</p>
         <textarea id="newNames" rows="5" style="width:100%;border:1.5px solid var(--line2);border-radius:12px;padding:10px;font:inherit" placeholder="Amina Hassan&#10;Ravi Kumar"></textarea>

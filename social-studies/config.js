@@ -10,5 +10,5 @@ window.CFG = {
   EMAIL: "maria@me.learnovateqa.com",
   SESSIONS: 12,
   /* this subject's own look: header and welcome colour, its line colour, and the colour of small tags */
-  THEME: { bg: "#DDF3E4", line: "#ABD6B6", tint: "#E3F5EA", tintLine: "#ABD6B6", motto: "Read. Identify. Reason. Answer." }
+  THEME: { bg: "#DDF3E4", line: "#ABD6B6", tint: "#E3F5EA", tintLine: "#ABD6B6", motto: "Read. Identify. Reason. Answer.", accent: "#2E7A4D", lede: "Civics, history, economics and geography: read sources, charts and maps, and reason with evidence." }
 };

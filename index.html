@@ -214,7 +214,7 @@
           <div><dt>Question types</dt><dd>${esc(s.types)}</dd></div>
           <div><dt>Passing score</dt><dd><b>${esc(GED_PASS)}</b> or higher</dd></div>
         </dl>
-        ${open ? `<a class="btn primary go" href="${s.href}">${esc(t("open_subject"))} <span aria-hidden="true">→</span></a>` : `<a class="btn soft go" href="${mail(s)}">${esc(t("notify"))}</a>`}
+        ${open ? `<a class="btn primary go" style="background:${s.accent};border-color:${s.accent}" href="${s.href}">${esc(t("open_subject"))} <span aria-hidden="true">→</span></a>` : `<a class="btn soft go" href="${mail(s)}">${esc(t("notify"))}</a>`}
       </div>`;
     }).join("");
   }

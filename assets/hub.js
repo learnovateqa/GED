@@ -13,6 +13,7 @@
   if (CFG.THEME) {
     const r = document.documentElement.style, T = CFG.THEME;
     r.setProperty("--pink", T.bg); r.setProperty("--pink-line", T.line); r.setProperty("--tint", T.tint); r.setProperty("--tint-b", T.tintLine);
+    if (T.accent) { r.setProperty("--brand", T.accent); r.setProperty("--brand-d", T.accentDark || T.accent); }
     const m = document.querySelector('meta[name="theme-color"]'); if (m) m.content = T.bg;
   }
 
@@ -236,22 +237,42 @@
 
   function pageHome() {
     const done = doneCount(), next = COURSE.sessions.find(s => ready(s.n) && !partsDone(s.n).checklist) || COURSE.sessions[0];
-    main.innerHTML = `<section class="shero">
-        <a class="backl" href="../"><span aria-hidden="true">←</span> The GED Academy · all subjects</a>
-        <h1>${esc(CFG.COURSE)}</h1>
-        ${CFG.THEME && CFG.THEME.motto ? `<p class="motto">${esc(CFG.THEME.motto)}</p>` : ""}
-        <p class="lede">${auth ? `Welcome, <b class="en">${esc(auth.name)}</b>. ` : ""}${esc(COURSE.tagline)} GED® test preparation with Ms. Maria.</p>
-        <div class="row" style="margin-top:14px"><a class="btn primary" href="#/session/${next.n}">${done || partsDone(next.n).reviewer ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a><a class="btn" href="#/syllabus">${esc(t("syllabus"))}</a></div>
-      </section>${preview()}
-      <div class="card pcard">
-        <div class="ring" style="--p:${Math.round(done / CFG.SESSIONS * 100)}"><div><b>${done}/${CFG.SESSIONS}</b><small>SESSIONS</small></div></div>
-        <div style="flex:1;min-width:200px"><h3 style="margin:0">${done ? "Keep going" : "Your next step"}</h3><p style="margin:4px 0 0">Session ${next.n}: ${esc(next.title)}</p><p class="small muted" style="margin:2px 0 0">${done} of ${CFG.SESSIONS} sessions complete</p></div>
+    const started = done || partsDone(next.n).reviewer, open = (COURSE.ready || []).length;
+    const ICON = ["🧭", "📖", "⚖️", "✍️", "📝", "🏁"], TONES = ["blue", "green", "peach", "lav", "rose", "gold"];
+    const tiles = COURSE.phases.map((ph, i) => { const first = ph.sessions[0], label = ph.name.replace(/^Phase \d+ · /, ""); return `<a class="t-${TONES[i % 6]}" href="#/session/${first}"><span aria-hidden="true">${ICON[i % 6]}</span>${esc(label.charAt(0).toUpperCase() + label.slice(1))}<small>Session${ph.sessions.length > 1 ? "s" : ""} ${ph.sessions[0]}${ph.sessions.length > 1 ? "–" + ph.sessions[ph.sessions.length - 1] : ""}</small></a>`; }).join("");
+    const how = [["blue", "🖥️", "Slides", "The main ideas, one slide at a time. Swipe or use the arrows."], ["green", "📖", "Reviewer", "Clear notes with weak and strong examples, tips and a word list."], ["peach", "✏️", "Workbook", "Easy to challenge. After you submit, see every answer and why."], ["lav", "📝", "Timed quiz", "35 GED-style questions with a clock. Your score goes to Ms. Maria."], ["rose", "🏅", "Checklist", "Tick what you can do now and earn the session badge."]];
+    main.innerHTML = `<section class="shero2 fullbleed"><div class="in">
+        <div>
+          <a class="backl" href="../"><span aria-hidden="true">←</span> The GED Academy · all subjects</a>
+          <p class="eyebrow" style="margin-top:16px">GED® ${esc(CFG.COURSE)} · ${CFG.SESSIONS} sessions</p>
+          <h1>${esc(CFG.THEME && CFG.THEME.motto ? CFG.THEME.motto : CFG.COURSE)}</h1>
+          <p class="lede">${auth && !TEACH ? `Welcome back, <b class="en">${esc(auth.name)}</b>. ` : ""}${esc(CFG.THEME && CFG.THEME.lede ? CFG.THEME.lede : COURSE.tagline)}</p>
+          <div class="row" style="margin-top:18px"><a class="btn primary" href="#/session/${next.n}">${started ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a><a class="btn" href="#/syllabus">${esc(t("syllabus"))}</a></div>
+          <p class="by">Prepared &amp; taught by <b>Ms. Maria</b></p>
+        </div>
+        <div class="tiles" aria-label="Parts of the course">${tiles}</div>
+      </div></section>
+      <div class="facts2">${COURSE.facts.map(f => `<div><small>${esc(f[0])}</small><b>${esc(f[1])}</b><span>${esc(f[2])}</span></div>`).join("")}</div>
+      <p class="small muted" style="margin:6px 0 0">Test facts are from ged.com.</p>
+      ${preview()}
+      <div class="sh"><span class="no">01</span><h2>Your progress</h2></div>
+      <div class="pgrid">
+        <div class="card pcard"><div class="ring" style="--p:${Math.round(done / CFG.SESSIONS * 100)}"><div><b>${done}/${CFG.SESSIONS}</b><small>SESSIONS</small></div></div>
+          <div style="flex:1;min-width:180px"><h3 style="margin:0">${done ? "Keep going" : "Your next step"}</h3><p style="margin:4px 0 10px">Session ${next.n}: ${esc(next.title)}</p><a class="btn primary sm" href="#/session/${next.n}">${started ? "Continue" : "Start"} <span aria-hidden="true">→</span></a></div></div>
+        <a class="card t-gold nextc" href="#/me" style="background:var(--c)"><span aria-hidden="true">📈</span><b>My progress</b><span class="small">Badges, workbook scores and every quiz attempt.</span></a>
       </div>
-      <div class="grid" style="grid-template-columns:repeat(auto-fit,minmax(150px,1fr))">${COURSE.facts.map((f, i) => `<div class="pillar t-${tone(i + 1)}"><small>${esc(f[0])}</small><b>${esc(f[1])}</b><br><span class="small">${esc(f[2])}</span></div>`).join("")}</div>
-      <p class="small muted" style="margin-top:6px">Test facts are from ged.com.</p>
-      <div class="sh"><span class="no">12</span><h2>${esc(t("sessions"))}</h2></div>${sessionList()}`;
+      <div class="sh"><span class="no">02</span><h2>The twelve sessions</h2></div>
+      <p>${open} session${open === 1 ? " is" : "s are"} open now. More open as the course goes on.</p>
+      ${sessionList()}
+      <div class="sh"><span class="no">03</span><h2>How each session works</h2></div>
+      <div class="grid feat5">${how.map(h => `<div class="card t-${h[0]}" style="background:var(--c)"><h3><span aria-hidden="true">${h[1]}</span> ${esc(h[2])}</h3><p style="margin:0">${esc(h[3])}</p></div>`).join("")}</div>
+      <div class="sh"><span class="no">04</span><h2>Your teacher</h2></div>
+      <div class="card teacher"><div class="avatar" aria-hidden="true">M</div><div><h3 style="font-size:1.3rem;margin:0">Ms. Maria</h3><p class="muted" style="margin:0 0 6px">English Language Instructor</p><p>Mistakes are how we learn here, so come and make some. Message me any time between sessions.</p><a class="btn soft sm" href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("The GED Academy · " + CFG.SHORT)}">Contact Ms. Maria</a></div></div>
+      <div class="end"><h2>Twelve sessions. One step at a time.</h2><p>Read. Practise. Test yourself. Then do the next one.</p><a class="btn primary" href="#/session/${next.n}">${started ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a></div>`;
   }
-  function pageSessions() { main.innerHTML = `${preview()}<h1>${esc(t("sessions"))}</h1><p>Each session has slides, a reviewer, a workbook, a quiz and a checklist.</p>${sessionList()}`; }
+  /* a coloured banner at the top of each inner page */
+  const banner = (icon, eyebrow, title, sub, extra) => `<section class="pbanner"><span class="pbic" aria-hidden="true">${icon}</span><div><p class="eyebrow">${esc(eyebrow)}</p><h1>${esc(title)}</h1>${sub ? `<p class="pbsub">${sub}</p>` : ""}${extra || ""}</div></section>`;
+  function pageSessions() { main.innerHTML = `${banner("🗂️", CFG.COURSE, t("sessions"), "Twelve sessions. Each one has slides, a reviewer, a workbook, a timed quiz and a checklist.", `<div class="row" style="margin-top:12px"><span class="chip">🏅 ${doneCount()} of ${CFG.SESSIONS} complete</span><span class="chip">📂 ${(COURSE.ready || []).length} open now</span></div>`)}${preview()}${sessionList()}`; }
 
   function stepsBar(n, cur) {
     const d = partsDone(n), P = [...(LESSON[n] && (LESSON[n].slides || canvaFor(n)) ? [["slides", "🖥️", t("slides")]] : []), ["reviewer", "📖", t("reviewer")], ["workbook", "✏️", t("workbook")], ["quiz", "📝", t("quiz")], ["checklist", "🏅", t("checklist")]];
@@ -499,16 +520,25 @@
   /* ---------- My progress ---------- */
   function pageMe() {
     const rows = COURSE.sessions.map(s => { const x = state.s[s.n] || {}; return `<tr><td>${s.n}</td><td style="white-space:normal;min-width:150px">${esc(s.title)}</td><td>${x.rev ? "✓" : "–"}</td><td>${x.wb ? x.wb.score + "/" + x.wb.total : "–"}</td><td>${x.quiz && x.quiz.length ? x.quiz.map(q => q.score + "/" + q.total).join(", ") : "–"}</td><td>${x.badge ? "🏅" : "–"}</td></tr>`; }).join("");
-    main.innerHTML = `${preview()}<h1>${esc(t("progress"))}</h1><p>${auth ? `<b class="en">${esc(auth.name)}</b> · ` : ""}${esc(CFG.COURSE)}</p>
-      <div class="card" style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><div class="ring" style="--p:${Math.round(doneCount() / CFG.SESSIONS * 100)}"><div><b>${doneCount()}/${CFG.SESSIONS}</b><small>SESSIONS</small></div></div>
-      <p style="flex:1;min-width:180px;margin:0">A session is complete when you read the reviewer, submit the workbook, take the quiz and tick the checklist.</p></div>
-      <div class="sh"><span class="no">01</span><h2>Badges</h2></div><div class="badges">${COURSE.sessions.map(s => `<div><div class="badge ${(state.s[s.n] || {}).badge ? "" : "off"}" aria-hidden="true">🏅</div>Session ${s.n}<span class="sr">${(state.s[s.n] || {}).badge ? " earned" : " not earned yet"}</span></div>`).join("")}</div>
+    const S = COURSE.sessions.map(s => state.s[s.n] || {}), wbs = S.filter(x => x.wb), qz = S.flatMap(x => x.quiz || []);
+    const wbAvg = wbs.length ? Math.round(wbs.reduce((a, x) => a + x.wb.score / x.wb.total, 0) / wbs.length * 100) : 0;
+    const best = S.map(x => (x.quiz && x.quiz.length ? Math.max(...x.quiz.map(q => q.score / q.total)) : null)).filter(v => v !== null);
+    const qAvg = best.length ? Math.round(best.reduce((a, v) => a + v, 0) / best.length * 100) : 0;
+    const stat = (tone, icon, label, val, sub) => `<div class="stat t-${tone}"><span aria-hidden="true">${icon}</span><small>${label}</small><b>${val}</b><em>${sub}</em></div>`;
+    main.innerHTML = `${banner("📈", CFG.COURSE, t("progress"), auth ? `<b class="en">${esc(auth.name)}</b>` : "Your progress is saved on this device.")}${preview()}
+      <div class="stats">
+        ${stat("rose", "🏅", "Sessions complete", `${doneCount()} / ${CFG.SESSIONS}`, "reviewer, workbook, quiz and checklist")}
+        ${stat("blue", "✏️", "Workbooks", `${wbs.length}`, wbs.length ? `average ${wbAvg}%` : "none submitted yet")}
+        ${stat("green", "📝", "Quiz attempts", `${qz.length}`, best.length ? `best scores average ${qAvg}%` : "no quiz yet")}
+        ${stat("gold", "⭐", "Badges", `${doneCount()}`, doneCount() ? "well done!" : "finish a session to earn one")}
+      </div>
+      <div class="sh"><span class="no">01</span><h2>Badges</h2></div><div class="badges">${COURSE.sessions.map(s => `<div class="t-${tone(s.n)}"><div class="badge ${(state.s[s.n] || {}).badge ? "" : "off"}" aria-hidden="true">${(state.s[s.n] || {}).badge ? "🏅" : s.n}</div>Session ${s.n}<span class="sr">${(state.s[s.n] || {}).badge ? " earned" : " not earned yet"}</span></div>`).join("")}</div>
       <div class="sh"><span class="no">02</span><h2>Scores</h2></div><div class="scroll"><table class="tbl ptable"><thead><tr><th>#</th><th>Session</th><th>Reviewer</th><th>Workbook</th><th>Quiz attempts</th><th>Badge</th></tr></thead><tbody>${rows}</tbody></table></div>`;
   }
 
   /* ---------- Syllabus ---------- */
   function pageSyllabus() {
-    main.innerHTML = `<p class="eyebrow">12-session syllabus</p><h1>${esc(CFG.COURSE)}</h1><p>Prepared for Learnovate students by Ms. Maria.</p>
+    main.innerHTML = `${banner("🧭", "12-session syllabus", CFG.COURSE, "Prepared for Learnovate students by Ms. Maria.")}
       <div class="box t-blue"><span class="lab">Course goal</span>${esc(COURSE.goal)}</div>
       <div class="sh"><span class="no">01</span><h2>By the end, you can</h2></div><ul>${COURSE.outcomes.map(o => `<li>${esc(o)}</li>`).join("")}</ul>
       <div class="sh"><span class="no">02</span><h2>The twelve sessions</h2></div>
@@ -519,7 +549,7 @@
   /* ---------- Help ---------- */
   function pageHelp() {
     const H = (q, a) => `<details class="card" style="margin:8px 0"><summary style="font-weight:600;cursor:pointer;min-height:44px">${q}</summary><div style="margin-top:8px">${a}</div></details>`;
-    main.innerHTML = `<h1>${esc(t("help"))}</h1>
+    main.innerHTML = `${banner("💬", "The GED Academy", t("help"), "Quick answers about signing in, studying and the quiz. Still stuck? Write to Ms. Maria.")}
       ${H("How do I sign in?", "<p>Ms. Maria gives you an access code. Type the code and your full name. You sign in one time on each phone or computer.</p>")}
       ${H("What do I do in each session?", "<ol><li><b>Slides:</b> look at the main ideas, one slide at a time.</li><li><b>Reviewer:</b> read the notes and examples.</li><li><b>Workbook:</b> answer the questions. After you submit, you see each answer and why.</li><li><b>Quiz:</b> take the short quiz. You see your score only. You can try again.</li><li><b>Checklist:</b> tick what you can do, and earn the badge.</li></ol>")}
       ${H("Do I need to send my work to Ms. Maria?", "<p>No. Your progress, workbook results and quiz scores go to Ms. Maria by themselves. After a quiz, please also take a screenshot of your score and send it to her.</p>")}
@@ -533,6 +563,7 @@
   /* ---------- router ---------- */
   async function route() {
     const h = location.hash.replace(/^#\/?/, "").split("/"), page = h[0] || "home";
+    main.classList.toggle("wide", page === "home");
     document.querySelectorAll(".tabs a, .navl a").forEach(a => { const p = a.getAttribute("href").replace(/^#\/?/, "") || "home"; (p === page || (p === "sessions" && page === "session")) ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
     if (API.on() && !auth && page !== "help" && page !== "syllabus") return gate();
     if (TEACH && !document.getElementById("teachBar")) {
