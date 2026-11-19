@@ -8,6 +8,7 @@ window.CFG = {
   SHORT: "RLA",
   TEACHER: "Ms. Maria",
   EMAIL: "maria@me.learnovateqa.com",
+  WHATSAPP: "97470771337",           /* Ms. Maria's WhatsApp: country code + number, digits only */
   SESSIONS: 12,
   /* this subject's own look: header and welcome colour, its line colour, and the colour of small tags */
   THEME: { bg: "#F8DFE3", line: "#EFC9D2", tint: "#F9DCE7", tintLine: "#EBB5C9", motto: "Read. Reason. Write.", accent: "#B03A68", lede: "Read for meaning, judge arguments, write clearly and correctly, and pass the 45-minute essay." }

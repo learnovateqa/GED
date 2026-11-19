@@ -66,7 +66,7 @@
         <p class="err" id="gerr" role="alert">${esc(msg || "")}</p>
         <button class="btn primary" style="width:100%" type="submit">${esc(t("sign_in"))}</button>
       </form>
-      <p class="small muted" style="margin-top:12px">No code? <a href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Access code for The GED Academy")}">${esc(t("contact"))}</a></p></div>`;
+      <p class="small muted" style="margin-top:12px">No code? <a href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Access code for The GED Academy")}">${esc(t("contact"))}</a>${CFG.WHATSAPP ? ` or <a href="${wa("Hello Ms. Maria, I need an access code for The GED Academy (" + CFG.SHORT + ").")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}</p></div>`;
     $("#gate").onsubmit = async e => {
       e.preventDefault();
       const f = e.target, code = f.code.value.trim().toUpperCase(), name = f.name.value.trim().replace(/\s+/g, " "), btn = f.querySelector("button");
@@ -109,6 +109,9 @@
     const L = await r.json(); linkPassages(L.workbook); linkPassages(L.quiz);
     return (LESSON[n] = L);
   }
+  /* WhatsApp: opens a chat with Ms. Maria, with a short message already typed */
+  const wa = (text) => CFG.WHATSAPP ? `https://wa.me/${CFG.WHATSAPP}?text=${encodeURIComponent(text)}` : "";
+  const waBtn = (text, label, cls) => CFG.WHATSAPP ? `<a class="btn ${cls || "soft sm"} wab" href="${wa(text)}" target="_blank" rel="noopener"><span aria-hidden="true">💬</span> ${esc(label || "WhatsApp Ms. Maria")}</a>` : "";
   const sess = n => COURSE.sessions.find(s => s.n === n);
   /* Canva slides: canva.json in the subject folder holds one Canva "view" link per session, e.g. { "1": "https://www.canva.com/design/…/view" }.
      When a session has a link, the viewer shows the Canva deck, so edits made in Canva appear on the site at once. */
@@ -267,7 +270,7 @@
       <div class="sh"><span class="no">03</span><h2>How each session works</h2></div>
       <div class="grid feat5">${how.map(h => `<div class="card t-${h[0]}" style="background:var(--c)"><h3><span aria-hidden="true">${h[1]}</span> ${esc(h[2])}</h3><p style="margin:0">${esc(h[3])}</p></div>`).join("")}</div>
       <div class="sh"><span class="no">04</span><h2>Your teacher</h2></div>
-      <div class="card teacher"><div class="avatar" aria-hidden="true">M</div><div><h3 style="font-size:1.3rem;margin:0">Ms. Maria</h3><p class="muted" style="margin:0 0 6px">English Language Instructor</p><p>Mistakes are how we learn here, so come and make some. Message me any time between sessions.</p><a class="btn soft sm" href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("The GED Academy · " + CFG.SHORT)}">Contact Ms. Maria</a></div></div>
+      <div class="card teacher"><div class="avatar" aria-hidden="true">M</div><div><h3 style="font-size:1.3rem;margin:0">Ms. Maria</h3><p class="muted" style="margin:0 0 6px">English Language Instructor</p><p>Mistakes are how we learn here, so come and make some. Message me any time between sessions.</p><div class="row"><a class="btn soft sm" href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("The GED Academy · " + CFG.SHORT)}">✉️ Email Ms. Maria</a>${waBtn("Hello Ms. Maria, I am studying " + CFG.SHORT + " on The GED Academy.")}</div></div></div>
       <div class="end"><h2>Twelve sessions. One step at a time.</h2><p>Read. Practise. Test yourself. Then do the next one.</p><a class="btn primary" href="#/session/${next.n}">${started ? "Continue" : "Start"} Session ${next.n} <span aria-hidden="true">→</span></a></div>`;
   }
   /* a coloured banner at the top of each inner page */
@@ -424,7 +427,8 @@
     const d = new Date(q.at);
     return `<div class="score" role="status"><p class="eyebrow">${esc(CFG.SHORT)} · Session ${n} · Short quiz</p><span class="big">${q.score} / ${q.total}</span>
       <p style="margin:6px 0 0"><b class="en">${esc(auth ? auth.name : "")}</b><br><span class="small">Attempt ${i} · ${esc(d.toLocaleDateString(undefined, { day: "numeric", month: "short", year: "numeric" }))}, ${esc(d.toLocaleTimeString(undefined, { hour: "numeric", minute: "2-digit" }))}${q.secs ? ` · ${Math.floor(q.secs / 60)} min ${q.secs % 60} s` : ""}</span></p></div>
-      <div class="box t-rose">📸 <b>Take a screenshot of your score and send it to Ms. Maria.</b><br>The quiz does not show the answers, because you can try again.</div>`;
+      <div class="box t-rose">📸 <b>Take a screenshot of your score and send it to Ms. Maria.</b><br>The quiz does not show the answers, because you can try again.
+        ${CFG.WHATSAPP ? `<div style="margin-top:10px">${waBtn(`Hello Ms. Maria, here is my ${CFG.SHORT} Session ${n} quiz score: ${q.score} / ${q.total} (attempt ${i}). My screenshot is attached.`, "Send my score on WhatsApp", "primary sm")}</div>` : ""}</div>`;
   }
   function pageQuiz(L, fresh) {
     const n = L.n, tries = ss(n).quiz || [], top = `${head(L)}${stepsBar(n, "quiz")}`;
@@ -557,7 +561,7 @@
       ${H("How do I change the language?", "<p>Press the 🌐 button at the top. Menus change to your language. You can also translate the explanations. Passages and questions always stay in English, like the real test.</p>")}
       ${H("How do I put this on my phone like an app?", "<p><b>Android (Chrome):</b> press ⋮ and then “Add to Home screen” or “Install app”.</p><p><b>iPhone (Safari):</b> press the Share button and then “Add to Home Screen”.</p>")}
       ${H("I have no internet. Can I study?", "<p>Pages you opened before still open. Your work is saved on your phone and goes to Ms. Maria when the internet is back. The short quiz needs internet.</p>")}
-      <a class="btn primary" style="margin-top:10px" href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Help: The GED Academy · " + CFG.SHORT)}">${esc(t("contact"))}</a>`;
+      <div class="row" style="margin-top:10px"><a class="btn primary" href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Help: The GED Academy · " + CFG.SHORT)}">✉️ Email Ms. Maria</a>${waBtn("Hello Ms. Maria, I need help with The GED Academy (" + CFG.SHORT + ").", "WhatsApp Ms. Maria", "sm")}</div>`;
   }
 
   /* ---------- router ---------- */

@@ -229,3 +229,5 @@ main.wide .slist{grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
 .end h2{font-size:1.5rem}
 @media (max-width:860px){.shero2 .in{grid-template-columns:1fr}.facts2{grid-template-columns:1fr 1fr}.facts2 div:nth-child(3){border:0}.facts2 div:nth-child(n+3){border-top:1.5px solid var(--line2)}.pgrid{grid-template-columns:1fr}main.wide .slist{grid-template-columns:1fr}}
 @media (max-width:520px){.shero2{padding-top:22px}.tiles a{min-height:84px}.teacher{grid-template-columns:1fr}.facts2 div{padding:12px 14px}}
+.wab{border-color:#1E8E4E}
+.btn.primary.wab{background:#1E8E4E;border-color:#1E8E4E}
