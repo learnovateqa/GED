@@ -57,16 +57,33 @@
 
   /* ---------- sign in ---------- */
   function gate(msg) {
-    main.innerHTML = `<div class="card t-rose" style="background:var(--c);max-width:480px;margin:6vh auto">
-      <p class="eyebrow">🔑 ${esc(t("code_required"))}</p><h1 style="font-size:1.5rem">${esc(CFG.COURSE)}</h1>
-      <p>Type the access code from Ms. Maria and your name.</p>
+    main.classList.add("wide", "gatev");
+    main.innerHTML = `<section class="glog">
+      <div class="gbrand">
+        <p class="eyebrow">GED® ${esc(CFG.COURSE)} · ${CFG.SESSIONS} sessions</p>
+        <h1>${esc(CFG.THEME && CFG.THEME.motto ? CFG.THEME.motto : CFG.COURSE)}</h1>
+        <p class="glede">${esc(CFG.THEME && CFG.THEME.lede ? CFG.THEME.lede : COURSE.tagline)}</p>
+        <ul class="gfeat">
+          <li><span aria-hidden="true">🖥️</span><div><b>Slides and reviewer</b><br>Clear notes with weak and strong examples.</div></li>
+          <li><span aria-hidden="true">✏️</span><div><b>Workbook</b><br>Easy to challenge, with every answer and why.</div></li>
+          <li><span aria-hidden="true">📝</span><div><b>Timed quiz</b><br>35 GED-style questions with a clock.</div></li>
+          <li><span aria-hidden="true">🏅</span><div><b>Badges</b><br>Finish a session and earn its badge.</div></li>
+        </ul>
+        <p class="gby">Prepared &amp; taught by <b>Ms. Maria</b></p>
+      </div>
+      <div class="gform">
+        <p class="eyebrow">🔑 ${esc(t("code_required"))}</p><h2>${esc(t("sign_in"))}</h2>
+        <p>Type the access code from Ms. Maria and your full name.</p>
       <form id="gate" autocomplete="off">
         <label class="field"><span>Access code</span><input class="en" name="code" required autocapitalize="characters" inputmode="text" maxlength="12"></label>
         <label class="field"><span>Your full name</span><input class="en" name="name" required maxlength="60" autocomplete="name"></label>
         <p class="err" id="gerr" role="alert">${esc(msg || "")}</p>
         <button class="btn primary" style="width:100%" type="submit">${esc(t("sign_in"))}</button>
       </form>
-      <p class="small muted" style="margin-top:12px">No code? <a href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Access code for The GED Academy")}">${esc(t("contact"))}</a>${CFG.WHATSAPP ? ` or <a href="${wa("Hello Ms. Maria, I need an access code for The GED Academy (" + CFG.SHORT + ").")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}</p></div>`;
+      <p class="small muted" style="margin-top:12px">No code? <a href="mailto:${esc(CFG.EMAIL)}?subject=${encodeURIComponent("Access code for The GED Academy")}">${esc(t("contact"))}</a>${CFG.WHATSAPP ? ` or <a href="${wa("Hello Ms. Maria, I need an access code for The GED Academy (" + CFG.SHORT + ").")}" target="_blank" rel="noopener">WhatsApp</a>` : ""}</p>
+        <p class="small muted" style="margin:14px 0 0">You sign in once on each phone or computer.</p>
+      </div>
+    </section>`;
     $("#gate").onsubmit = async e => {
       e.preventDefault();
       const f = e.target, code = f.code.value.trim().toUpperCase(), name = f.name.value.trim().replace(/\s+/g, " "), btn = f.querySelector("button");
@@ -567,7 +584,8 @@
   /* ---------- router ---------- */
   async function route() {
     const h = location.hash.replace(/^#\/?/, "").split("/"), page = h[0] || "home";
-    main.classList.toggle("wide", page === "home");
+    main.classList.remove("gatev");
+    main.classList.toggle("wide", page === "home" || (API.on() && !auth && page !== "help" && page !== "syllabus"));
     document.querySelectorAll(".tabs a, .navl a").forEach(a => { const p = a.getAttribute("href").replace(/^#\/?/, "") || "home"; (p === page || (p === "sessions" && page === "session")) ? a.setAttribute("aria-current", "page") : a.removeAttribute("aria-current"); });
     if (API.on() && !auth && page !== "help" && page !== "syllabus") return gate();
     if (TEACH && !document.getElementById("teachBar")) {

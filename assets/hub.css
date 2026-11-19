@@ -231,3 +231,24 @@ main.wide .slist{grid-template-columns:repeat(auto-fill,minmax(420px,1fr))}
 @media (max-width:520px){.shero2{padding-top:22px}.tiles a{min-height:84px}.teacher{grid-template-columns:1fr}.facts2 div{padding:12px 14px}}
 .wab{border-color:#1E8E4E}
 .btn.primary.wab{background:#1E8E4E;border-color:#1E8E4E}
+
+/* ---------- footer always at the bottom of the screen ---------- */
+body{display:flex;flex-direction:column;min-height:100vh;min-height:100dvh}
+body>main{flex:1 0 auto;width:100%}
+/* ---------- student sign-in: welcome panel + form ---------- */
+.glog{display:grid;grid-template-columns:1.1fr 1fr;max-width:1000px;margin:5vh auto;border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(27,42,74,.14);background:#fff;border:1.5px solid var(--pink-line,#B9DAE5)}
+.gbrand{position:relative;background:var(--pink);padding:38px 36px;overflow:hidden;background-image:linear-gradient(rgba(255,255,255,.55) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.55) 1px,transparent 1px);background-size:24px 24px}
+.gbrand::after{content:"";position:absolute;right:-80px;bottom:-80px;width:240px;height:240px;border-radius:50%;background:rgba(255,255,255,.5)}
+.gbrand h1{font-size:clamp(1.8rem,3.6vw,2.6rem);margin:6px 0 10px}
+.glede{color:#2E3B5C;max-width:40ch}
+.gfeat{list-style:none;padding:0;margin:18px 0 0;display:grid;grid-template-columns:1fr 1fr;gap:10px;position:relative;z-index:1}
+.gfeat li{display:flex;gap:10px;background:rgba(255,255,255,.75);border:1px solid var(--pink-line,#B9DAE5);border-radius:14px;padding:10px 12px;font-size:.88rem;line-height:1.4}
+.gfeat li>span{font-size:1.25rem;line-height:1.2}
+.gby{display:inline-block;background:#fff;border:1.5px solid var(--pink-line,#B9DAE5);border-radius:999px;padding:6px 16px;margin:18px 0 0;font-size:.9rem;position:relative;z-index:1}
+.gby::before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--brand);margin-inline-end:8px;vertical-align:middle}
+.gform{padding:36px;display:grid;align-content:center}
+.gform h2{font-size:1.6rem;margin:4px 0 6px}
+@media (max-width:820px){.glog{grid-template-columns:1fr;margin:0 -16px;border-radius:0;border-width:0 0 1.5px;box-shadow:none}.gbrand{padding:24px 20px}.gfeat{grid-template-columns:1fr 1fr}.gform{padding:24px 20px}}
+@media (max-width:420px){.gfeat li{font-size:.84rem;padding:8px 10px}.gfeat li div br+*{display:none}}
+main.gatev{display:grid;align-content:center}
+main.gatev .glog{margin-top:3vh;margin-bottom:3vh}
